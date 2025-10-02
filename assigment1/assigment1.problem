@@ -1,17 +1,17 @@
 % Metamodel
-class character{
-    Weapon[] weapons;
-    Potion[] potions;
-    Armour[] armours;
+abstract class Character{
+    contains Weapon[0..2] weapons;
+    contains Potion[] potions;
+    contains Armour[] armours;
 }
 
-class Hero extends character {
+class Hero extends Character {
     string name;
     int level;
-    Race[1] race;
-    Role[1] role
+    contains Race[1] race;
+    contains Role[1] role
     contains Attribute[] attributes;
-    Skill[] skills;
+    contains Skill[] skills;
 }
 scope Hero = 1.
 
@@ -20,17 +20,27 @@ decision rule setLevel50(Hero h) ==> level(h): 50.
 concretization rule setLevel(Hero h) <-> !isConcrete(level(h)) 
     ==> level(h): 70.
 
-abstract class Race extends character.
+abstract class Race extends Character.
 class Human extends Race.
+type(Human::new): "Human".
 class Elf extends Race.
+type(Elf::new): "Elf".
 class Orc extends Race.
+type(Orc::new): "Orc".
 class Darf extends Race.
+type(Darf::new): "Darf".
 
-abstract class Role.
+abstract class Role{
+    string type
+}
 class Wizzard extends Role.
+type(Wizzard::new): "Wizzard".
 class Archer extends Role.
+type(Archer::new): "Archer".
 class Thief extends Role.
+type(Thief::new): "Thief".
 class Knight extends Role.
+type(Knight::new): "Knight".
 
 
 abstract class Attribute {
@@ -39,31 +49,38 @@ abstract class Attribute {
 }
 class Strength extends Attribute.
 attributeName(Strength::new): "Strength". % Set to this string for every instance of the class
+%Always have on item
+scope Strength = 0..1.
 
 class Intelligence extends Attribute.
 attributeName(Intelligence::new): "Intelligence". % Set to this string for every instance of the class
+scope Intelligence = 0..1.
 
 class Agility extends Attribute.
 attributeName(Agility::new): "Agility". % Set to this string for every instance of the class
+scope Agility = 0..1.
 
 class Perception extends Attribute.
 attributeName(Perception::new): "Perception". % Set to this string for every instance of the class
+scope Perception = 0..1.
 
 abstract class Skill{
     string skillName;
     int min_level;
-    Attribute[] attributes;
+    contains Attribute[1] skillAttribute;
 }
 
 class Archery extends Skill.
 skillName(Archery::new): "Archery". % Set to this string for every instance of the class
+scope Archery = 0..1.
 
 class Magic extends Skill.
 skillName(Magic::new): "Magic". % Set to this string for every instance of the class
+scope Magic = 0..1.
 
 class Stealth extends Skill.
 skillName(Stealth::new): "Stealth". % Set to this string for every instance of the class
-
+scope Stealth = 0..1.
 
 abstract class Equipment{
     string equipmentName;
@@ -84,16 +101,20 @@ abstract class Potion extends Equipment{
 class Sword extends Weapon{
     string color;
 }
+type(Sword::new): "Sword".
 
 class Bow extends Weapon{
     int numArrow;
 }
+type(Bow::new): "Bow".
 
 class Axe extends Weapon.
+type(Axe::new): "Axe".
 
 class Staff extends Weapon{
     int magicLevel;
 }
+type(Staff::new): "Staff".
 
 class HeavyArmour extends Armour.
 
@@ -103,11 +124,36 @@ class growdPotion extends Potion.
 
 class invisabilityPotion extends Potion.
 
-class shapeShifPotion extends Potion.
+class shapeShiftPotion extends Potion.
 
 %We only have one Hero so all attributes are hero attributes
-int sumOfAllAttributes() = sum {  Attribute(h) -> value(h)}.
 
+% == Constraints ==
+
+%At least one of the arrtibutes must be a value higher than one
+int sumOfAllAttributes() = sum {  Attribute(a) -> value(a)}.
 error noZeroAttributes() <-> sumOfAllAttributes() > 0.
 
-% Constraints
+error EquipmentLimitHero(Hero h) <->     (count {  weapons(h, _e) } + count {  potions(h, _e) } + count {  armours(h, _e) })  < 5. %equipment limit Hero
+
+error ArmorLimitHero(Hero h) <->      count { armours(h, _e) } < 2 . %equipment limit Hero
+
+error EquipmentLimitRace(Race r) <-> (count {  weapons(r, _e) } + count {  potions(r, _e) } + count {  armours(r, _e) })  < 5. %equipment limit Hero
+
+%pred StaffOnlyForWizard()  <-> Staff(_s), Hero(h), role(h, r),  
+
+%Cannot have certain weapens
+% error StaffNotForThief() <-> Staff(_s), Thief(_w).
+% error StaffNotForArcher() <-> Staff(_s), Archer(_w).
+% error StaffNotForKnight() <-> Staff(_s), Knight(_w).
+% error BowNotForWizzard() <-> Bow(_b), Wizzard(_w).
+% error StaffNotForWizzardt() <-> Axe(_a), Wizzard(_w).
+
+%error OnlyWizzard() <-> Hero(h1), role(h1, r1), 
+%                             (type(r1) != "Wizzard" ).
+error WizzardOnlyStaff() <-> Hero(h1), role(h1, r1), weapons(r1, w1), 
+                             (type(r1) != "Wizzard" && type(w1) == "Staff").
+
+error RaceNoStaff(Race r1) <->  weapons(r1, w1), type(w1) == "Staff".
+
+% error skillAttributesInHeroAttributes() <-> Skill(s), skillAttribute(s, a0), Hero(h), attributes(h) contains a1.
