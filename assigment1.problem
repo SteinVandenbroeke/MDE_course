@@ -1,0 +1,113 @@
+% Metamodel
+class character{
+    Weapon[] weapons;
+    Potion[] potions;
+    Armour[] armours;
+}
+
+class Hero extends character {
+    string name;
+    int level;
+    Race[1] race;
+    Role[1] role
+    contains Attribute[] attributes;
+    Skill[] skills;
+}
+scope Hero = 1.
+
+decision rule setLevel100(Hero h) ==> level(h): 100.
+decision rule setLevel50(Hero h) ==> level(h): 50.
+concretization rule setLevel(Hero h) <-> !isConcrete(level(h)) 
+    ==> level(h): 70.
+
+abstract class Race extends character.
+class Human extends Race.
+class Elf extends Race.
+class Orc extends Race.
+class Darf extends Race.
+
+abstract class Role.
+class Wizzard extends Role.
+class Archer extends Role.
+class Thief extends Role.
+class Knight extends Role.
+
+
+abstract class Attribute {
+    string attributeName; % This helps to differentiate the subclasses in constraints
+    int value;
+}
+class Strength extends Attribute.
+attributeName(Strength::new): "Strength". % Set to this string for every instance of the class
+
+class Intelligence extends Attribute.
+attributeName(Intelligence::new): "Intelligence". % Set to this string for every instance of the class
+
+class Agility extends Attribute.
+attributeName(Agility::new): "Agility". % Set to this string for every instance of the class
+
+class Perception extends Attribute.
+attributeName(Perception::new): "Perception". % Set to this string for every instance of the class
+
+abstract class Skill{
+    string skillName;
+    int min_level;
+    Attribute[] attributes;
+}
+
+class Archery extends Skill.
+skillName(Archery::new): "Archery". % Set to this string for every instance of the class
+
+class Magic extends Skill.
+skillName(Magic::new): "Magic". % Set to this string for every instance of the class
+
+class Stealth extends Skill.
+skillName(Stealth::new): "Stealth". % Set to this string for every instance of the class
+
+
+abstract class Equipment{
+    string equipmentName;
+}
+
+abstract class Weapon extends Equipment{
+    int attackDammage;
+}
+
+abstract class Armour extends Equipment{
+    int defendDammage;
+}
+
+abstract class Potion extends Equipment{
+    int duration;
+}
+
+class Sword extends Weapon{
+    string color;
+}
+
+class Bow extends Weapon{
+    int numArrow;
+}
+
+class Axe extends Weapon.
+
+class Staff extends Weapon{
+    int magicLevel;
+}
+
+class HeavyArmour extends Armour.
+
+class LightArmour extends Armour.
+
+class growdPotion extends Potion.
+
+class invisabilityPotion extends Potion.
+
+class shapeShifPotion extends Potion.
+
+%We only have one Hero so all attributes are hero attributes
+int sumOfAllAttributes() = sum {  Attribute(h) -> value(h)}.
+
+error noZeroAttributes() <-> sumOfAllAttributes() > 0.
+
+% Constraints
