@@ -11,7 +11,7 @@ class Hero extends Character {
     contains Race[1] race;
     contains Role[1] role
     contains Attribute[] attributes;
-    contains Skill[] skills;
+    contains Skill[2] skills;
 }
 scope Hero = 1.
 
@@ -134,26 +134,23 @@ class shapeShiftPotion extends Potion.
 int sumOfAllAttributes() = sum {  Attribute(a) -> value(a)}.
 error noZeroAttributes() <-> sumOfAllAttributes() > 0.
 
-error EquipmentLimitHero(Hero h) <->     (count {  weapons(h, _e) } + count {  potions(h, _e) } + count {  armours(h, _e) })  < 5. %equipment limit Hero
+error EquipmentLimitHero(Hero h) <-> (count {  weapons(h, _e) } + count {  potions(h, _e) } + count {  armours(h, _e) })  < 5. %equipment limit Hero
 
-error ArmorLimitHero(Hero h) <->      count { armours(h, _e) } < 2 . %equipment limit Hero
+error ArmorLimitHero(Hero h) <-> count { armours(h, _e) } < 2 . %equipment limit Hero
 
 error EquipmentLimitRace(Race r) <-> (count {  weapons(r, _e) } + count {  potions(r, _e) } + count {  armours(r, _e) })  < 5. %equipment limit Hero
 
-%pred StaffOnlyForWizard()  <-> Staff(_s), Hero(h), role(h, r),  
+error WizzardOnlyStaff(Hero h1) <-> role(h1, r1), 
+                             ((type(r1) != "Wizzard" && count {  Staff(_s) } != 0)).
 
-%Cannot have certain weapens
-% error StaffNotForThief() <-> Staff(_s), Thief(_w).
-% error StaffNotForArcher() <-> Staff(_s), Archer(_w).
-% error StaffNotForKnight() <-> Staff(_s), Knight(_w).
-% error BowNotForWizzard() <-> Bow(_b), Wizzard(_w).
-% error StaffNotForWizzardt() <-> Axe(_a), Wizzard(_w).
+error RaceNoStaff(Race r1) <->  weapons(r1, w1), count {Staff(w1) } != 0.
 
-%error OnlyWizzard() <-> Hero(h1), role(h1, r1), 
-%                             (type(r1) != "Wizzard" ).
-error WizzardOnlyStaff() <-> Hero(h1), role(h1, r1), weapons(r1, w1), 
-                             (type(r1) != "Wizzard" && type(w1) == "Staff").
+error ThiefNoHeavyArmour(Thief t1) <-> armours(t1, a1), 
+                             ( count {  HeavyArmour(a1) } != 0).
 
-error RaceNoStaff(Race r1) <->  weapons(r1, w1), type(w1) == "Staff".
+error WizzardMustSkills(Wizzard w1) <-> ( count {  skills(w1, _1) } > 0).
+error WizzardMustHaveMagic(Wizzard w1) <-> skills(w1, s1), ( count {  Magic(s1) } == 0).
 
-% error skillAttributesInHeroAttributes() <-> Skill(s), skillAttribute(s, a0), Hero(h), attributes(h) contains a1.
+
+
+% error skillAttributesInHeroAttributes() <-> Skill(s), skillAttribute(s, a0), Hero(h), attributes(h) contains a1. 
