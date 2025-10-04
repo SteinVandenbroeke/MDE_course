@@ -1,17 +1,20 @@
 % Metamodel
-abstract class Character{
+
+% Inventory can contain Equipment (types of Equipment are Weapon, Armour and Potion).
+class Inventory{
     contains Weapon[0..2] weapons;
     contains Potion[] potions;
     contains Armour[] armours;
 }
 
-class Hero extends Character {
+class Hero {
     string name;
     int level;
     contains Race[1] race;
-    contains Role[1] role
-    contains Attribute[] attributes;
-    contains Skill[2] skills;
+    contains Role[1] role;
+    contains Attribute[1..2] attributes; %Every hero has Attributes (At least one - 1..*)
+    contains Skill[1..2] skills; %Every hero has Skills (At least one - 1..*)
+    contains Inventory [1] inventory; %A hero has an inventory. (At least one - 1..*)
 }
 scope Hero = 1.
 
@@ -20,54 +23,56 @@ decision rule setLevel50(Hero h) ==> level(h): 50.
 concretization rule setLevel(Hero h) <-> !isConcrete(level(h)) 
     ==> level(h): 70.
 
-abstract class Race extends Character.
-class Human extends Race.
-type(Human::new): "Human".
-class Elf extends Race.
-type(Elf::new): "Elf".
-class Orc extends Race.
-type(Orc::new): "Orc".
-class Darf extends Race.
-type(Darf::new): "Darf".
-
-abstract class Role{
-    string type
+abstract class Race {
+    string raceType;
 }
-class Wizzard extends Role.
-type(Wizzard::new): "Wizzard".
+class Human extends Race.
+raceType(Human::new): "Human".
+class Elf extends Race.
+raceType(Elf::new): "Elf".
+class Orc extends Race.
+raceType(Orc::new): "Orc".
+class Dwarf extends Race.
+raceType(Dwarf::new): "Dwarf".
+
+abstract class Role {
+    string roleType;
+}
+class Wizard extends Role.
+roleType(Wizard::new): "Wizard".
 class Archer extends Role.
-type(Archer::new): "Archer".
+roleType(Archer::new): "Archer".
 class Thief extends Role.
-type(Thief::new): "Thief".
+roleType(Thief::new): "Thief".
 class Knight extends Role.
-type(Knight::new): "Knight".
+roleType(Knight::new): "Knight".
 
 
 abstract class Attribute {
     string attributeName; % This helps to differentiate the subclasses in constraints
-    int value;
+    int attributeValue;
 }
 class Strength extends Attribute.
 attributeName(Strength::new): "Strength". % Set to this string for every instance of the class
 %Always have on item
-scope Strength = 0..1.
+%scope Strength = 0..1.
 
 class Intelligence extends Attribute.
 attributeName(Intelligence::new): "Intelligence". % Set to this string for every instance of the class
-scope Intelligence = 0..1.
+%scope Intelligence = 0..1.
 
 class Agility extends Attribute.
 attributeName(Agility::new): "Agility". % Set to this string for every instance of the class
-scope Agility = 0..1.
+%scope Agility = 0..1.
 
 class Perception extends Attribute.
 attributeName(Perception::new): "Perception". % Set to this string for every instance of the class
-scope Perception = 0..1.
+%scope Perception = 0..1.
 
 abstract class Skill{
     string skillName;
-    int min_level;
-    contains Attribute[1] skillAttribute;
+    int minLevel;
+    contains Attribute[1] skillAttribute; %Can have Attributes
 }
 
 class Archery extends Skill.
@@ -87,11 +92,11 @@ abstract class Equipment{
 }
 
 abstract class Weapon extends Equipment{
-    int attackDammage;
+    int attackDamage;
 }
 
 abstract class Armour extends Equipment{
-    int defendDammage;
+    int defendDamage;
 }
 
 abstract class Potion extends Equipment{
@@ -101,55 +106,132 @@ abstract class Potion extends Equipment{
 class Sword extends Weapon{
     string color;
 }
-type(Sword::new): "Sword".
+equipmentName(Sword::new): "Sword".
 
 class Bow extends Weapon{
     int numArrow;
 }
-type(Bow::new): "Bow".
+equipmentName(Bow::new): "Bow".
 
 class Axe extends Weapon.
-type(Axe::new): "Axe".
+equipmentName(Axe::new): "Axe".
 
 class Staff extends Weapon{
     int magicLevel;
 }
-type(Staff::new): "Staff".
+equipmentName(Staff::new): "Staff".
 
 class HeavyArmour extends Armour.
 
 class LightArmour extends Armour.
 
-class growdPotion extends Potion.
+class GrowthPotion extends Potion.
 
-class invisabilityPotion extends Potion.
+class InvisibilityPotion extends Potion.
 
-class shapeShiftPotion extends Potion.
+class ShapeShiftPotion extends Potion.
 
 %We only have one Hero so all attributes are hero attributes
 
 % == Constraints ==
 
 %At least one of the arrtibutes must be a value higher than one
-int sumOfAllAttributes() = sum {  Attribute(a) -> value(a)}.
-error noZeroAttributes() <-> sumOfAllAttributes() > 0.
+%int sumOfAllAttributes() = sum {  Attribute(a) -> attributeValue(a)}.
+%error noZeroAttributes() <-> sumOfAllAttributes() > 0.
 
-error EquipmentLimitHero(Hero h) <-> (count {  weapons(h, _e) } + count {  potions(h, _e) } + count {  armours(h, _e) })  < 5. %equipment limit Hero
+% The inventory cannot contain too much Equipment.
+error EquipmentLimitHero(Hero h) <-> 
+    inventory(h, i),
+    (count {  weapons(i, _) } 
+     + count {  potions(i, _) } 
+     + count {  armours(i, _) })  > 5. %equipment limit Hero (error if inventory > 5 items)
 
-error ArmorLimitHero(Hero h) <-> count { armours(h, _e) } < 2 . %equipment limit Hero
+% A Hero cannot have more than one type of Armour.
+error noBothTypesOfArmours(Hero h) <->
+    inventory(h,i),
+    armours(i,aH), HeavyArmour(aH),
+    armours(i,aL), LightArmour(aL).
 
-error EquipmentLimitRace(Race r) <-> (count {  weapons(r, _e) } + count {  potions(r, _e) } + count {  armours(r, _e) })  < 5. %equipment limit Hero
+%Doubt
+error WizardOnlyStaff(Hero h) <-> 
+    role(h, r), ((roleType(r) != "Wizard" && count {  Staff(_s) } != 0)).
+%error WizardOnlyStaff1(Hero h) <-> 
+%    role(h, r), !Wizard(r), count {  Staff(_s) } != 0.
 
-error WizzardOnlyStaff(Hero h1) <-> role(h1, r1), 
-                             ((type(r1) != "Wizzard" && count {  Staff(_s) } != 0)).
+% To check if it's working well (only thiefs)
+%error heroThief (Hero h) <->
+%    role(h,r), roleType(r) != "Thief".
 
-error RaceNoStaff(Race r1) <->  weapons(r1, w1), count {Staff(w1) } != 0.
+error thiefNotWearHeavyArmour(Hero h) <-> 
+    role(h, r),  roleType(r) == "Thief", 
+    inventory(h,i), armours(i,aH), HeavyArmour(aH).
 
-error ThiefNoHeavyArmour(Thief t1) <-> armours(t1, a1), 
-                             ( count {  HeavyArmour(a1) } != 0).
+% To check if it's working well (only wizards)
+%error heroWizard (Hero h) <->
+%    role(h,r), !Wizard(r).
 
-error WizzardMustSkills(Wizzard w1) <-> ( count {  skills(w1, _1) } > 0).
-error WizzardMustHaveMagic(Wizzard w1) <-> skills(w1, s1), ( count {  Magic(s1) } == 0).
+%  A Wizard must have Magic.
+pred hasMagic(Hero h) <->
+    skills(h, s), skillName(s) == "Magic".
+
+error wizardMustHaveMagic(Hero h) <->
+    role(h, r), Wizard(r), !hasMagic(h).
+
+%Magic requires Intelligence.
+pred hasIntelligence(Skill s) <->
+    skillAttribute(s, a), Intelligence(a).
+
+error magicRequiresIntelligence(Skill s) <->
+    Magic(s), !hasIntelligence(s).
+
+% To check if it's working well (only Archers)
+%error heroArcher (Hero h) <->
+%    role(h,r), !Archer(r).
+
+%  An Archer must have a Bow.
+pred hasBow(Hero h) <->
+    inventory(h, i),
+    weapons(i, b),
+    Bow(b).
+
+error archerMustHaveBow(Hero h) <->
+    role(h, r), Archer(r), !hasBow(h).
+
+% To check if it's working well (only Heros with Bow)
+%error heroNotHasABow(Hero h) <->
+%    !hasBow(h).
+
+% If a Hero has a Bow, he must have Archery.
+pred hasArchery(Hero h) <->
+    skills(h,s), Archery(s).
+
+error hasBowhasArchery(Hero h) <->
+    hasBow(h), !hasArchery(h).
+
+%-------------------------------------
+% A Dwarf cannot be a Wizard.
+error dwarfCantBeWizard(Hero h) <->
+    race(h, ra),  Dwarf(ra), 
+    role(h, ro),  Wizard(ro).
+
+%error ArmourLimitHero(Hero h) <-> 
+%    inventory(h, i),
+%    (count {  armours(i, _) })  < 2. %equipment limit Hero (error less than 3)
+
+%error ArmorLimitHero(Hero h) <-> count { armours(h, _e) } < 2 . %equipment limit Hero
+
+%error EquipmentLimitRace(Race r) <-> (count {  weapons(r, _e) } + count {  potions(r, _e) } + count {  armours(r, _e) })  < 5. %equipment limit Hero
+
+%error WizardOnlyStaff(Hero h1) <-> role(h1, r1), 
+%                             ((roleType(r1) != "Wizard" && count {  Staff(_s) } != 0)).
+
+%error RaceNoStaff(Race r1) <->  weapons(r1, w1), count {Staff(w1) } != 0.
+
+%error ThiefNoHeavyArmour(Thief t1) <-> armours(t1, a1), 
+%                             ( count {  HeavyArmour(a1) } != 0).
+
+%error WizardMustSkills(Wizard w1) <-> ( count {  skills(w1, _1) } > 0).
+%error WizardMustHaveMagic(Wizard w1) <-> skills(w1, s1), ( count {  Magic(s1) } == 0).
 
 
 
