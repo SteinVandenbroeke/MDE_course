@@ -131,12 +131,12 @@ class ShapeShiftPotion extends Potion.
 
 % Set concrete values for attributes, to test only set values to zero -> should fail to create a model
 decision rule setAttributeValue0(Attribute a) ==> attributeValue(a):0.
-decision rule setAttributeValue1(Attribute a) ==> attributeValue(a):1.
-decision rule setAttributeValue2(Attribute a) ==> attributeValue(a):2.
-decision rule setAttributeValue3(Attribute a) ==> attributeValue(a):3.
-decision rule setAttributeValue4(Attribute a) ==> attributeValue(a):4.
+decision rule setAttributeValue10(Attribute a) ==> attributeValue(a):10.
+decision rule setAttributeValue20(Attribute a) ==> attributeValue(a):20.
+decision rule setAttributeValue30(Attribute a) ==> attributeValue(a):30.
+decision rule setAttributeValue40(Attribute a) ==> attributeValue(a):40.
 concretization rule setAttributeValue(Attribute a) <-> !isConcrete(attributeValue(a)) 
-    ==> attributeValue(a): 5.
+    ==> attributeValue(a): 50.
 
 int sumOfAllAttributes() = sum {  Attribute(a) -> attributeValue(a)}.
 error noZeroAttributes() <-> sumOfAllAttributes() == 0.
@@ -238,6 +238,20 @@ pred hasMagic(Hero h) <->
 
 error wizardMustHaveMagic(Hero h) <->
     role(h, r), Wizard(r), !hasMagic(h).
+%---------------------------------------------%
+
+
+%---------------------------------------------%
+% Rule: A knight must have a strenght value higher than 10
+
+% TEST 1 (Should succeed): always add a knight
+%scope Knight = 1.
+
+error KnightHasStrenght(Knight k) <->
+    !Strength(_s).
+
+error KnightToLowString(Knight k) <->
+    Strength(s), attributeValue(s) < 10.
 %---------------------------------------------%
 
 
