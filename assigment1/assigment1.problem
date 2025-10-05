@@ -169,11 +169,14 @@ error noBothTypesOfArmours(Hero h) <->
 % error generateStaff () <-> !Staff(_s).
 
 % TEST 2 (Should succeed): try to generate wizard with staff
-scope Wizard = 1.
-error generateStaff () <-> !Staff(_s).
+% scope Wizard = 1.
+% error generateStaff () <-> !Staff(_s).
+
+% error WizardOnlyStaff1(Hero h) <-> 
+%    role(h, r), ((roleType(r) != "Wizard" && count {  Staff(_s) } != 0)).
 
 error WizardOnlyStaff1(Hero h) <-> 
-   role(h, r), ((roleType(r) != "Wizard" && count {  Staff(_s) } != 0)).
+   !Wizard(_w), count {  Staff(_s) } != 0.
 %---------------------------------------------%
 
 %---------------------------------------------%
