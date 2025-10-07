@@ -165,13 +165,12 @@ error noBothTypesOfArmours(Hero h) <->
 % Rule: Only the Wizzard can wield a staff
 
 % TEST 1 (Should fail): try to generate thief with staff
-% error heroThief_TEST (Hero h) <->
-%     role(h,r), roleType(r) != "Thief".
-% error generateStaff () <-> !Staff(_s).
+% scope Thief = 1.
+% scope Staff = 1.
 
 % TEST 2 (Should succeed): try to generate wizard with staff
+% scope Staff = 1.
 % scope Wizard = 1.
-% error generateStaff () <-> !Staff(_s).
 
 error WizardOnlyStaff1(Hero h) <-> 
    !Wizard(_w), count {  Staff(_s) } != 0.
@@ -200,15 +199,11 @@ error thiefNotWearHeavyArmour(Hero h) <->
 %Rule: A hero cannot have the same attribute/skill more than once
 
 % Attributes
-scope Strength = 0..1.
-scope Intelligence = 0..1.
-scope Agility = 0..1.
-scope Perception = 0..1.
+error noDubbleAtributesInHero(Hero h) <-> attributes(h, a1), attributes(h, a2), 
+                                          a1 != a2, attributeName(a1) == attributeName(a2).
 
-%Skills
-scope Archery = 0..1.
-scope Magic = 0..1.
-scope Stealth = 0..1.
+error noDubbleSkillsInHero(Hero h) <-> skills(h, s1), skills(h, s2), 
+                                          s1 != s2, skillName(s1) == skillName(s2).
 
 %---------------------------------------------%
 
@@ -230,7 +225,7 @@ error heroSkillLevel(Hero h) <-> Skill(s), minHeroLevel(s) > level(h).
 
 % TEST 1 (Should succeed): Generate only wizard (chances are low, and thus often fails)
 %error heroWizard () <-> !Wizard(_r).
-%scope Wizard = 1. 
+scope Wizard = 1. 
 
 pred hasMagic(Hero h) <->
     skills(h, s), skillName(s) == "Magic".
@@ -268,14 +263,12 @@ error magicRequiresIntelligence(Skill s) <->
 % Rule: An Archer must have a Bow.
 
 % TEST 1 (should succeed): Generate archer with bow
-% error heroArcher (Hero h) <->
-%    role(h,r), !Archer(r).
-% error generateBow() <-> !Bow(_b).
+% scope Archer = 1.
+% scope Bow = 1.
 
 % TEST 2 (should fail): generate archer without bow
-% error heroArcher (Hero h) <->
-%    role(h,r), !Archer(r).
-% error generateBow() <-> Bow(_b).
+% scope Archer = 1.
+% scope Bow = 0.
 
 %  An Archer must have a Bow.
 pred hasBow(Hero h) <->
