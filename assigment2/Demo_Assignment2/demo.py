@@ -135,7 +135,7 @@ m1 = """
         coursename = "Stochastics";
         students = 60;
     }
-    :courseinstructor (stochastics -> smith)
+    :courseinstructor (stochastics -> smith):courseinstructor (stochastics -> smith)
     :courseinstructor (stochastics -> meyer)
     :coursetype (stochastics -> lecturetype)
     stochroom:courseroom(stochastics -> auditorium2)
