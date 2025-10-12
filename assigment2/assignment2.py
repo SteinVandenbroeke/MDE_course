@@ -4,7 +4,7 @@ mm_rgp = """
         lower_cardinality = 1;
         upper_cardinality = 1;
         constraint = ```
-            get_slot_value(this, "lives") > 0
+            get_slot_value(this, "lives") >= 0
         ```;
     }
     
