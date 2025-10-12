@@ -45,10 +45,18 @@ mm_rgp = """
         abstract=True;
     }
     
-    Key:Class
+    Key:Class {
+        constraint = ```
+            len(get_incoming(this, "DoorToKey")) == 1
+        ```;
+    }
     :Inheritance (Key -> Item)
     
-    Objective:Class
+    Objective:Class {
+        constraint = ```
+            get_slot_value(this, "points") <= 100
+        ```;
+    }
     :Inheritance (Objective -> Item)
     
     Objective_points:AttributeLink (Objective -> Integer) {
@@ -80,8 +88,8 @@ mm_rgp = """
             
             level0 = get_incoming(tile0, "LevelToTile")
             level1 = get_incoming(tile1, "LevelToTile")
-            
-            level0 == level1                     
+
+            level0 == level1
         ```;
     }
     
@@ -115,7 +123,8 @@ mm_rgp = """
     }
     
     
-     ### Global Constraints ###
+    ### Global Constraints ###
+
 
     AllObjectivesPointsUnder100:GlobalConstraint {
         constraint = ```
@@ -170,14 +179,13 @@ comform_m = """
    L2_T5:LevelToTile (L2 -> D1)
    
    H_T0:HeroTile (H -> T1)
-   
-   K:Key
-   
-   T2_K:StandardToTileItem (T2 -> K)
-   
-   D0_K:DoorToKey (D0 -> K)
-   
-   D1_K:DoorToKey (D1 -> K)
+
+   K0:Key
+   K1:Key
+   T2_K0:StandardToTileItem (T2 -> K0)
+   T3_K1:StandardToTileItem (T3 -> K1)
+   D0_K0:DoorToKey (D0 -> K0)
+   D1_K1:DoorToKey (D1 -> K1)
    
    O1:Objective{
         points = 50;
@@ -188,6 +196,64 @@ comform_m = """
         points = 50;
    }
 """
+
+nonconform_m = """
+    W:World
+
+    H:Hero{
+        lives = 10;
+    }
+
+    L1:Level{
+        name = "level1";
+    }
+
+    L2:Level{
+        name = "level2";
+    }
+
+    W_L1:WorldToLevel (W -> L1)
+    W_L2:WorldToLevel (W -> L2)
+
+    T1:Trap
+    T2:StandardTile
+    T3:StandardTile
+    T4:Obstacle
+    D0:Door
+    D1:Door
+
+    D0_D1:DoorToDoor (D0 -> D1)
+    D1_D0:DoorToDoor (D1 -> D0)
+
+    L1_T1:LevelToTile (L1 -> T1)
+    L1_T2:LevelToTile (L1 -> T2)
+    L1_T3:LevelToTile (L1 -> T3)
+    L1_T4:LevelToTile (L1 -> T4)
+    L1_D0:LevelToTile (L1 -> D0)
+    L1_D1:LevelToTile (L1 -> D1)
+
+    L2_T1:LevelToTile (L2 -> T1)
+    L2_T2:LevelToTile (L2 -> T2)
+    L2_T3:LevelToTile (L2 -> T3)
+    L2_T4:LevelToTile (L2 -> T4)
+
+    H_T0:HeroTile (H -> T1)
+    H_T1:HeroTile (H -> T2)
+
+    K:Key
+    T2_K:StandardToTileItem (T2 -> K)
+    D0_K:DoorToKey (D0 -> K)
+    D1_K:DoorToKey (D1 -> K)
+
+    O1:Objective{
+        points = 60;
+    }
+
+    O2:Objective{
+        points = 60;
+    }
+"""
+
 
 
 from state.devstate import DevState
@@ -207,15 +273,30 @@ print("Parsing MM")
 mm = parser.parse_od(state, m_text=mm_rgp, mm=mmm)
 print("Done")
 
-print("Parsing Model")
+print("Parsing Model (Conforming model)")
 m = parser.parse_od(state, m_text=comform_m, mm=mm)
 print("Done")
 
-print("Valid?")
+print("Parsing Model (Non-conforming model)")
+non_m = parser.parse_od(state, m_text=nonconform_m, mm=mm)
+print("Done")
+
+print("Valid? (Conforming model)")
 conf = Conformance(state, m, mm)
 print(render_conformance_check_result(conf.check_nominal()))
+
+print("Valid? (Non-conforming model)")
+conf_2 = Conformance(state, non_m, mm)
+print(render_conformance_check_result(conf_2.check_nominal()))
 
 uml = plantuml.render_package("Courses Meta-model", plantuml.render_class_diagram(state, mm))
 uml += plantuml.render_package("Courses Model", plantuml.render_object_diagram(state, m, mm))
 uml += plantuml.render_trace_conformance(state, m, mm)
+print("UML (Conforming):")
 print(make_url(uml))
+
+uml_2 = plantuml.render_package("Courses Meta-model", plantuml.render_class_diagram(state, mm))
+uml_2 += plantuml.render_package("Courses Model", plantuml.render_object_diagram(state, non_m, mm))
+uml_2 += plantuml.render_trace_conformance(state, non_m, mm)
+print("UML (Non-conforming):")
+print(make_url(uml_2))
