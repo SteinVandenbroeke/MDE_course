@@ -78,19 +78,11 @@ mm_rgp = """
     
     LevelToTile:Association (Level -> Tile) {
         target_lower_cardinality = 1;
+        source_upper_cardinality = 1;
     }
     
     TileToTile:Association (Tile -> Tile) {
         target_upper_cardinality = 4;
-        constraint = ```
-            tile0 = get_source(this)
-            tile1 = get_target(this)
-            
-            level0 = get_incoming(tile0, "LevelToTile")
-            level1 = get_incoming(tile1, "LevelToTile")
-
-            level0 == level1
-        ```;
     }
     
     TileToTile_direction:AttributeLink (TileToTile -> String) {
@@ -171,12 +163,35 @@ comform_m = """
    L1_T3:LevelToTile (L1 -> T3)
    L1_T4:LevelToTile (L1 -> T4)
    L1_T5:LevelToTile (L1 -> D0)
+   
+   T1_T2:TileToTile (T1 -> T2){
+    direction = "up";
+   }
 
-   L2_T1:LevelToTile (L2 -> T1)
-   L2_T2:LevelToTile (L2 -> T2)
-   L2_T3:LevelToTile (L2 -> T3)
-   L2_T4:LevelToTile (L2 -> T4)
-   L2_T5:LevelToTile (L2 -> D1)
+   T5:StandardTile
+   T6:StandardTile
+   T7:StandardTile
+   
+   L2_T5:LevelToTile (L2 -> T5)
+   L2_T6:LevelToTile (L2 -> T6)
+   L2_T7:LevelToTile (L2 -> T7)
+   L2_D1:LevelToTile (L2 -> D1)
+   
+   T5_T6:TileToTile (T5 -> T6){
+    direction = "up";
+   }
+   
+   T6_T5:TileToTile (T6 -> T5){
+    direction = "down";
+   }
+   
+   T5_T7:TileToTile (T5 -> T7){
+    direction = "left";
+   }
+   
+   T7_T5:TileToTile (T7 -> T5){
+    direction = "right";
+   }
    
    H_T0:HeroTile (H -> T1)
 
