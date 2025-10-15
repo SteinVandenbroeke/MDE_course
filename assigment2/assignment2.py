@@ -27,6 +27,15 @@ mm_rgp = """
     
     Tile:Class{
         abstract=True;
+        constraint = ```
+            no_dubble_directions = True
+            items = set()
+            for tileItem in get_incoming(this, "TileToTile"):
+                if get_slot_value(tileItem, "direction") in items:
+                    no_dubble_directions = False;
+                items.add(get_slot_value(tileItem, "direction"))
+            no_dubble_directions
+        ```;
     }
     
     StandardTile:Class
@@ -98,6 +107,8 @@ mm_rgp = """
     DoorToKey:Association (Door -> Key) {
         target_lower_cardinality = 1;
         target_upper_cardinality = 1;
+        source_lower_cardinality = 1;
+        source_upper_cardinality = 1;
     }
     
     DoorToDoor:Association (Door -> Door){
@@ -234,6 +245,15 @@ nonconform_m = """
     T2:StandardTile
     T3:StandardTile
     T4:Obstacle
+    
+    T1_T2:TileToTile (T1 -> T2){
+        direction = "right";
+    }
+    
+    T3_T2:TileToTile (T3 -> T2){
+        direction = "right";
+    }
+    
     D0:Door
     D1:Door
 
