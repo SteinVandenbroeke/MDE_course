@@ -92,6 +92,12 @@ mm_rgp = """
     
     TileToTile:Association (Tile -> Tile) {
         target_upper_cardinality = 4;
+        constraint = ```
+            tile0 = get_source(this)
+            tile1 = get_target(this)
+            
+            get_source(get_incoming(tile0, "LevelToTile")[0]) == get_source(get_incoming(tile1, "LevelToTile")[0])
+        ```;
     }
     
     TileToTile_direction:AttributeLink (TileToTile -> String) {
