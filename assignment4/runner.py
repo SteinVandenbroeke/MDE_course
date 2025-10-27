@@ -11,7 +11,16 @@ from assignment4 import get_actions, termination_condition
 
 def render_text(od: ODAPI):
     # TODO: Implement, so a short description of the current state is printed
-    txt = ""
+    _, hero = od.get_all_instances("Hero")[0]
+    currentTile = od.get_target(od.get_outgoing(hero, "CreaturesTile")[0])
+    currentLevel = od.get_source(od.get_incoming(currentTile, "LevelToTile")[0])
+    inventory = [f"{od.get_type_name(od.get_target(item))}: {od.get_name(od.get_target(item))}" for item in od.get_outgoing(hero, "HeroCollectsItems")]
+    word = od.get_source(od.get_incoming(currentLevel, "WorldToLevel")[0])
+    world_state = od.get_source(od.get_incoming(word, "WorldStateToWorld")[0])
+    collected_points = od.get_slot_value(world_state, "collectedpoints")
+
+
+    txt = f"Location: {od.get_type_name(currentTile)} {od.get_name(currentTile)} | lives:  {od.get_slot_value(hero, "lives")} | Inventory: {inventory} | Levels: {od.get_name(currentLevel)} | Total collected points: {collected_points}"
     return txt
 
 

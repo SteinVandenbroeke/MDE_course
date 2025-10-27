@@ -234,7 +234,7 @@ m_rpg_def = """
     
     
     H:Hero{
-        lives = 10;
+        lives = 3;
     }
     
     M:Monster{
@@ -255,60 +255,92 @@ m_rpg_def = """
     
     W_L1:WorldToLevel (W -> L1)
     W_L2:WorldToLevel (W -> L2)
+    
+    # Level 1: Start tile is T2
+    
+    # T1 T2 T3
+    #    T5 D0
 
    T1:Trap
    T2:StandardTile
    T3:StandardTile
    T4:Obstacle
+   T5:StandardTile
    D0:Door
    D1:Door
 
    D0_D1:DoorToDoor (D0 -> D1)
    D0_D2:DoorToDoor (D1 -> D0)
-
+   
    L1_T1:LevelToTile (L1 -> T1)
    L1_T2:LevelToTile (L1 -> T2)
    L1_T3:LevelToTile (L1 -> T3)
    L1_T4:LevelToTile (L1 -> T4)
-   L1_T5:LevelToTile (L1 -> D0)
+   L1_T5:LevelToTile (L1 -> T5)
+   L1_D0:LevelToTile (L1 -> D0)
    
    T1_T2:TileToTile (T1 -> T2){
-    direction = "up";
+    direction = "right";
    }
-
-   T5:StandardTile
-   T6:StandardTile
-   T7:StandardTile
-   
-   L2_T5:LevelToTile (L2 -> T5)
-   L2_T6:LevelToTile (L2 -> T6)
-   L2_T7:LevelToTile (L2 -> T7)
-   L2_D1:LevelToTile (L2 -> D1)
-   
-   T5_T6:TileToTile (T5 -> T6){
-    direction = "up";
-   }
-   
-   T6_T5:TileToTile (T6 -> T5){
-    direction = "down";
-   }
-   
-   T5_T7:TileToTile (T5 -> T7){
+   T2_T1:TileToTile (T2 -> T1){
     direction = "left";
    }
    
-   T7_T5:TileToTile (T7 -> T5){
-    direction = "right";
+   T1_T4:TileToTile (T1 -> T4){
+    direction = "down";
+   }
+   T4_T1:TileToTile (T4 -> T1){
+    direction = "up";
    }
    
-   H_T0:CreaturesTile (H -> T1)
-   M_T0:CreaturesTile (M -> T1)
-   M2_T0:CreaturesTile (M2 -> T5)
+   T2_T5:TileToTile (T2 -> T5){
+    direction = "down";
+   }
+   T5_T2:TileToTile (T5 -> T2){
+    direction = "up";
+   }
+   
+   T2_T3:TileToTile (T2 -> T3){
+    direction = "right";
+   }
+   T3_T2:TileToTile (T3 -> T2){
+    direction = "left";
+   }
+   
+   T3_D0:TileToTile (T3 -> D0){
+    direction = "down";
+   }
+   D0_T3:TileToTile (D0 -> T3){
+    direction = "up";
+   }
+
+
+   T5_D0:TileToTile (T5 -> D0){
+    direction = "right";
+   }
+   D0_T5:TileToTile (D0 -> T5){
+    direction = "left";
+   }
+
+
+   T6:StandardTile
+   T7:StandardTile
+   T8:StandardTile
+   
+   L2_T6:LevelToTile (L2 -> T6)
+   L2_T7:LevelToTile (L2 -> T7)
+   L2_T8:LevelToTile (L2 -> T8)
+   L2_D1:LevelToTile (L2 -> D1)
+
+   
+   H_T0:CreaturesTile (H -> T2)
+   M_T0:CreaturesTile (M -> T3)
+   M2_T0:CreaturesTile (M2 -> T6)
 
    K0:Key
    K1:Key
-   T2_K0:StandardToTileItem (T2 -> K0)
-   T3_K1:StandardToTileItem (T3 -> K1)
+   T2_K0:StandardToTileItem (T3 -> K0)
+   T3_K1:StandardToTileItem (T7 -> K1)
    D0_K0:DoorToKey (D0 -> K0)
    D1_K1:DoorToKey (D1 -> K1)
    
@@ -317,9 +349,7 @@ m_rpg_def = """
    }
    
    
-   O2:Objective{
-        points = 50;
-   }
+   T5_O1:StandardToTileItem (T5 -> O1)
 """
 
 nonconform_m = """
@@ -380,10 +410,6 @@ nonconform_m = """
     D1_K:DoorToKey (D1 -> K)
 
     O1:Objective{
-        points = 60;
-    }
-
-    O2:Objective{
         points = 60;
     }
 """
