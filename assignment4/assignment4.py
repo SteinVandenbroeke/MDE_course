@@ -11,6 +11,14 @@ def precondition_creature_alive(od: ODAPI, creature: str):
 
 def precondition_can_use_door(od: ODAPI, door: str):
     # TODO: Check whether the door can be used by the Hero: Do they have the matching Key?
+
+    hero = od.get_all_instances("Hero")[0]
+    hero_items = od.get_outgoing(hero, "HeroCollectsItems")
+    door_key = od.get_outgoing(hero, "DoorToKey")
+
+    return door_key in hero_items
+
+
     raise NotImplementedError
 
 
