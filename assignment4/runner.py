@@ -21,18 +21,24 @@ def render_text(od: ODAPI):
     world_state = od.get_source(od.get_incoming(word, "WorldStateToWorld")[0])
     collected_points = od.get_slot_value(world_state, "collectedpoints")
 
-    # Monsters info
-    monsters_info = []
+    # Monsters info 
+    monsters_blocks = []
     for _, monster in od.get_all_instances("Monster"):
         monsterTile  = od.get_target(od.get_outgoing(monster, "CreaturesTile")[0])
         monsterLevel = od.get_source(od.get_incoming(monsterTile, "LevelToTile")[0])
-        monsterLives = od.get_slot_value(monster, 'lives')
-        monsters_info.append(
-            f"{od.get_name(monster)} (Lives: {monsterLives}) -> "
-            f"Tile {od.get_name(monsterTile)} | Level {od.get_name(monsterLevel)}"
+        monsterLives = od.get_slot_value(monster, "lives")
+        monsterStatus = "Alive" if monsterLives > 0 else "Defeated"
+
+        monsters_blocks.append(
+            f"  Name: {od.get_name(monster)}\n"
+            f"  Location: {od.get_type_name(monsterTile)} {od.get_name(monsterTile)}\n"
+            f"  Lives: {monsterLives}\n"
+            f"  Level: {od.get_name(monsterLevel)}\n"
+            f"  Status: {monsterStatus}\n"
+            "  ====================="
         )
 
-    monsters_text = "\n".join(monsters_info) if monsters_info else "    - None"
+    monsters_text = "\n".join(monsters_blocks) if monsters_blocks else "  - None"
 
     txt = (
         "=== HERO STATUS ===\n"
@@ -43,10 +49,11 @@ def render_text(od: ODAPI):
         f"Total collected points: {collected_points}\n"
         "====================\n\n"
         "=== MONSTERS STATUS ===\n"
-        f"Monsters:\n{monsters_text}"
+        f"{monsters_text}"
     )
 
     return txt
+
 
 
 state = DevState()

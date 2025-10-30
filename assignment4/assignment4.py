@@ -21,7 +21,6 @@ def precondition_can_use_door(od: ODAPI, door: str):
             return True
 
     return False
-    raise NotImplementedError
 
 
 def precondition_creature_can_move(od: ODAPI, target_tile: str):
@@ -31,19 +30,22 @@ def precondition_creature_can_move(od: ODAPI, target_tile: str):
     return target_tile != "Obstacle"
 
 
-    raise NotImplementedError
-
-
 def precondition_fight_possible(od: ODAPI):
     # TODO: Check whether two creatures are on the same Tile so fighting is possible in the current state
 
-    all_creatures = od.get_all_instances("Creatures")
-    for _, creature in all_creatures:
-        if len(od.get_outgoing(creature, "CreaturesTile")) >= 2:
-            return True
-    return False
+    # Hero tile
+    _, hero = od.get_all_instances("Hero")[0]
+    hero_tile = od.get_target(od.get_outgoing(hero, "CreaturesTile")[0])
 
-    raise NotImplementedError
+    # Is there any monster alive? (in the same tile)
+    for _, monster in od.get_all_instances("Monster"):
+        if od.get_slot_value(monster, "lives") <= 0:
+            continue
+        monster_tile = od.get_target(od.get_outgoing(monster, "CreaturesTile")[0])
+        if monster_tile == hero_tile:
+            return True
+
+    return False
 
 
 def mark_as_moved(od: ODAPI, creature_name: str):
@@ -62,7 +64,7 @@ def action_use_door(od: ODAPI, door: str):
 
     od.delete(od.get_outgoing(hero, "CreaturesTile")[0])
     od.create_link("H_T", "CreaturesTile", hero, to_door_item)
-    mark_as_moved(od, od.get_name(hero))  # <- agregue esto
+    mark_as_moved(od, od.get_name(hero))
     return [f"Going through door, you now entered level {od.get_name(level)}"]
 
 
@@ -75,12 +77,7 @@ def action_move_monster(od: ODAPI, monster: str, target_tile: str):
     od.create_link(f"{od.get_name(monster_item)}_{od.get_name(target_item)}", "CreaturesTile", monster_item, target_item)
 
 def action_move_monster_random(od: ODAPI, monster_name: str):
-    """
-        Move a monster to a random valid adjacent Tile based on TileToTile links
-        (used during the 'Listening for monsters' phase).
-    """
-    import random
-
+    # Moves a monster to a random valid adjacent tile (Listening phase). No combat.
     monster_item = od.get(monster_name)
     current_tile = od.get_target(od.get_outgoing(monster_item, "CreaturesTile")[0])
 
@@ -95,15 +92,12 @@ def action_move_monster_random(od: ODAPI, monster_name: str):
         return [f"{od.get_name(monster_item)} has no valid adjacent tiles to move."]
 
     link, chosen_tile = random.choice(valid_targets)
-    
     try:
         direction = od.get_slot_value(link, "direction")
     except Exception:
         direction = "unknown"
 
-
     action_move_monster(od, od.get_name(monster_item), od.get_name(chosen_tile))
-
     mark_as_moved(od, od.get_name(monster_item))
 
     return [f"{od.get_name(monster_item)} moved {direction} to tile {od.get_name(chosen_tile)} ({od.get_type_name(chosen_tile)})"]
@@ -142,11 +136,11 @@ def action_move_hero(od: ODAPI, target_tile_name: str):
                     print(od.get_slot_value(world_state, "collectedpoints"))
                     print(od.get_slot_value(tile_item, "points"))
                     od.set_slot_value(world_state, "collectedpoints",  od.get_slot_value(world_state, "collectedpoints") + od.get_slot_value(tile_item, "points"))
-                    return_list.append(f"Moved hero {od.get_type_name(hero)} to tile {od.get_name(target_tile)} of type {od.get_type_name(target_tile)}")
+                    return_list.append("\n"f"Moved hero {od.get_type_name(hero)} to tile {od.get_name(target_tile)} of type {od.get_type_name(target_tile)}""\n")
         case "Trap":
             #remove a life
             od.set_slot_value(hero, "lives", od.get_slot_value(hero, "lives") - 1)
-            return_list.append(f"Hero step on a trap and lost a life, {od.get_slot_value(hero, 'lives')} remaining lifes")
+            return_list.append("\n"f"Hero step on a trap and lost a life, {od.get_slot_value(hero, 'lives')} remaining lives""\n")
 
     return return_list
 
@@ -157,16 +151,30 @@ def action_fight(od: ODAPI, hero_name: str, monster_name: str):
     monster = od.get(monster_name)
 
     hero_lives = od.get_slot_value(hero, "lives")
-    monster_lives = od.get_slot_value(hero, "lives")
+    monster_lives = od.get_slot_value(monster, "lives")
 
-    if monster_lives > hero_lives:
+    if hero_lives > monster_lives:
+        od.set_slot_value(monster, "lives", monster_lives - 1)
+        result = "\nHero won the fight :)"
+    elif monster_lives > hero_lives:
         od.set_slot_value(hero, "lives", hero_lives - 1)
-        return ["Monster won the fight :(", f"Hero lifes: {od.get_slot_value(hero, 'lives')}", f"Monster lifes: {od.get_slot_value(monster, 'lives')}"]
+        result = "Monster won the fight :("
+    else:
+        result = "\nIt's a tie.\n"
 
-    od.set_slot_value(hero, "lives", hero_lives - 1)
-    return ["Hero won the fight", f"Hero lifes: {od.get_slot_value(hero, 'lives')}", f"Monster lifes: {od.get_slot_value(monster, 'lives')}"]
+    # Advance time
+    _, clock = od.get_all_instances("Clock")[0]
+    od.set_slot_value(clock, "time", od.get_slot_value(clock, "time") + 1)
 
-    raise NotImplementedError
+    #reset creatures moved state
+    for _, creature_state in od.get_all_instances("CreatureState"):
+        od.set_slot_value(creature_state, "moved", False)
+
+    return [
+        result,
+        f"Hero lives: {od.get_slot_value(hero, 'lives')}",
+        f"Monster lives: {od.get_slot_value(monster, 'lives')}\n",
+    ]
 
 
 def action_advance_time(od: ODAPI):
@@ -185,16 +193,20 @@ def get_actions(od: ODAPI):
     """
         Retrieve the actions that are possible in the current state
     """
+    # Dictionary mapping "Action text" to the (partial) function that is executed
     actions = {}
 
+    # TODO: Determine the currently possible actions and add them to the actions dictionary
+
+    # Hero info
     _, hero = od.get_all_instances("Hero")[0]
     currentTile = od.get_target(od.get_outgoing(hero, "CreaturesTile")[0])
 
     hero_state = od.get_source(od.get_incoming(hero, "CreatureStateToCreature")[0])
     hero_moved = od.get_slot_value(hero_state, "moved")
 
+    # Hero movements
     if not hero_moved:
-        # Hero movement action
         possibleTileMoves = od.get_outgoing(currentTile, "TileToTile")
         for possible_move_tile_to_tile in possibleTileMoves:
             possible_move = od.get_target(possible_move_tile_to_tile)
@@ -209,7 +221,7 @@ def get_actions(od: ODAPI):
         if len(actions) > 0:
             return make_actions_pure(actions.items(), od)
 
-    # Monster listening 
+    # Listening for monsters
     hero_level = od.get_source(od.get_incoming(currentTile, "LevelToTile")[0])
     monster_to_move = None
     for _, monster in od.get_all_instances("Monster"):
@@ -217,7 +229,6 @@ def get_actions(od: ODAPI):
             monster_state = od.get_source(od.get_incoming(monster, "CreatureStateToCreature")[0])
             if od.get_slot_value(monster_state, "moved"):
                 continue
-
             monster_tile = od.get_target(od.get_outgoing(monster, "CreaturesTile")[0])
             monster_level = od.get_source(od.get_incoming(monster_tile, "LevelToTile")[0])
             if monster_level == hero_level:
@@ -225,17 +236,38 @@ def get_actions(od: ODAPI):
                 break
 
     if monster_to_move is not None:
-        actions["Listening for monsters..."] = partial(action_move_monster_random, monster_name=od.get_name(monster_to_move))
+        actions["Listening for monsters..."] = partial(
+            action_move_monster_random,
+            monster_name=od.get_name(monster_to_move)
+        )
         return make_actions_pure(actions.items(), od)
 
-    # Fight
+    #fight after listening
     if precondition_fight_possible(od):
-        actions["Fight!"] = action_fight
-        return make_actions_pure(actions.items(), od)
+        _, hero = od.get_all_instances("Hero")[0]
+        currentTile = od.get_target(od.get_outgoing(hero, "CreaturesTile")[0])
 
-    # Advance time
+        same_tile_monster = None
+        for _, monster in od.get_all_instances("Monster"):
+            if od.get_slot_value(monster, "lives") <= 0:
+                continue
+            monster_tile = od.get_target(od.get_outgoing(monster, "CreaturesTile")[0])
+            if monster_tile == currentTile:
+                same_tile_monster = monster
+                break
+
+        if same_tile_monster is not None:
+            actions["Fight!"] = partial(
+                action_fight,
+                hero_name=od.get_name(hero),
+                monster_name=od.get_name(same_tile_monster)
+            )
+            return make_actions_pure(actions.items(), od)
+
+    # If no other action is possible, add the (one and only) choice to advance time
     actions["Continue..."] = action_advance_time
     return make_actions_pure(actions.items(), od)
+
 
 
 
@@ -259,7 +291,7 @@ def termination_condition(od: ODAPI):
     # Otherwise, return a string with the reason for termination
     hero_name, hero = od.get_all_instances("Hero")[0]
     if not precondition_creature_alive(od, hero_name):
-        return "You are out of lives :("
+        return "\nYou are out of lives :(\n"
 
     #All objectives are collected
     objective_count = False
@@ -268,7 +300,8 @@ def termination_condition(od: ODAPI):
 
     print("Objective counts", len(od.get_all_instances("Objective")), objective_count)
     if len(od.get_all_instances("Objective")) == objective_count:
-        return "All objectives found! :)"
+        return "\nAll objectives found! :)\n"
 
 
     return None
+
