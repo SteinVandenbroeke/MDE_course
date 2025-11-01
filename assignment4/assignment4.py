@@ -287,21 +287,22 @@ def make_actions_pure(actions, od):
 
 
 def termination_condition(od: ODAPI):
-    # TODO: implement the termination conditions, returning None means no termination condition is satisfied
-    # Otherwise, return a string with the reason for termination
-    hero_name, hero = od.get_all_instances("Hero")[0]
-    if not precondition_creature_alive(od, hero_name):
+    # Hero without lives
+    _, hero = od.get_all_instances("Hero")[0]
+    if od.get_slot_value(hero, "lives") <= 0:
         return "\nYou are out of lives :(\n"
 
-    #All objectives are collected
-    objective_count = False
-    for item in od.get_outgoing(hero, "HeroCollectsItems"):
-        objective_count += od.get_type_name(od.get_target(item)) == "Objective" #Add one to objective count if objective
+    # End if objectives exist and all were collected
+    collected = 0
+    for link in od.get_outgoing(hero, "HeroCollectsItems"):
+        if od.get_type_name(od.get_target(link)) == "Objective":
+            collected += 1
 
-    print("Objective counts", len(od.get_all_instances("Objective")), objective_count)
-    if len(od.get_all_instances("Objective")) == objective_count:
+    total = len(od.get_all_instances("Objective"))
+    if total > 0 and collected == total:
         return "\nAll objectives found! :)\n"
 
-
+    # continue
     return None
+
 
