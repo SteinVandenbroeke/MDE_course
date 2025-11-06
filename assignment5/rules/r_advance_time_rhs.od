@@ -1,0 +1,10 @@
+theClock:RAM_Clock {
+  RAM_time = `get_value(this) + 1`;
+}
+
+:GlobalCondition {
+    condition = ```
+        for _, state in get_all_instances("CreatureState"):
+            set_slot_value(state, "moved", False)
+    ```;
+}
