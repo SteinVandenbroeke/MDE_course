@@ -1,0 +1,15 @@
+creatureTile:RAM_Tile
+
+ourCreature:RAM_Creatures
+
+moveToTile:RAM_StandardTile
+
+creatureOnTile:RAM_CreaturesTile (ourCreature -> creatureTile)
+
+areAdjacent:RAM_TileToTile (creatureTile -> moveToTile)
+
+heroNotMoved:RAM_CreatureState {
+    RAM_moved = `False`;
+}
+
+
