@@ -1,7 +1,7 @@
 creatureTile:RAM_Tile
 
 ourHero:RAM_Hero {
-    RAM_lives = 'get_value(this) - 1';
+    RAM_lives = `get_value(this) - 1`;
 }
 
 moveToTile:RAM_Trap

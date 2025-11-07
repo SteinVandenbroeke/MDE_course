@@ -1,7 +1,7 @@
 creatureTile:RAM_Tile
 
-ourHero:RAM_Hero{
-    RAM_lives = 'get_value(this) == get_value(this)';
+ourHero:RAM_Hero {
+    RAM_lives = `get_value(this)`;
 }
 
 moveToTile:RAM_Trap

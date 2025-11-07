@@ -9,8 +9,48 @@ from assignment5 import get_rules, TerminationCondition
 
 
 def render_text(od: ODAPI):
-    # TODO: put your rendering function here
-    txt = ""
+    # TODO: Implement, so a short description of the current state is printed
+
+    # Hero info
+    _, hero = od.get_all_instances("Hero")[0]
+    currentTile = od.get_target(od.get_outgoing(hero, "CreaturesTile")[0])
+    currentLevel = od.get_source(od.get_incoming(currentTile, "LevelToTile")[0])
+    inventory = [f"{od.get_type_name(od.get_target(item))}: {od.get_name(od.get_target(item))}" for item in od.get_outgoing(hero, "HeroCollectsItems")]
+    word = od.get_source(od.get_incoming(currentLevel, "WorldToLevel")[0])
+    world_state = od.get_source(od.get_incoming(word, "WorldStateToWorld")[0])
+    collected_points = od.get_slot_value(world_state, "collectedpoints")
+
+    # Monsters info
+    monsters_blocks = []
+    for _, monster in od.get_all_instances("Monster"):
+        monsterTile  = od.get_target(od.get_outgoing(monster, "CreaturesTile")[0])
+        monsterLevel = od.get_source(od.get_incoming(monsterTile, "LevelToTile")[0])
+        monsterLives = od.get_slot_value(monster, "lives")
+        monsterStatus = "Alive" if monsterLives > 0 else "Defeated"
+
+        monsters_blocks.append(
+            f"  Name: {od.get_name(monster)}\n"
+            f"  Location: {od.get_type_name(monsterTile)} {od.get_name(monsterTile)}\n"
+            f"  Lives: {monsterLives}\n"
+            f"  Level: {od.get_name(monsterLevel)}\n"
+            f"  Status: {monsterStatus}\n"
+            "  ====================="
+        )
+
+    monsters_text = "\n".join(monsters_blocks) if monsters_blocks else "  - None"
+
+    txt = (
+        "=== HERO STATUS ===\n"
+        f"Location: {od.get_type_name(currentTile)} {od.get_name(currentTile)}\n"
+        f"Lives: {od.get_slot_value(hero, 'lives')}\n"
+        f"Inventory: {inventory}\n"
+        f"Level: {od.get_name(currentLevel)}\n"
+        f"Total collected points: {collected_points}\n"
+        "====================\n\n"
+        "=== MONSTERS STATUS ===\n"
+        f"{monsters_text}"
+    )
+
     return txt
 
 
