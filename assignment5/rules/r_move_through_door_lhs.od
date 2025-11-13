@@ -1,0 +1,25 @@
+currentDoor:RAM_Door
+
+connectedDoor:RAM_Door
+
+hero:RAM_Hero
+
+key:RAM_Key
+
+heroOnTile:RAM_CreaturesTile (hero -> currentDoor)
+
+currentLevel:RAM_Level
+
+playingOnCurrentLevel:RAM_LevelToTile(currentLevel -> currentDoor)
+
+doorsAreConnected:RAM_DoorToDoor(currentDoor -> connectedDoor)
+
+doorToKey:RAM_DoorToKey(currentDoor -> key)
+
+heroToKey:RAM_HeroCollectsItems(hero -> key)
+
+moved:RAM_CreatureState {
+    RAM_moved = `get_value(this) == False`;
+}
+
+hero_state_to_creature:RAM_CreatureStateToCreature (moved -> hero)

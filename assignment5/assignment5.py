@@ -23,9 +23,12 @@ def get_rules(current_state, rt_mm):
                          ['advance_time'])
 
     rules_hero_move = load_rules(current_state, get_filename, rt_mm_ramified,
-                         ['hero_move_to_standard_tile', 'hero_move_to_trap_tile'])
+                         ['hero_move_to_standard_tile_no_item', 'hero_move_to_standard_tile_with_item', 'hero_move_to_trap_tile', "hero_move_to_door_tile", "move_through_door"])
 
-    return PriorityActionGenerator(matcher_rewriter, [rules_hero_move])
+    reset_hero_move = load_rules(current_state, get_filename, rt_mm_ramified,
+                         ['reset_hero_move_TODO'])
+
+    return PriorityActionGenerator(matcher_rewriter, [rules_hero_move, reset_hero_move])
 
 
 class TerminationCondition:

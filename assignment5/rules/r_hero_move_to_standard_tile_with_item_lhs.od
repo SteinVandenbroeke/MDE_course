@@ -4,7 +4,7 @@ ourHero:RAM_Hero
 
 moveToTile:RAM_StandardTile
 
-heroMovedTile:RAM_CreaturesTile (ourHero -> moveToTile)
+heroOnTile:RAM_CreaturesTile (ourHero -> creatureTile)
 
 currentLevel:RAM_Level
 
@@ -13,7 +13,10 @@ Playing_on_current_level:RAM_LevelToTile(currentLevel -> creatureTile)
 areAdjacent:RAM_TileToTile (creatureTile -> moveToTile)
 
 heroNotMoved:RAM_CreatureState {
-    RAM_moved = `True`;
+    RAM_moved = `get_value(this) == False`;
 }
 
 hero_state_to_creature:RAM_CreatureStateToCreature (heroNotMoved -> ourHero)
+
+tile_item:RAM_Item
+has_item:RAM_StandardToTileItem (moveToTile -> tile_item)

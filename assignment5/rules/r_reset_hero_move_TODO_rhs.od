@@ -1,0 +1,3 @@
+heroNotMoved:RAM_CreatureState {
+    RAM_moved = `False`;
+}

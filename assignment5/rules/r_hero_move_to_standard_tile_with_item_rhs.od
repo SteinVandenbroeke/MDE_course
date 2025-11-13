@@ -17,3 +17,6 @@ heroNotMoved:RAM_CreatureState {
 }
 
 hero_state_to_creature:RAM_CreatureStateToCreature (heroNotMoved -> ourHero)
+
+tile_item:RAM_Item
+hero_item:RAM_HeroCollectsItems (ourHero -> tile_item)

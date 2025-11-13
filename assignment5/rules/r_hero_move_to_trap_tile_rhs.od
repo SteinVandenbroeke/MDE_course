@@ -10,7 +10,7 @@ heroOnTile:RAM_CreaturesTile (ourHero -> moveToTile)
 
 currentLevel:RAM_Level
 
-Playing_on_current_level:RAM_LevelToTile(currentLevel -> moveToTile)
+Playing_on_current_level:RAM_LevelToTile(currentLevel -> creatureTile)
 
 areAdjacent:RAM_TileToTile (creatureTile -> moveToTile)
 

@@ -2,13 +2,13 @@ creatureTile:RAM_Tile
 
 ourHero:RAM_Hero
 
-moveToTile:RAM_StandardTile
+moveToTile:RAM_Door
 
 heroMovedTile:RAM_CreaturesTile (ourHero -> moveToTile)
 
 currentLevel:RAM_Level
 
-Playing_on_current_level:RAM_LevelToTile(currentLevel -> creatureTile)
+Playing_on_current_level:RAM_LevelToTile(currentLevel -> moveToTile)
 
 areAdjacent:RAM_TileToTile (creatureTile -> moveToTile)
 
