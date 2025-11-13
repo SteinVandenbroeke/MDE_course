@@ -1,0 +1,4 @@
+moveToTile:RAM_StandardTile
+
+tile_item:RAM_Item
+has_item:RAM_StandardToTileItem (moveToTile -> tile_item)
