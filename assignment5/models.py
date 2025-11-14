@@ -238,7 +238,7 @@ m_rpg_def = """
     }
     
     M:Monster{
-        lives = 3;
+        lives = 10;
     }
     
     M2:Monster{

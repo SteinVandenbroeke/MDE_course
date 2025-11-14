@@ -1,10 +1,10 @@
 creatureTile:RAM_Tile
 
-ourMonster:RAM_Monster { }
-
-ourHero:RAM_Hero {
-    condition = `set_slot_value(matched("ourMonster"), "lives", max(get_slot_value(matched("ourMonster"), "lives") - 1, 0))`;
+ourMonster:RAM_Monster { 
+    RAM_lives = `get_value(this) - 1`;
 }
+
+ourHero:RAM_Hero { }
 
 heroOnTile:RAM_CreaturesTile (ourHero -> creatureTile)
 monsterOnTile:RAM_CreaturesTile (ourMonster -> creatureTile)

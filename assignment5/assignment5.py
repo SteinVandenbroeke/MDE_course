@@ -24,12 +24,9 @@ def get_rules(current_state, rt_mm):
     
     rules_monster_move = load_rules(current_state, get_filename, rt_mm_ramified,
                                  ['monster_move'])
-
-    fight_hero_wins = load_rules(current_state, get_filename, rt_mm_ramified,
-                                 ['hero_wins'])
     
-    fight_monster_wins = load_rules(current_state, get_filename, rt_mm_ramified,
-                                 ['monster_wins'])
+    fight = load_rules(current_state, get_filename, rt_mm_ramified, 
+                       ['hero_wins', 'monster_wins', 'tie'])
 
     rules_hero_move = load_rules(current_state, get_filename, rt_mm_ramified,
                          ['hero_move_to_standard_tile_no_item', 'hero_move_to_standard_tile_with_item', 'hero_move_to_trap_tile', "hero_move_to_door_tile", "move_through_door"])
@@ -37,8 +34,7 @@ def get_rules(current_state, rt_mm):
     reset_hero_move = load_rules(current_state, get_filename, rt_mm_ramified,
                          ['reset_hero_move_TODO'])
 
-    #return PriorityActionGenerator(matcher_rewriter, [rules_monster_move, rules_hero_move, reset_hero_move])
-    return PriorityActionGenerator(matcher_rewriter, [rules_monster_move, fight_hero_wins, fight_monster_wins, rules_hero_move, reset_hero_move])
+    return PriorityActionGenerator(matcher_rewriter, [rules_monster_move, fight, rules_hero_move, reset_hero_move])
 
 
 class TerminationCondition:
@@ -48,7 +44,11 @@ class TerminationCondition:
 
         # Dict in the format "cause": "pattern"
         patterns_cs = {
-            # TODO: Put the patterns for your termination conditions here
+            "Hero died: GAME OVER": """
+                anAccept:RAM_Hero {
+                    condition = `get_slot_value(this, "lives") <= 0`;
+                }
+                """,
         }
 
         self.patterns = {cause: parse_od(state, pattern_cs, self.rt_mm_ramified)
