@@ -49,6 +49,21 @@ class TerminationCondition:
                     condition = `get_slot_value(this, "lives") <= 0`;
                 }
                 """,
+            "The hero collected all the objectives: WINNER": """
+                anAccept:RAM_Hero {
+                    condition = ```
+                        collected = 0
+                        for link in get_outgoing(this, "HeroCollectsItems"):
+                            item = get_target(link)
+                            if get_type_name(item) == "Objective":
+                                collected += 1
+
+                        total = len(get_all_instances("Objective"))
+
+                        collected == total and total > 0
+                    ```;
+                }
+            """,
         }
 
         self.patterns = {cause: parse_od(state, pattern_cs, self.rt_mm_ramified)

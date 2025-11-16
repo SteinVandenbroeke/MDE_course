@@ -8,7 +8,7 @@ heroMovedTile:RAM_CreaturesTile (ourHero -> moveToTile)
 
 currentLevel:RAM_Level
 
-Playing_on_current_level:RAM_LevelToTile(currentLevel -> creatureTile)
+Playing_on_current_level:RAM_LevelToTile (currentLevel -> creatureTile)
 
 areAdjacent:RAM_TileToTile (creatureTile -> moveToTile)
 
@@ -20,3 +20,18 @@ hero_state_to_creature:RAM_CreatureStateToCreature (heroNotMoved -> ourHero)
 
 tile_item:RAM_Item
 hero_item:RAM_HeroCollectsItems (ourHero -> tile_item)
+
+world:RAM_World
+
+worldState:RAM_WorldState {
+    condition = ```
+        obj = matched("tile_item")
+        if get_type_name(obj) == "Objective":
+            current = get_slot_value(this, "collectedpoints")
+            pts = get_slot_value(obj, "points")
+            set_slot_value(this, "collectedpoints", current + pts)
+        True
+    ```;
+}
+
+worldStateToWorld:RAM_WorldStateToWorld (worldState -> world)

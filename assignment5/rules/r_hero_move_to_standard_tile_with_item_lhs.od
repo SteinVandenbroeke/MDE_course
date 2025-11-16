@@ -8,7 +8,7 @@ heroOnTile:RAM_CreaturesTile (ourHero -> creatureTile)
 
 currentLevel:RAM_Level
 
-Playing_on_current_level:RAM_LevelToTile(currentLevel -> creatureTile)
+Playing_on_current_level:RAM_LevelToTile (currentLevel -> creatureTile)
 
 areAdjacent:RAM_TileToTile (creatureTile -> moveToTile)
 
@@ -20,3 +20,7 @@ hero_state_to_creature:RAM_CreatureStateToCreature (heroNotMoved -> ourHero)
 
 tile_item:RAM_Item
 has_item:RAM_StandardToTileItem (moveToTile -> tile_item)
+
+world:RAM_World
+worldState:RAM_WorldState
+worldStateToWorld:RAM_WorldStateToWorld (worldState -> world)
