@@ -1,10 +1,12 @@
 creatureTile:RAM_Tile
 
+ourMonster:RAM_Monster {
+    RAM_lives = `get_value(this)`;
+}
+
 ourHero:RAM_Hero {
     condition = `get_slot_value(this, "lives") > get_slot_value(matched("ourMonster"), "lives")`;
 }
-
-ourMonster:RAM_Monster
 
 heroOnTile:RAM_CreaturesTile (ourHero -> creatureTile)
 monsterOnTile:RAM_CreaturesTile (ourMonster -> creatureTile)
