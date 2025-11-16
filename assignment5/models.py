@@ -234,7 +234,7 @@ m_rpg_def = """
     
     
     H:Hero{
-        lives = 5;
+        lives = 4;
     }
     
     M:Monster{

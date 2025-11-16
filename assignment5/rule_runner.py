@@ -11,6 +11,10 @@ from assignment5 import get_rules, TerminationCondition
 def render_text(od: ODAPI):
     # TODO: Implement, so a short description of the current state is printed
 
+    # Clock / time-step
+    _, clock = od.get_all_instances("Clock")[0]
+    current_time = od.get_slot_value(clock, "time")
+    
     # Hero info
     _, hero = od.get_all_instances("Hero")[0]
     currentTile = od.get_target(od.get_outgoing(hero, "CreaturesTile")[0])
@@ -40,6 +44,7 @@ def render_text(od: ODAPI):
     monsters_text = "\n".join(monsters_blocks) if monsters_blocks else "  - None"
 
     txt = (
+        f"Time: {current_time}\n"
         "=== HERO STATUS ===\n"
         f"Location: {od.get_type_name(currentTile)} {od.get_name(currentTile)}\n"
         f"Lives: {od.get_slot_value(hero, 'lives')}\n"
