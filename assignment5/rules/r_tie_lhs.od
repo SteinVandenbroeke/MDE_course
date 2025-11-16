@@ -1,13 +1,20 @@
 creatureTile:RAM_Tile
 
-ourMonster:RAM_Monster { 
-    RAM_lives = `get_value(this)`;
-}
-
 ourHero:RAM_Hero {
-    RAM_lives = `get_value(this)`;
     condition = `get_slot_value(this, "lives") == get_slot_value(matched("ourMonster"), "lives")`;
 }
 
+ourMonster:RAM_Monster
+
 heroOnTile:RAM_CreaturesTile (ourHero -> creatureTile)
 monsterOnTile:RAM_CreaturesTile (ourMonster -> creatureTile)
+
+heroState:RAM_CreatureState {
+    RAM_moved = `get_value(this) == True`;
+}
+heroStateToCreature:RAM_CreatureStateToCreature (heroState -> ourHero)
+
+monsterState:RAM_CreatureState {
+    RAM_moved = `get_value(this) == True`;
+}
+monsterStateToCreature:RAM_CreatureStateToCreature (monsterState -> ourMonster)
