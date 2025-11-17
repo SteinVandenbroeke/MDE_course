@@ -24,17 +24,20 @@ def get_rules(current_state, rt_mm):
     
     rules_monster_move = load_rules(current_state, get_filename, rt_mm_ramified,
                                  ['monster_move'])
-    
+
+    pick_up_items = load_rules(current_state, get_filename, rt_mm_ramified,
+                                 ['item_on_current_tile'])
+
     fight = load_rules(current_state, get_filename, rt_mm_ramified, 
                        ['hero_wins', 'monster_wins', 'tie'])
 
     rules_hero_move = load_rules(current_state, get_filename, rt_mm_ramified,
-                         ['hero_move_to_standard_tile_no_item', 'hero_move_to_standard_tile_with_item', 'hero_move_to_trap_tile', "hero_move_to_door_tile", "move_through_door"])
+                         ['hero_move_to_standard_tile', 'hero_move_to_trap_tile', "hero_move_to_door_tile", "move_through_door"])
 
     reset_hero_move = load_rules(current_state, get_filename, rt_mm_ramified,
                          ['reset_hero_move_TODO'])
 
-    return PriorityActionGenerator(matcher_rewriter, [rules_monster_move, fight, rules_hero_move, rules_x])
+    return PriorityActionGenerator(matcher_rewriter, [pick_up_items, rules_monster_move, fight, rules_hero_move, rules_x])
 
 
 class TerminationCondition:

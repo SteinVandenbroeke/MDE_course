@@ -339,7 +339,7 @@ m_rpg_def = """
 
    K0:Key
    K1:Key
-   T2_K0:StandardToTileItem (T3 -> K0)
+   a:StandardToTileItem (T3 -> K0)
    T3_K1:StandardToTileItem (T7 -> K1)
    D0_K0:DoorToKey (D0 -> K0)
    D1_K1:DoorToKey (D1 -> K1)
@@ -348,8 +348,14 @@ m_rpg_def = """
         points = 50;
    }
    
+   O2:Objective{
+        points = 10;
+   }
+   
    
    T5_O1:StandardToTileItem (T5 -> O1)
+   
+   T5_O2:StandardToTileItem (T3 -> O2)
 """
 
 nonconform_m = """
