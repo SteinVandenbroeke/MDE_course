@@ -34,7 +34,7 @@ def get_rules(current_state, rt_mm):
     reset_hero_move = load_rules(current_state, get_filename, rt_mm_ramified,
                          ['reset_hero_move_TODO'])
 
-    return PriorityActionGenerator(matcher_rewriter, [rules_monster_move, fight, rules_hero_move, reset_hero_move])
+    return PriorityActionGenerator(matcher_rewriter, [rules_monster_move, fight, rules_hero_move, rules_x])
 
 
 class TerminationCondition:
