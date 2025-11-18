@@ -376,7 +376,7 @@ m_rpg_def = """
 
    
    H_T0:CreaturesTile (H -> T2)
-   M_T0:CreaturesTile (M -> D0)
+   M_T0:CreaturesTile (M -> T5)
    M2_T0:CreaturesTile (M2 -> T6)
 
    K0:Key
