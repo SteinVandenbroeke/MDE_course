@@ -6,5 +6,6 @@ theClock:RAM_Clock {
     condition = ```
         for _, state in get_all_instances("CreatureState"):
             set_slot_value(state, "moved", False)
+            set_slot_value(state, "fought", False)
     ```;
 }

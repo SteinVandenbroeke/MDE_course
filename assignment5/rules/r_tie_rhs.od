@@ -8,11 +8,12 @@ heroOnTile:RAM_CreaturesTile (ourHero -> creatureTile)
 monsterOnTile:RAM_CreaturesTile (ourMonster -> creatureTile)
 
 heroState:RAM_CreatureState {
-    RAM_moved = `False`;
+    RAM_moved = `True`;
 }
 heroStateToCreature:RAM_CreatureStateToCreature (heroState -> ourHero)
 
 monsterState:RAM_CreatureState {
-    RAM_moved = `False`;
+    RAM_moved = `True`;
+    RAM_fought = `True`;
 }
 monsterStateToCreature:RAM_CreatureStateToCreature (monsterState -> ourMonster)

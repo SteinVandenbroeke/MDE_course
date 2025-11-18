@@ -18,5 +18,6 @@ heroStateToCreature:RAM_CreatureStateToCreature (heroState -> ourHero)
 
 monsterState:RAM_CreatureState {
     RAM_moved = `get_value(this) == True`;
+    RAM_fought = `get_value(this) == False`;
 }
 monsterStateToCreature:RAM_CreatureStateToCreature (monsterState -> ourMonster)

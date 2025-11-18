@@ -201,6 +201,11 @@ rt_mm_rpg_def = mm_rpg_def + """
         optional = False;
     }
     
+    CreatureState_fought:AttributeLink (CreatureState -> Boolean) {
+        name = "fought";
+        optional = False;
+    }
+    
     
     
     # Associations
@@ -402,18 +407,21 @@ rt_m_rpg_def = m_rpg_def + """
     
     CSH:CreatureState {
         moved = False;
+        fought = False;
     }
     
     CS_H:CreatureStateToCreature (CSH -> H)
     
     CSM:CreatureState {
         moved = False;
+        fought = False;
     }
     
     CS_M:CreatureStateToCreature (CSM -> M)
     
     CSM2:CreatureState {
         moved = False;
+        fought = False;
     }
     
     S_M2:CreatureStateToCreature (CSM2 -> M2)
