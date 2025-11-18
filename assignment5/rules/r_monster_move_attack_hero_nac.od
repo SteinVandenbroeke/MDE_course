@@ -1,0 +1,9 @@
+currentTile:RAM_Tile
+
+moveToTile_obstacle:RAM_Obstacle
+
+monster:RAM_Monster
+
+monsterOnTile:RAM_CreaturesTile (monster -> currentTile)
+
+areAdjacent:RAM_TileToTile (currentTile -> moveToTile_obstacle)

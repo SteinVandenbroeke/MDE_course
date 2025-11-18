@@ -338,10 +338,40 @@ m_rpg_def = """
    L2_T7:LevelToTile (L2 -> T7)
    L2_T8:LevelToTile (L2 -> T8)
    L2_D1:LevelToTile (L2 -> D1)
+   
+   #T6 T7
+   #T8 D1
+   T6_T7:TileToTile (T6 -> T7){
+    direction = "right";
+   }
+   T7_T6:TileToTile (T7 -> T6){
+    direction = "left";
+   }
+   
+   T6_T8:TileToTile (T6 -> T8){
+    direction = "down";
+   }
+   T8_T6:TileToTile (T8 -> T6){
+    direction = "up";
+   }
+   
+   T8_D1:TileToTile (T8 -> D1){
+    direction = "right";
+   }
+   D1_T8:TileToTile (D1 -> T8){
+    direction = "left";
+   }
+   
+   T7_D1:TileToTile (T7 -> D1){
+    direction = "down";
+   }
+   D1_T7:TileToTile (D1 -> T7){
+    direction = "up";
+   }
 
    
    H_T0:CreaturesTile (H -> T2)
-   M_T0:CreaturesTile (M -> T5)
+   M_T0:CreaturesTile (M -> D0)
    M2_T0:CreaturesTile (M2 -> T6)
 
    K0:Key

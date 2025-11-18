@@ -23,7 +23,7 @@ def get_rules(current_state, rt_mm):
                          ['advance_time'])
     
     rules_monster_move = load_rules(current_state, get_filename, rt_mm_ramified,
-                                 ['monster_move'])
+                                 ['monster_move', 'monster_move_attack_hero'])
 
     pick_up_items = load_rules(current_state, get_filename, rt_mm_ramified,
                                  ['item_on_current_tile'])

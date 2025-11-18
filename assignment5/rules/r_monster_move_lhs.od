@@ -10,10 +10,6 @@ hero:RAM_Hero
 
 monsterOnTile:RAM_CreaturesTile (monster -> currentTile)
 
-currentLevel:RAM_Level
-
-Playing_on_current_level:RAM_LevelToTile(currentLevel -> currentTile)
-
 areAdjacent:RAM_TileToTile (currentTile -> moveToTile)
 
 monsterNotMoved:RAM_CreatureState {
@@ -27,3 +23,14 @@ heroMoved:RAM_CreatureState {
 monster_state_to_creature:RAM_CreatureStateToCreature (monsterNotMoved -> monster)
 
 hero_state_to_creature:RAM_CreatureStateToCreature (heroMoved -> hero)
+
+# Hero and monster should be in the same level
+currentLevel:RAM_Level
+
+Playing_on_current_level_0:RAM_LevelToTile(currentLevel -> currentTile)
+
+heroTile:RAM_Tile
+
+heroOnTile:RAM_CreaturesTile (hero -> heroTile)
+
+Playing_on_current_level_1:RAM_LevelToTile(currentLevel -> heroTile)

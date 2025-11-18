@@ -25,10 +25,6 @@ monsterMovedTile:RAM_CreaturesTile (monster -> moveToTile)
 # Hero and monster should be in the same level
 currentLevel:RAM_Level
 
-Playing_on_current_level:RAM_LevelToTile(currentLevel -> currentTile)
+Playing_on_current_level_0:RAM_LevelToTile(currentLevel -> currentTile)
 
-heroTile:RAM_Tile
-
-heroOnTile:RAM_CreaturesTile (hero -> heroTile)
-
-Playing_on_current_level_1:RAM_LevelToTile(currentLevel -> heroTile)
+heroOnTile:RAM_CreaturesTile (hero -> moveToTile)
