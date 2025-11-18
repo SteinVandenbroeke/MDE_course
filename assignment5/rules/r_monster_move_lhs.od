@@ -2,7 +2,9 @@ currentTile:RAM_Tile
 
 moveToTile:RAM_Tile
 
-monster:RAM_Monster
+monster:RAM_Monster {
+    condition = `get_slot_value(this, "lives") > 0`;
+}
 
 hero:RAM_Hero
 
