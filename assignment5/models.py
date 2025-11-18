@@ -258,8 +258,8 @@ m_rpg_def = """
     
     # Level 1: Start tile is T2
     
-    # T1 T2 T3
-    #    T5 D0
+    # T1 T2 T3 
+    # T4 T5 D0
 
    T1:Trap
    T2:StandardTile
@@ -291,6 +291,13 @@ m_rpg_def = """
    }
    T4_T1:TileToTile (T4 -> T1){
     direction = "up";
+   }
+   
+   T5_T4:TileToTile (T5 -> T4){
+    direction = "left";
+   }
+   T4_T5:TileToTile (T4 -> T5){
+    direction = "right";
    }
    
    T2_T5:TileToTile (T2 -> T5){
@@ -334,7 +341,7 @@ m_rpg_def = """
 
    
    H_T0:CreaturesTile (H -> T2)
-   M_T0:CreaturesTile (M -> T3)
+   M_T0:CreaturesTile (M -> T5)
    M2_T0:CreaturesTile (M2 -> T6)
 
    K0:Key
@@ -348,76 +355,7 @@ m_rpg_def = """
         points = 50;
    }
    
-   O2:Objective{
-        points = 10;
-   }
-   
-   
    T5_O1:StandardToTileItem (T5 -> O1)
-   
-   T5_O2:StandardToTileItem (T3 -> O2)
-"""
-
-nonconform_m = """
-    W:World
-
-    H:Hero{
-        lives = 10;
-    }
-
-    L1:Level{
-        name = "level1";
-    }
-
-    L2:Level{
-        name = "level2";
-    }
-
-    W_L1:WorldToLevel (W -> L1)
-    W_L2:WorldToLevel (W -> L2)
-
-    T1:Trap
-    T2:StandardTile
-    T3:StandardTile
-    T4:Obstacle
-    
-    T1_T2:TileToTile (T1 -> T2){
-        direction = "right";
-    }
-    
-    T3_T2:TileToTile (T3 -> T2){
-        direction = "right";
-    }
-    
-    D0:Door
-    D1:Door
-
-    D0_D1:DoorToDoor (D0 -> D1)
-    D1_D0:DoorToDoor (D1 -> D0)
-
-    L1_T1:LevelToTile (L1 -> T1)
-    L1_T2:LevelToTile (L1 -> T2)
-    L1_T3:LevelToTile (L1 -> T3)
-    L1_T4:LevelToTile (L1 -> T4)
-    L1_D0:LevelToTile (L1 -> D0)
-    L1_D1:LevelToTile (L1 -> D1)
-
-    L2_T1:LevelToTile (L2 -> T1)
-    L2_T2:LevelToTile (L2 -> T2)
-    L2_T3:LevelToTile (L2 -> T3)
-    L2_T4:LevelToTile (L2 -> T4)
-
-    H_T0:CreaturesTile (H -> T1)
-    H_T1:CreaturesTile (H -> T2)
-
-    K:Key
-    T2_K:StandardToTileItem (T2 -> K)
-    D0_K:DoorToKey (D0 -> K)
-    D1_K:DoorToKey (D1 -> K)
-
-    O1:Objective{
-        points = 60;
-    }
 """
 
 # TODO: add a valid instance of the additional runtime-information
