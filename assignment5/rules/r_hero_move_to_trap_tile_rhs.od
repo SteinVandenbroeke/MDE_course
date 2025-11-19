@@ -6,7 +6,7 @@ ourHero:RAM_Hero {
 
 moveToTile:RAM_Trap
 
-heroOnTile:RAM_CreaturesTile (ourHero -> moveToTile)
+heroMovedTile:RAM_CreaturesTile (ourHero -> moveToTile)
 
 currentLevel:RAM_Level
 

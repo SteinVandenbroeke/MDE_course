@@ -337,7 +337,7 @@ m_rpg_def = """
 
    T6:StandardTile
    T7:StandardTile
-   T8:StandardTile
+   T8:Obstacle
    
    L2_T6:LevelToTile (L2 -> T6)
    L2_T7:LevelToTile (L2 -> T7)
@@ -376,7 +376,7 @@ m_rpg_def = """
 
    
    H_T0:CreaturesTile (H -> T2)
-   M_T0:CreaturesTile (M -> T5)
+   M_T0:CreaturesTile (M -> D0)
    M2_T0:CreaturesTile (M2 -> T6)
 
    K0:Key
