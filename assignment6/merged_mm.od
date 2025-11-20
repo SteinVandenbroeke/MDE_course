@@ -1,0 +1,209 @@
+# Auto generated topified runtime Meta-Model, merged RPG and Petri Nets
+Hero:Class {
+    upper_cardinality = 1;
+    lower_cardinality = 1;
+}
+Creatures:Class {
+    abstract = True;
+    constraint = `get_slot_value(this, "lives") >= 0`;
+}
+PNTransition:Class
+Monster:Class
+PNPlaceState:Class
+Trap:Class
+Objective:Class {
+    constraint = `get_slot_value(this, "points") <= 100`;
+}
+Door:Class
+Item:Class {
+    abstract = True;
+}
+CreatureState:Class
+World:Class {
+    lower_cardinality = 1;
+    upper_cardinality = 1;
+}
+Top:Class {
+    abstract = True;
+}
+WorldState:Class
+State:Class {
+    abstract = True;
+}
+PNPlace:Class
+Obstacle:Class
+Tile:Class {
+    abstract = True;
+    constraint = ```
+        no_dubble_directions = True
+        items = set()
+        for tileItem in get_incoming(this, "TileToTile"):
+            if get_slot_value(tileItem, "direction") in items:
+                no_dubble_directions = False;
+            items.add(get_slot_value(tileItem, "direction"))
+        no_dubble_directions
+    ```;
+}
+Level:Class
+Clock:Class {
+    lower_cardinality = 1;
+    upper_cardinality = 1;
+}
+StandardTile:Class
+Key:Class {
+    constraint = `len(get_incoming(this, "DoorToKey")) == 1`;
+}
+PNConnectable:Class {
+    abstract = True;
+}
+AtMostOneMonsterPerLevel:GlobalConstraint {
+    constraint = ```
+        valid_constraint = True
+        monster_levels = []
+        for _, monster in get_all_instances("Monster"):
+            monster_level = get_name(get_source(get_incoming(get_target(get_outgoing(monster, "CreaturesTile")[0]), "LevelToTile")[0]))
+            if monster_level in monster_levels:
+                valid_constraint = False
+                break
+            monster_levels.append(monster_level)
+        
+        valid_constraint
+    ```;
+}
+AllObjectivesPointsUnder100:GlobalConstraint {
+    constraint = ```
+        total_amount_of_objective_points = 0
+        for _, objective in get_all_instances("Objective"):
+            total_amount_of_objective_points += get_slot_value(objective, "points")
+        
+        total_amount_of_objective_points <= 100
+    ```;
+}
+NoCreatureOnObstacle:GlobalConstraint {
+    constraint = ```
+        valid_constraint = True
+        for _, monster in get_all_instances("Monster"):
+            monster_tile_type = get_type_name(get_target(get_outgoing(monster, "CreaturesTile")[0]))
+            valid_constraint = monster_tile_type != "Obstacle" and valid_constraint
+        valid_constraint
+    ```;
+}
+PNPlaceState_numTokens:AttributeLink (PNPlaceState -> Integer) {
+    constraint = `"numTokens cannot be negative" if get_value(get_target(this)) < 0 else None`;
+    name = "numTokens";
+    optional = False;
+}
+Objective_points:AttributeLink (Objective -> Integer) {
+    optional = False;
+    name = "points";
+}
+CreatureState_fought:AttributeLink (CreatureState -> Boolean) {
+    optional = False;
+    name = "fought";
+}
+WorldState_collectedpoints:AttributeLink (WorldState -> Integer) {
+    name = "collectedpoints";
+    optional = False;
+}
+Clock_time:AttributeLink (Clock -> Integer) {
+    name = "time";
+    optional = False;
+}
+CreatureState_moved:AttributeLink (CreatureState -> Boolean) {
+    name = "moved";
+    optional = False;
+}
+Creatures_lives:AttributeLink (Creatures -> Integer) {
+    optional = False;
+    name = "lives";
+}
+:Inheritance (State -> Top)
+LevelToTile:Association (Level -> Tile) {
+    source_upper_cardinality = 1;
+    target_lower_cardinality = 1;
+}
+arc:Association (PNConnectable -> PNConnectable)
+HeroCollectsItems:Association (Hero -> Item)
+StandardToTileItem:Association (StandardTile -> Item) {
+    target_lower_cardinality = 0;
+    target_upper_cardinality = 1;
+}
+pn_of:Association (PNPlaceState -> PNPlace) {
+    source_lower_cardinality = 1;
+    source_upper_cardinality = 1;
+    target_lower_cardinality = 1;
+    target_upper_cardinality = 1;
+}
+CreaturesTile:Association (Creatures -> Tile) {
+    target_lower_cardinality = 1;
+    target_upper_cardinality = 1;
+}
+DoorToDoor:Association (Door -> Door) {
+    constraint = ```
+        door0 = get_source(this)
+        door1 = get_target(this)
+        
+        DoorLevel0 = get_incoming(door0, "LevelToTile")[0]
+        DoorLevel1 = get_incoming(door1, "LevelToTile")[0]
+        DoorLevel0 != DoorLevel1
+    ```;
+    target_lower_cardinality = 1;
+    target_upper_cardinality = 1;
+}
+WorldToLevel:Association (World -> Level) {
+    target_lower_cardinality = 1;
+}
+WorldStateToWorld:Association (WorldState -> World) {
+    target_lower_cardinality = 1;
+    target_upper_cardinality = 1;
+}
+TileToTile:Association (Tile -> Tile) {
+    target_upper_cardinality = 4;
+    constraint = ```
+        tile0 = get_source(this)
+        tile1 = get_target(this)
+        
+        get_source(get_incoming(tile0, "LevelToTile")[0]) == get_source(get_incoming(tile1, "LevelToTile")[0])
+    ```;
+}
+CreatureStateToCreature:Association (CreatureState -> Creatures) {
+    target_upper_cardinality = 1;
+    target_lower_cardinality = 1;
+}
+inh_arc:Association (PNPlace -> PNTransition)
+DoorToKey:Association (Door -> Key) {
+    target_upper_cardinality = 1;
+    source_lower_cardinality = 1;
+    source_upper_cardinality = 1;
+    target_lower_cardinality = 1;
+}
+generic_link:Association (Top -> Top)
+TileToTile_direction:AttributeLink (TileToTile -> String) {
+    optional = False;
+    name = "direction";
+}
+Level_name:AttributeLink (Level -> String) {
+    name = "name";
+    optional = False;
+}
+:Inheritance (generic_link -> Top)
+:Inheritance (StandardTile -> Tile)
+:Inheritance (World -> Top)
+:Inheritance (Objective -> Item)
+:Inheritance (Door -> Tile)
+:Inheritance (Trap -> Tile)
+:Inheritance (PNConnectable -> Top)
+:Inheritance (Clock -> Top)
+:Inheritance (Key -> Item)
+:Inheritance (Item -> Top)
+:Inheritance (WorldState -> State)
+:Inheritance (CreatureState -> State)
+:Inheritance (PNPlace -> PNConnectable)
+:Inheritance (PNPlaceState -> Top)
+:Inheritance (Obstacle -> Tile)
+:Inheritance (Hero -> Creatures)
+:Inheritance (Tile -> Top)
+:Inheritance (PNTransition -> PNConnectable)
+:Inheritance (Creatures -> Top)
+:Inheritance (Level -> Top)
+:Inheritance (Monster -> Creatures)
