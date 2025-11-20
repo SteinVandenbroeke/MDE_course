@@ -1,0 +1,5 @@
+tile1:RAM_Tile
+tile2:RAM_Tile
+
+tile1Totile2:RAM_TileToTile (tile1 -> tile2)
+tile2Totile1:RAM_TileToTile (tile2 -> tile1)

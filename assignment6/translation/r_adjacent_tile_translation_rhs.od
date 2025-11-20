@@ -1,0 +1,5 @@
+Ptile1:RAM_PNPlace
+Ptile2:RAM_PNPlace
+
+Ptile1ToPtile2:RAM_PNTransition (Ptile1 -> Ptile2)
+Ptile2ToPtile1:RAM_PNTransition (Ptile2 -> Ptile1)

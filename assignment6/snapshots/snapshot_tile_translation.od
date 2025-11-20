@@ -1,0 +1,66 @@
+
+O1:Objective {
+    points = 50;
+}
+M2:Monster {
+    lives = 10;
+}
+M:Monster {
+    lives = 4;
+}
+Ptile10:PNPlace
+Ptile1:PNPlace
+Ptile13:PNPlace
+Ptile2:PNPlace
+Ptile11:PNPlace
+Ptile21:PNPlace
+Ptile23:PNPlace
+Ptile22:PNPlace
+Ptile20:PNPlace
+Ptile12:PNPlace
+L2:Level {
+    name = "level2";
+}
+L1:Level {
+    name = "level1";
+}
+H:Hero {
+    lives = 5;
+}
+CSM2:CreatureState {
+    fought = False;
+    moved = False;
+}
+CSH:CreatureState {
+    fought = False;
+    moved = False;
+}
+CSM:CreatureState {
+    moved = False;
+    fought = False;
+}
+WS:WorldState {
+    collectedpoints = 0;
+}
+C:Clock {
+    time = 0;
+}
+K1:Key
+K0:Key
+Ptile2ToPtile1:PNTransition
+Ptile1ToPtile20:PNTransition
+Ptile1ToPtile21:PNTransition
+Ptile2ToPtile10:PNTransition
+Ptile1ToPtile23:PNTransition
+Ptile2ToPtile12:PNTransition
+Ptile2ToPtile11:PNTransition
+Ptile2ToPtile13:PNTransition
+Ptile1ToPtile22:PNTransition
+Ptile1ToPtile2:PNTransition
+W:World
+S_M2:CreatureStateToCreature (CSM2 -> M2)
+CS_H:CreatureStateToCreature (CSH -> H)
+CS_M:CreatureStateToCreature (CSM -> M)
+W_L2:WorldToLevel (W -> L2)
+W_L1:WorldToLevel (W -> L1)
+WS_W:WorldStateToWorld (WS -> W)
