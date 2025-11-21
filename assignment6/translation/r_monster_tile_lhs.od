@@ -1,0 +1,4 @@
+tile1:RAM_Tile
+monster:RAM_Monster
+
+monsterToTile1:RAM_CreaturesTile (monster -> tile1)

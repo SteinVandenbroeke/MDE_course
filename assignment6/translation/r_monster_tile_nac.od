@@ -1,0 +1,10 @@
+tile1:RAM_Tile
+monster:RAM_Monster
+
+monsterToTile1:RAM_CreaturesTile (monster -> tile1)
+
+pTile:RAM_PNPlace
+glTileToPlace:RAM_generic_link (tile1 -> pTile)
+
+existingMonsterToken:RAM_PNPlaceState { }
+:RAM_pn_of (existingMonsterToken -> pTile)
