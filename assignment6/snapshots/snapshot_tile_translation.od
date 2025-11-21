@@ -1,66 +1,162 @@
 
-O1:Objective {
-    points = 50;
+CSH:CreatureState {
+    moved = False;
+    fought = False;
 }
-M2:Monster {
-    lives = 10;
-}
-M:Monster {
-    lives = 4;
-}
-Ptile10:PNPlace
-Ptile1:PNPlace
-Ptile13:PNPlace
-Ptile2:PNPlace
-Ptile11:PNPlace
-Ptile21:PNPlace
-Ptile23:PNPlace
-Ptile22:PNPlace
-Ptile20:PNPlace
-Ptile12:PNPlace
-L2:Level {
-    name = "level2";
-}
-L1:Level {
-    name = "level1";
-}
-H:Hero {
-    lives = 5;
+CSM:CreatureState {
+    fought = False;
+    moved = False;
 }
 CSM2:CreatureState {
     fought = False;
     moved = False;
 }
-CSH:CreatureState {
-    fought = False;
-    moved = False;
+D0:Door
+D1:Door
+T6:StandardTile
+T3:StandardTile
+T2:StandardTile
+T5:StandardTile
+T7:StandardTile
+O1:Objective {
+    points = 50;
 }
-CSM:CreatureState {
-    moved = False;
-    fought = False;
+M:Monster {
+    lives = 4;
+}
+M2:Monster {
+    lives = 10;
 }
 WS:WorldState {
     collectedpoints = 0;
 }
+W:World
 C:Clock {
     time = 0;
 }
-K1:Key
+T8:Obstacle
+T4:Obstacle
 K0:Key
-Ptile2ToPtile1:PNTransition
-Ptile1ToPtile20:PNTransition
-Ptile1ToPtile21:PNTransition
-Ptile2ToPtile10:PNTransition
-Ptile1ToPtile23:PNTransition
-Ptile2ToPtile12:PNTransition
-Ptile2ToPtile11:PNTransition
-Ptile2ToPtile13:PNTransition
-Ptile1ToPtile22:PNTransition
-Ptile1ToPtile2:PNTransition
-W:World
+K1:Key
+L1:Level {
+    name = "level1";
+}
+L2:Level {
+    name = "level2";
+}
+T1:Trap
+H:Hero {
+    lives = 5;
+}
+pTile1:PNPlace
+pTile5:PNPlace
+pTile7:PNPlace
+pTile2:PNPlace
+pTile6:PNPlace
+pTile4:PNPlace
+pTile:PNPlace
+pTile8:PNPlace
+pTile3:PNPlace
+pTile0:PNPlace
 S_M2:CreatureStateToCreature (CSM2 -> M2)
-CS_H:CreatureStateToCreature (CSH -> H)
 CS_M:CreatureStateToCreature (CSM -> M)
-W_L2:WorldToLevel (W -> L2)
-W_L1:WorldToLevel (W -> L1)
+CS_H:CreatureStateToCreature (CSH -> H)
+T5_O1:StandardToTileItem (T5 -> O1)
+T3_K1:StandardToTileItem (T7 -> K1)
+a:StandardToTileItem (T3 -> K0)
+glTileToPlace3:generic_link (T3 -> pTile3)
+glTileToPlace4:generic_link (T4 -> pTile4)
+glTileToPlace0:generic_link (D0 -> pTile0)
+glTileToPlace6:generic_link (T5 -> pTile6)
+glTileToPlace7:generic_link (T7 -> pTile7)
+glTileToPlace1:generic_link (T1 -> pTile1)
+glTileToPlace2:generic_link (T8 -> pTile2)
+glTileToPlace8:generic_link (D1 -> pTile8)
+glTileToPlace5:generic_link (T2 -> pTile5)
+glTileToPlace:generic_link (T6 -> pTile)
+H_T0:CreaturesTile (H -> T2)
+M_T0:CreaturesTile (M -> D0)
+M2_T0:CreaturesTile (M2 -> T6)
+L2_T8:LevelToTile (L2 -> T8)
+L2_T7:LevelToTile (L2 -> T7)
+L1_T3:LevelToTile (L1 -> T3)
+L2_D1:LevelToTile (L2 -> D1)
+L1_D0:LevelToTile (L1 -> D0)
+L2_T6:LevelToTile (L2 -> T6)
+L1_T4:LevelToTile (L1 -> T4)
+L1_T1:LevelToTile (L1 -> T1)
+L1_T5:LevelToTile (L1 -> T5)
+L1_T2:LevelToTile (L1 -> T2)
+D0_K0:DoorToKey (D0 -> K0)
+D1_K1:DoorToKey (D1 -> K1)
+T5_T2:TileToTile (T5 -> T2) {
+    direction = "up";
+}
+T8_T6:TileToTile (T8 -> T6) {
+    direction = "up";
+}
+T6_T7:TileToTile (T6 -> T7) {
+    direction = "right";
+}
+T2_T3:TileToTile (T2 -> T3) {
+    direction = "right";
+}
+D0_T3:TileToTile (D0 -> T3) {
+    direction = "up";
+}
+T3_T2:TileToTile (T3 -> T2) {
+    direction = "left";
+}
+T6_T8:TileToTile (T6 -> T8) {
+    direction = "down";
+}
+T2_T1:TileToTile (T2 -> T1) {
+    direction = "left";
+}
+T2_T5:TileToTile (T2 -> T5) {
+    direction = "down";
+}
+T5_T4:TileToTile (T5 -> T4) {
+    direction = "left";
+}
+T8_D1:TileToTile (T8 -> D1) {
+    direction = "right";
+}
+T1_T4:TileToTile (T1 -> T4) {
+    direction = "down";
+}
+T4_T1:TileToTile (T4 -> T1) {
+    direction = "up";
+}
+T5_D0:TileToTile (T5 -> D0) {
+    direction = "right";
+}
+T7_D1:TileToTile (T7 -> D1) {
+    direction = "down";
+}
+T3_D0:TileToTile (T3 -> D0) {
+    direction = "down";
+}
+T1_T2:TileToTile (T1 -> T2) {
+    direction = "right";
+}
+T7_T6:TileToTile (T7 -> T6) {
+    direction = "left";
+}
+D0_T5:TileToTile (D0 -> T5) {
+    direction = "left";
+}
+D1_T7:TileToTile (D1 -> T7) {
+    direction = "up";
+}
+T4_T5:TileToTile (T4 -> T5) {
+    direction = "right";
+}
+D1_T8:TileToTile (D1 -> T8) {
+    direction = "left";
+}
 WS_W:WorldStateToWorld (WS -> W)
+D0_D2:DoorToDoor (D1 -> D0)
+D0_D1:DoorToDoor (D0 -> D1)
+W_L1:WorldToLevel (W -> L1)
+W_L2:WorldToLevel (W -> L2)
