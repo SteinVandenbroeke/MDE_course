@@ -1,4 +1,4 @@
 tile1:RAM_Tile
 hero:RAM_Hero
 
-heroToTile1:RAM_CreatureTile (hero -> tile1)
+heroToTile1:RAM_CreaturesTile (hero -> tile1)

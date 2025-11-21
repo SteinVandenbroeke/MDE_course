@@ -6,5 +6,5 @@ heroToTile:RAM_CreaturesTile (hero -> tile1)
 pTile:RAM_PNPlace
 glTileToPlace:RAM_generic_link (tile1 -> pTile)
 
-heroToken:RAM_PNPlaceState { }
-:RAM_pn_of (heroToken -> pTile)
+existingHeroToken:RAM_PNPlaceState { }
+:RAM_pn_of (existingHeroToken -> pTile)

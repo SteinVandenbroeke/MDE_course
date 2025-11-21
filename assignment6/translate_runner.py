@@ -22,6 +22,7 @@ print("Ramifying")
 ramified_merged_mm = ramify(state, merged_mm)
 
 rule_names = [
+    "hero_tile",
     "tile_translation",
     "adjacent_tile_translation",
 ]
