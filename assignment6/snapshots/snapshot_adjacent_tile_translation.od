@@ -1,0 +1,228 @@
+
+WS:WorldState {
+    collectedpoints = 0;
+}
+pTile0:PNPlace
+pTile3:PNPlace
+pTile5:PNPlace
+pTile1:PNPlace
+pTile:PNPlace
+pTile4:PNPlace
+pTile7:PNPlace
+pTile2:PNPlace
+pTile6:PNPlace
+pTile8:PNPlace
+T3:StandardTile
+T2:StandardTile
+T7:StandardTile
+T6:StandardTile
+T5:StandardTile
+D0:Door
+D1:Door
+K1:Key
+K0:Key
+H:Hero {
+    lives = 5;
+}
+D1_to_T8:PNTransition
+T8_to_D1:PNTransition
+T2_to_T1:PNTransition
+T4_to_T5:PNTransition
+T4_to_T1:PNTransition
+D0_to_T5:PNTransition
+T6_to_T8:PNTransition
+D1_to_T7:PNTransition
+T5_to_T4:PNTransition
+D0_to_T3:PNTransition
+T1_to_T2:PNTransition
+T2_to_T3:PNTransition
+T8_to_T6:PNTransition
+T2_to_T5:PNTransition
+T3_to_T2:PNTransition
+T7_to_D1:PNTransition
+T5_to_D0:PNTransition
+T1_to_T4:PNTransition
+T6_to_T7:PNTransition
+T3_to_D0:PNTransition
+T7_to_T6:PNTransition
+T5_to_T2:PNTransition
+CSM2:CreatureState {
+    fought = False;
+    moved = False;
+}
+CSH:CreatureState {
+    fought = False;
+    moved = False;
+}
+CSM:CreatureState {
+    moved = False;
+    fought = False;
+}
+O1:Objective {
+    points = 50;
+}
+L1:Level {
+    name = "level1";
+}
+L2:Level {
+    name = "level2";
+}
+T4:Obstacle
+T8:Obstacle
+T1:Trap
+C:Clock {
+    time = 0;
+}
+W:World
+M2:Monster {
+    lives = 10;
+}
+M:Monster {
+    lives = 4;
+}
+D1_K1:DoorToKey (D1 -> K1)
+D0_K0:DoorToKey (D0 -> K0)
+W_L1:WorldToLevel (W -> L1)
+W_L2:WorldToLevel (W -> L2)
+T3_K1:StandardToTileItem (T7 -> K1)
+T5_O1:StandardToTileItem (T5 -> O1)
+a:StandardToTileItem (T3 -> K0)
+glTileToPlace2:generic_link (T8 -> pTile2)
+glTileToPlace6:generic_link (T5 -> pTile6)
+glTileToPlace8:generic_link (D1 -> pTile8)
+glTileToPlace1:generic_link (T1 -> pTile1)
+glTileToPlace4:generic_link (T4 -> pTile4)
+glTileToPlace3:generic_link (T3 -> pTile3)
+glTileToPlace5:generic_link (T2 -> pTile5)
+glTileToPlace:generic_link (T6 -> pTile)
+glTileToPlace0:generic_link (D0 -> pTile0)
+glTileToPlace7:generic_link (T7 -> pTile7)
+D0_D1:DoorToDoor (D0 -> D1)
+D0_D2:DoorToDoor (D1 -> D0)
+CS_H:CreatureStateToCreature (CSH -> H)
+S_M2:CreatureStateToCreature (CSM2 -> M2)
+CS_M:CreatureStateToCreature (CSM -> M)
+L1_T5:LevelToTile (L1 -> T5)
+L2_T7:LevelToTile (L2 -> T7)
+L1_T3:LevelToTile (L1 -> T3)
+L2_D1:LevelToTile (L2 -> D1)
+L2_T8:LevelToTile (L2 -> T8)
+L1_T1:LevelToTile (L1 -> T1)
+L2_T6:LevelToTile (L2 -> T6)
+L1_T2:LevelToTile (L1 -> T2)
+L1_D0:LevelToTile (L1 -> D0)
+L1_T4:LevelToTile (L1 -> T4)
+T2_T3:TileToTile (T2 -> T3) {
+    direction = "right";
+}
+T2_T5:TileToTile (T2 -> T5) {
+    direction = "down";
+}
+D0_T3:TileToTile (D0 -> T3) {
+    direction = "up";
+}
+T1_T2:TileToTile (T1 -> T2) {
+    direction = "right";
+}
+T2_T1:TileToTile (T2 -> T1) {
+    direction = "left";
+}
+T7_D1:TileToTile (T7 -> D1) {
+    direction = "down";
+}
+T3_T2:TileToTile (T3 -> T2) {
+    direction = "left";
+}
+D1_T7:TileToTile (D1 -> T7) {
+    direction = "up";
+}
+T3_D0:TileToTile (T3 -> D0) {
+    direction = "down";
+}
+T4_T5:TileToTile (T4 -> T5) {
+    direction = "right";
+}
+T6_T7:TileToTile (T6 -> T7) {
+    direction = "right";
+}
+D1_T8:TileToTile (D1 -> T8) {
+    direction = "left";
+}
+T5_T2:TileToTile (T5 -> T2) {
+    direction = "up";
+}
+T5_D0:TileToTile (T5 -> D0) {
+    direction = "right";
+}
+T8_D1:TileToTile (T8 -> D1) {
+    direction = "right";
+}
+T8_T6:TileToTile (T8 -> T6) {
+    direction = "up";
+}
+T1_T4:TileToTile (T1 -> T4) {
+    direction = "down";
+}
+T5_T4:TileToTile (T5 -> T4) {
+    direction = "left";
+}
+T4_T1:TileToTile (T4 -> T1) {
+    direction = "up";
+}
+T7_T6:TileToTile (T7 -> T6) {
+    direction = "left";
+}
+T6_T8:TileToTile (T6 -> T8) {
+    direction = "down";
+}
+D0_T5:TileToTile (D0 -> T5) {
+    direction = "left";
+}
+H_T0:CreaturesTile (H -> T2)
+M_T0:CreaturesTile (M -> D0)
+M2_T0:CreaturesTile (M2 -> T6)
+WS_W:WorldStateToWorld (WS -> W)
+T7_to_T6_trg:arc (T7_to_T6 -> pTile)
+D1_to_T7_src:arc (pTile8 -> D1_to_T7)
+T1_to_T4_trg:arc (T1_to_T4 -> pTile4)
+T1_to_T2_src:arc (pTile1 -> T1_to_T2)
+T3_to_D0_src:arc (pTile3 -> T3_to_D0)
+T5_to_D0_src:arc (pTile6 -> T5_to_D0)
+T2_to_T3_trg:arc (T2_to_T3 -> pTile3)
+T4_to_T1_src:arc (pTile4 -> T4_to_T1)
+D1_to_T8_src:arc (pTile8 -> D1_to_T8)
+T3_to_T2_src:arc (pTile3 -> T3_to_T2)
+T8_to_T6_src:arc (pTile2 -> T8_to_T6)
+T7_to_D1_src:arc (pTile7 -> T7_to_D1)
+T1_to_T4_src:arc (pTile1 -> T1_to_T4)
+T2_to_T1_trg:arc (T2_to_T1 -> pTile1)
+T4_to_T5_src:arc (pTile4 -> T4_to_T5)
+T7_to_T6_src:arc (pTile7 -> T7_to_T6)
+T6_to_T7_src:arc (pTile -> T6_to_T7)
+T8_to_T6_trg:arc (T8_to_T6 -> pTile)
+T3_to_T2_trg:arc (T3_to_T2 -> pTile5)
+T6_to_T8_src:arc (pTile -> T6_to_T8)
+D0_to_T5_trg:arc (D0_to_T5 -> pTile6)
+T5_to_T2_src:arc (pTile6 -> T5_to_T2)
+T6_to_T8_trg:arc (T6_to_T8 -> pTile2)
+T5_to_D0_trg:arc (T5_to_D0 -> pTile0)
+T8_to_D1_trg:arc (T8_to_D1 -> pTile8)
+D1_to_T7_trg:arc (D1_to_T7 -> pTile7)
+D0_to_T5_src:arc (pTile0 -> D0_to_T5)
+T3_to_D0_trg:arc (T3_to_D0 -> pTile0)
+T4_to_T1_trg:arc (T4_to_T1 -> pTile1)
+T6_to_T7_trg:arc (T6_to_T7 -> pTile7)
+D1_to_T8_trg:arc (D1_to_T8 -> pTile2)
+T5_to_T4_src:arc (pTile6 -> T5_to_T4)
+T7_to_D1_trg:arc (T7_to_D1 -> pTile8)
+T2_to_T1_src:arc (pTile5 -> T2_to_T1)
+T2_to_T5_src:arc (pTile5 -> T2_to_T5)
+T8_to_D1_src:arc (pTile2 -> T8_to_D1)
+D0_to_T3_src:arc (pTile0 -> D0_to_T3)
+T5_to_T4_trg:arc (T5_to_T4 -> pTile4)
+T1_to_T2_trg:arc (T1_to_T2 -> pTile5)
+D0_to_T3_trg:arc (D0_to_T3 -> pTile3)
+T4_to_T5_trg:arc (T4_to_T5 -> pTile6)
+T2_to_T3_src:arc (pTile5 -> T2_to_T3)
+T2_to_T5_trg:arc (T2_to_T5 -> pTile6)
+T5_to_T2_trg:arc (T5_to_T2 -> pTile5)

@@ -9,14 +9,14 @@ pTile2:RAM_PNPlace
 glTile1ToPlace:RAM_generic_link (tile1 -> pTile1)
 glTile2ToPlace:RAM_generic_link (tile2 -> pTile2)
 
-transition:RAM_PNTransition {
+existingTransition:RAM_PNTransition {
     name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}"`;
 }
 
-src_arc:RAM_arc (pTile1 -> transition) {
+existingTransition_src_arc:RAM_arc (pTile1 -> existingTransition) {
     name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_src"`;
 }
 
-trg_arc:RAM_arc (transition -> pTile2) {
+existingTransition_trg_arc:RAM_arc (existingTransition -> pTile2) {
     name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_trg"`;
 }

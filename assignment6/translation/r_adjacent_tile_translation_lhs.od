@@ -2,4 +2,9 @@ tile1:RAM_Tile
 tile2:RAM_Tile
 
 tile1Totile2:RAM_TileToTile (tile1 -> tile2)
-tile2Totile1:RAM_TileToTile (tile2 -> tile1)
+
+pTile1:RAM_PNPlace
+pTile2:RAM_PNPlace
+
+glTile1ToPlace:RAM_generic_link (tile1 -> pTile1)
+glTile2ToPlace:RAM_generic_link (tile2 -> pTile2)
