@@ -26,6 +26,10 @@ rule_names = [
     "tile_translation",
     "adjacent_tile_translation",
     "hero_tile",
+    "monster_tile",
+    "move_order_states",
+    "connect_move_hero_state",
+    "connect_move_monster_state"
 ]
 
 print("Loading rules")

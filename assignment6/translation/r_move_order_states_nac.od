@@ -1,0 +1,20 @@
+world:RAM_World
+
+pMonster_move:RAM_PNPlace {
+    name = `f"pMonster_move"`;
+}
+pMonsterState_move:RAM_PNPlaceState {
+    RAM_numTokens = `get_value(this) == 0`;
+}
+:RAM_pn_of (pMonsterState_move -> pMonster_move)
+
+pHero_move:RAM_PNPlace {
+    name = `f"pHero_move"`;
+}
+pHeroState_move:RAM_PNPlaceState {
+    RAM_numTokens = `get_value(this) == 1`;
+}
+:RAM_pn_of (pHeroState_move -> pHero_move)
+
+glWorld_To_move_order_hero:RAM_generic_link (world -> pHero_move)
+glWorld_To_move_order_monster:RAM_generic_link (world -> pMonster_move)

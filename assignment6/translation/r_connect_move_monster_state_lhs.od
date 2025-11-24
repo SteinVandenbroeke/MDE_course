@@ -1,0 +1,15 @@
+pMonster_move:RAM_PNPlace {
+    condition = `"pMonster_move" in get_name(this)`;
+}
+pMonsterState_move:RAM_PNPlaceState {
+    RAM_numTokens = `get_value(this) == 0`;
+}
+monsterStateMoveToMonsterMove:RAM_pn_of (pMonsterState_move -> pMonster_move)
+
+transition_monster:RAM_PNTransition {
+    condition = `"_move_for_monster" in get_name(this)`;
+}
+
+pHero_move:RAM_PNPlace {
+    condition = `"pHero_move" in get_name(this)`;
+}

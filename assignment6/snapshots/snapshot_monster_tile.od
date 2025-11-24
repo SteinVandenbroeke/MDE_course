@@ -146,7 +146,7 @@ pTileState_hero6:PNPlaceState {
     numTokens = 0;
 }
 pTileState_monster:PNPlaceState {
-    numTokens = 0;
+    numTokens = 1;
 }
 pTileState_monster7:PNPlaceState {
     numTokens = 0;
@@ -155,7 +155,7 @@ pTileState_monster2:PNPlaceState {
     numTokens = 0;
 }
 pTileState_monster8:PNPlaceState {
-    numTokens = 0;
+    numTokens = 1;
 }
 pTileState_hero8:PNPlaceState {
     numTokens = 0;

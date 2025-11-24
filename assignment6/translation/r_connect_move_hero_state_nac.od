@@ -1,0 +1,17 @@
+pHero_move:RAM_PNPlace {
+    condition = `"pHero_move" in get_name(this)`;
+}
+pHeroState_move:RAM_PNPlaceState {
+    RAM_numTokens = `get_value(this) == 1`;
+}
+heroStateMoveToHeroMove:RAM_pn_of (pHeroState_move -> pHero_move)
+
+transition_hero:RAM_PNTransition {
+    condition = `"_move_for_hero" in get_name(this)`;
+}
+
+allow_hero_move:RAM_arc (pHero_move -> transition_hero)
+
+pMonster_move:RAM_PNPlace {
+    condition = `"pMonster_move" in get_name(this)`;
+}

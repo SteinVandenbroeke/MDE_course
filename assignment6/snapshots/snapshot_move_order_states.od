@@ -33,6 +33,8 @@ CSM:CreatureState {
 T4:Obstacle
 T8:Obstacle
 tile_monster_place5:PNPlace
+pHero_move:PNPlace
+pMonster_move:PNPlace
 tile_monster_place1:PNPlace
 tile_monster_place7:PNPlace
 tile_hero_place1:PNPlace
@@ -121,6 +123,9 @@ pTileState_hero0:PNPlaceState {
 pTileState_hero:PNPlaceState {
     numTokens = 0;
 }
+pHeroState_move:PNPlaceState {
+    numTokens = 1;
+}
 pTileState_hero5:PNPlaceState {
     numTokens = 0;
 }
@@ -146,7 +151,7 @@ pTileState_hero6:PNPlaceState {
     numTokens = 0;
 }
 pTileState_monster:PNPlaceState {
-    numTokens = 0;
+    numTokens = 1;
 }
 pTileState_monster7:PNPlaceState {
     numTokens = 0;
@@ -155,12 +160,15 @@ pTileState_monster2:PNPlaceState {
     numTokens = 0;
 }
 pTileState_monster8:PNPlaceState {
-    numTokens = 0;
+    numTokens = 1;
 }
 pTileState_hero8:PNPlaceState {
     numTokens = 0;
 }
 pTileState_monster5:PNPlaceState {
+    numTokens = 0;
+}
+pMonsterState_move:PNPlaceState {
     numTokens = 0;
 }
 pTileState_hero2:PNPlaceState {
@@ -270,11 +278,13 @@ glTileToPlace_monster2:generic_link (T5 -> tile_monster_place2)
 glTileToPlace_monster:generic_link (T6 -> tile_monster_place)
 glTileToPlace_hero6:generic_link (D1 -> tile_hero_place6)
 glTileToPlace_monster5:generic_link (T8 -> tile_monster_place5)
+glWorld_To_move_order_hero:generic_link (W -> pHero_move)
 glTileToPlace_monster8:generic_link (D0 -> tile_monster_place8)
 glTileToPlace_monster3:generic_link (T7 -> tile_monster_place3)
 glTileToPlace_monster1:generic_link (T4 -> tile_monster_place1)
 glTileToPlace_monster6:generic_link (D1 -> tile_monster_place6)
 glTileToPlace_hero1:generic_link (T4 -> tile_hero_place1)
+glWorld_To_move_order_monster:generic_link (W -> pMonster_move)
 glTileToPlace_hero8:generic_link (D0 -> tile_hero_place8)
 glTileToPlace_hero7:generic_link (T1 -> tile_hero_place7)
 glTileToPlace_hero4:generic_link (T2 -> tile_hero_place4)
@@ -385,8 +395,10 @@ D0_K0:DoorToKey (D0 -> K0)
 :pn_of (pTileState_monster1 -> tile_monster_place1)
 :pn_of (pTileState_monster7 -> tile_monster_place7)
 :pn_of (pTileState_hero0 -> tile_hero_place0)
+:pn_of (pMonsterState_move -> pMonster_move)
 :pn_of (pTileState_hero -> tile_hero_place)
 :pn_of (pTileState_hero8 -> tile_hero_place8)
+:pn_of (pHeroState_move -> pHero_move)
 :pn_of (pTileState_monster6 -> tile_monster_place6)
 :pn_of (pTileState_monster4 -> tile_monster_place4)
 :pn_of (pTileState_monster3 -> tile_monster_place3)

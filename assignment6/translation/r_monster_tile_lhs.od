@@ -2,3 +2,11 @@ tile1:RAM_Tile
 monster:RAM_Monster
 
 monsterToTile1:RAM_CreaturesTile (monster -> tile1)
+
+pTile_monster:RAM_PNPlace
+pTileState_monster:RAM_PNPlaceState {
+    condition = `"_monster" in get_name(this)`;
+    RAM_numTokens = `get_value(this) == 0`;
+}
+monsterStateToMonster:RAM_pn_of (pTileState_monster -> pTile_monster)
+glTileToPlace_hero:RAM_generic_link (tile1 -> pTile_monster)
