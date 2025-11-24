@@ -1,3 +1,10 @@
 theTile:RAM_Tile
-pTile:RAM_PNPlace
-glTileToPlace:RAM_generic_link (theTile -> pTile)
+pTile_monster:RAM_PNPlace
+pTileState_monster:RAM_PNPlaceState
+:RAM_pn_of (pTileState_monster -> pTile_monster)
+glTileToPlace_monster:RAM_generic_link (theTile -> pTile_monster)
+
+pTile_hero:RAM_PNPlace
+pTileState_hero:RAM_PNPlaceState
+:RAM_pn_of (pTileState_hero -> pTile_hero)
+glTileToPlace_hero:RAM_generic_link (theTile -> pTile_hero)

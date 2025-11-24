@@ -10,6 +10,7 @@ from transformation.rule import RuleMatcherRewriter, ActionGenerator
 from util import loader, simulator
 from simulator import RPGSimulator
 
+print("test")
 if len(sys.argv) != 2:
     print("Usage:")
     print(f"  python {__file__} model.od")

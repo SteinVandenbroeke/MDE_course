@@ -3,20 +3,38 @@ tile2:RAM_Tile
 
 tile1Totile2:RAM_TileToTile (tile1 -> tile2)
 
-pTile1:RAM_PNPlace
-pTile2:RAM_PNPlace
+pTile1_monster:RAM_PNPlace
+pTile2_monster:RAM_PNPlace
 
-glTile1ToPlace:RAM_generic_link (tile1 -> pTile1)
-glTile2ToPlace:RAM_generic_link (tile2 -> pTile2)
+pTile1_hero:RAM_PNPlace
+pTile2_hero:RAM_PNPlace
 
-transition:RAM_PNTransition {
-    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}"`;
+glTile1ToPlace_monster:RAM_generic_link (tile1 -> pTile1_monster)
+glTile2ToPlace_monster:RAM_generic_link (tile2 -> pTile2_monster)
+
+glTile1ToPlace_hero:RAM_generic_link (tile1 -> pTile1_hero)
+glTile2ToPlace_hero:RAM_generic_link (tile2 -> pTile2_hero)
+
+transition_monster:RAM_PNTransition {
+    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_for_monster"`;
 }
 
-src_arc:RAM_arc (pTile1 -> transition) {
-    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_src"`;
+src_arc_monster:RAM_arc (pTile1_monster -> transition_monster) {
+    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_src_for_monster"`;
 }
 
-trg_arc:RAM_arc (transition -> pTile2) {
-    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_trg"`;
+trg_arc_monster:RAM_arc (transition_monster -> pTile2_monster) {
+    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_trg_for_monster"`;
+}
+
+transition_hero:RAM_PNTransition {
+    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_for_hero"`;
+}
+
+src_arc_hero:RAM_arc (pTile1_hero -> transition_hero) {
+    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_src_for_hero"`;
+}
+
+trg_arc_hero:RAM_arc (transition_hero -> pTile2_hero) {
+    name = `f"{get_name(matched('tile1'))}_to_{get_name(matched('tile2'))}_trg_for_hero"`;
 }

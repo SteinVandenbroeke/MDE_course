@@ -3,8 +3,23 @@ tile2:RAM_Tile
 
 tile1Totile2:RAM_TileToTile (tile1 -> tile2)
 
-pTile1:RAM_PNPlace
-pTile2:RAM_PNPlace
+pTile1_monster:RAM_PNPlace {
+    condition = `"_monster" in get_name(this)`;
+}
+pTile2_monster:RAM_PNPlace{
+    condition = `"_monster" in get_name(this)`;
+}
 
-glTile1ToPlace:RAM_generic_link (tile1 -> pTile1)
-glTile2ToPlace:RAM_generic_link (tile2 -> pTile2)
+pTile1_hero:RAM_PNPlace{
+    condition = `"_hero" in get_name(this)`;
+}
+
+pTile2_hero:RAM_PNPlace{
+    condition = `"_hero" in get_name(this)`;
+}
+
+glTile1ToPlace_monster:RAM_generic_link (tile1 -> pTile1_monster)
+glTile2ToPlace_monster:RAM_generic_link (tile2 -> pTile2_monster)
+
+glTile1ToPlace_hero:RAM_generic_link (tile1 -> pTile1_hero)
+glTile2ToPlace_hero:RAM_generic_link (tile2 -> pTile2_hero)

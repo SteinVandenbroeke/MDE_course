@@ -1,4 +1,5 @@
 import os
+import shutil
 
 from bootstrap.scd import bootstrap_scd
 from concrete_syntax.textual_od import parser, renderer
@@ -22,10 +23,9 @@ print("Ramifying")
 ramified_merged_mm = ramify(state, merged_mm)
 
 rule_names = [
-    "monster_tile",
-    "hero_tile",
     "tile_translation",
     "adjacent_tile_translation",
+    "hero_tile",
 ]
 
 print("Loading rules")
@@ -58,3 +58,5 @@ for i, rule_name in enumerate(rule_names):
         with open(snapshot, "w") as s:
             s.write(txt)
             print("Wrote to snapshot")
+
+shutil.copyfile(f"{CWD}/snapshots/snapshot_{rule_names.pop()}.od", f'{CWD}/snapshots/final.od')

@@ -1,10 +1,11 @@
 tile1:RAM_Tile
 hero:RAM_Hero
+heroToTile1:RAM_CreaturesTile (hero -> tile1)
 
-heroToTile:RAM_CreaturesTile (hero -> tile1)
+pTile_hero:RAM_PNPlace
+pTileState_hero:RAM_PNPlaceState {
+    RAM_numTokens = `1`;
+}
 
-pTile:RAM_PNPlace
-glTileToPlace:RAM_generic_link (tile1 -> pTile)
-
-heroToken:RAM_PNPlaceState { }
-:RAM_pn_of (heroToken -> pTile)
+heroStateToHero:RAM_pn_of (pTileState_hero -> pTile_hero)
+glTileToPlace_hero:RAM_generic_link (tile1 -> pTile_hero)
