@@ -1,0 +1,17 @@
+#We only do hero lives because there is no fighting and thus monster lives are not used
+hero:RAM_Hero
+pheroLives:RAM_PNPlace
+
+glHeroToLives:RAM_generic_link (hero -> pheroLives){
+    condition = `"glHeroToLives" in get_name(this)`;
+}
+
+ptransition:RAM_PNTransition {
+    condition = `f"_move_for_ in get_name(this)"`;
+}
+
+#Check if Hero is alive
+arcHeroMustBeAlive:RAM_arc (pheroLives -> ptransition)
+
+#we don't want to lose our life token
+dont_lose_life:RAM_arc (ptransition -> pheroLives)

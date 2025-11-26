@@ -31,7 +31,9 @@ rule_names = [
     "connect_move_hero_state",
     "connect_move_monster_state",
     "level",
-    "monster_same_level"
+    "monster_same_level",
+    "hero_lives",
+    "hero_must_be_alive_to_move"
 ]
 
 print("Loading rules")

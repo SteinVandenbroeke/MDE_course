@@ -1,0 +1,8 @@
+hero:RAM_Hero
+
+pheroLives:RAM_PNPlace
+pHeroLivesState:RAM_PNPlaceState {
+    RAM_numTokens = `get_slot_value(matched('hero'), 'lives')`;
+}
+heroLivesStateToHeroLives:RAM_pn_of (pHeroLivesState -> pheroLives)
+glHeroToLives:RAM_generic_link (hero -> pheroLives)
