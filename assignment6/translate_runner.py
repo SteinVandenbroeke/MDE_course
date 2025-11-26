@@ -29,7 +29,9 @@ rule_names = [
     "monster_tile",
     "move_order_states",
     "connect_move_hero_state",
-    "connect_move_monster_state"
+    "connect_move_monster_state",
+    "level",
+    "monster_same_level"
 ]
 
 print("Loading rules")

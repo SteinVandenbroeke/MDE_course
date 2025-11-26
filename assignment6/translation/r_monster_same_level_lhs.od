@@ -1,0 +1,14 @@
+level:RAM_Level
+tile:RAM_Tile
+
+pLevel:RAM_PNPlace{
+    condition = `f"{get_name(matched('level'))}" in get_name(this)`;
+}
+
+glLevelToPlace_hero:RAM_generic_link (level -> pLevel)
+tile_same_level:RAM_LevelToTile (level -> tile)
+
+transition_monster:RAM_PNTransition {
+    condition = `"_move_for_monster" in get_name(this) and (f"{get_name(matched('tile'))}_to_" in get_name(this) or f"_to_{get_name(matched('tile'))}" in get_name(this))`;
+}
+

@@ -1,0 +1,13 @@
+level:RAM_Level
+tile:RAM_Tile
+
+pLevel:RAM_PNPlace
+
+glLevelToPlace_hero:RAM_generic_link (level -> pLevel)
+tile_same_level:RAM_LevelToTile (level -> tile)
+
+transition_monster:RAM_PNTransition
+
+src_arc_hero:RAM_arc (pLevel -> transition_monster) {
+    name = `f"level_{get_name(matched('level'))}_to_{get_name(matched('tile'))}_level_lock_for_monster"`;
+}

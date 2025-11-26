@@ -1,0 +1,11 @@
+level:RAM_Level
+
+pLevel:RAM_PNPlace{
+    name = `f"p_rep_{get_name(matched('level'))}"`;
+}
+
+pLevelState_hero:RAM_PNPlaceState
+
+pLevelStateTopLevel:RAM_pn_of (pLevelState_hero -> pLevel)
+
+glLevelToPlace_hero:RAM_generic_link (level -> pLevel)

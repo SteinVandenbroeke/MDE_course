@@ -1,0 +1,14 @@
+level:RAM_Level
+
+pLevel:RAM_PNPlace{
+    name = `f"p_rep_{get_name(matched('level'))}"`;
+}
+
+pLevelState:RAM_PNPlaceState {
+    name = `f"p_rep_{get_name(matched('level'))}_state"`;
+    RAM_numTokens = `int(get_name(get_source(get_incoming(get_target(get_outgoing(get_all_instances('Hero')[0][1], "CreaturesTile")[0]), "LevelToTile")[0])) == get_name(matched('level')))`;
+}
+
+pLevelStateTopLevel:RAM_pn_of (pLevelState -> pLevel)
+
+glLevelToPlace_hero:RAM_generic_link (level -> pLevel)

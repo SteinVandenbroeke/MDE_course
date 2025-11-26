@@ -4,7 +4,7 @@ pMonster_move:RAM_PNPlace {
 pMonsterState_move:RAM_PNPlaceState {
     RAM_numTokens = `0`;
 }
-monsterStateMoveToMonsterMove:RAM_pn_of (pMonsterState_move -> pMonsterState_move)
+monsterStateMoveToMonsterMove:RAM_pn_of (pMonsterState_move -> pMonster_move)
 
 transition_monster:RAM_PNTransition {
     condition = `"_move_for_monster" in get_name(this)`;
