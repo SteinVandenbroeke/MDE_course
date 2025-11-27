@@ -1,0 +1,17 @@
+pheroLives:RAM_PNPlace
+trap:RAM_Trap
+pTileTrap:RAM_PNPlace #petrinet trap tile representation
+
+glTileToPlace_hero:RAM_generic_link (trap -> pTileTrap)
+
+ptransition:RAM_PNTransition
+
+#If destination is trap
+TransitionToPTiletrap:RAM_arc (ptransition -> pTileTrap)
+
+arcHeroMustBeAlive:RAM_arc (pheroLives -> ptransition)
+
+#Check if place is not yet pointed out as trap
+place_is_trap_tile:RAM_generic_link (trap -> pTileTrap) {
+    condition = `f"place_is_trap_tile" in get_name(this)`;
+}

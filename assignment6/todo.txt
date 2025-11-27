@@ -1,0 +1,5 @@
+- Walking through doors (transition that moves player and current level, and checks if key is present)
+    - keys
+- Collecting Objectives
+- No monster in level (fix) now it stops
+    - Can be easly done using an extra paralel place and absorber if no monster is in level

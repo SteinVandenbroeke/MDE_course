@@ -11,3 +11,5 @@ transition_monster:RAM_PNTransition
 src_arc_hero:RAM_arc (pLevel -> transition_monster) {
     name = `f"level_{get_name(matched('level'))}_to_{get_name(matched('tile'))}_level_lock_for_monster"`;
 }
+
+keep_token_in_level:RAM_arc (transition_monster -> pLevel)

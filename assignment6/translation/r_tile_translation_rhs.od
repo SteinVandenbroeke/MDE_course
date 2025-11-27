@@ -2,9 +2,10 @@ theTile:RAM_Tile
 
 #Monster place for tile
 pTile_monster:RAM_PNPlace {
-    name = `f"tile_monster_place"`;
+    name = `f"tile_monster_place_{get_name(matched('theTile'))}"`;
 }
 pTileState_monster:RAM_PNPlaceState {
+    name = `f"tile_monster_place_state_{get_name(matched('theTile'))}"`;
     RAM_numTokens = `0`;
 }
 :RAM_pn_of (pTileState_monster -> pTile_monster)
@@ -13,9 +14,10 @@ glTileToPlace_monster:RAM_generic_link (theTile -> pTile_monster)
 
 #Hero place for tile
 pTile_hero:RAM_PNPlace {
-    name = `f"tile_hero_place"`;
+    name = `f"tile_hero_place_{get_name(matched('theTile'))}"`;
 }
 pTileState_hero:RAM_PNPlaceState {
+    name = `f"tile_hero_place_state_{get_name(matched('theTile'))}"`;
     RAM_numTokens = `0`;
 }
 :RAM_pn_of (pTileState_hero -> pTile_hero)

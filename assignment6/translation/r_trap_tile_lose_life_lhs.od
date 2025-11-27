@@ -1,0 +1,24 @@
+pheroLives:RAM_PNPlace
+trap:RAM_Trap
+pTileTrap:RAM_PNPlace #petrinet trap tile representation
+
+glTileToPlace_hero:RAM_generic_link (trap -> pTileTrap)
+
+ptransition:RAM_PNTransition {
+    condition = `"_move_for_hero" in get_name(this)`;
+}
+
+#If destination is trap
+TransitionToPTiletrap:RAM_arc (ptransition -> pTileTrap) {
+    condition = `"_trg_for_hero" in get_name(this)`;
+}
+
+arcHeroMustBeAlive:RAM_arc (pheroLives -> ptransition) {
+    condition = `f"arc_lives_check_" in get_name(this)`;
+}
+
+#We want to remove this rule
+dont_lose_life:RAM_arc (ptransition -> pheroLives) {
+    condition = `f"return_lives_" in get_name(this)`;
+}
+
