@@ -10,8 +10,12 @@ pTileState_key:RAM_PNPlaceState {
 keyStateToPlace:RAM_pn_of (pTileState_key -> pTile_key)
 glKeyToPlace:RAM_generic_link (key -> pTile_key)
 
-pTile_hero:RAM_PNPlace
+pTile_hero:RAM_PNPlace {
+    condition = `"_hero_place" in get_name(this)`;
+}
 glTileHero:RAM_generic_link (tile -> pTile_hero)
 
-transition_hero:RAM_PNTransition
+transition_hero:RAM_PNTransition {
+    condition = `"_move_for_hero" in get_name(this)`;
+}
 heroTileToMove:RAM_arc (pTile_hero -> transition_hero)
