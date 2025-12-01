@@ -1,0 +1,11 @@
+tile:RAM_StandardTile
+key:RAM_Key
+tileToKey:RAM_StandardToTileItem (tile -> key)
+
+pTile_key:RAM_PNPlace
+pTileState_key:RAM_PNPlaceState {
+    RAM_numTokens = `1`;
+}
+keyStateToPlace:RAM_pn_of (pTileState_key -> pTile_key)
+
+glKeyToPlace:RAM_generic_link (key -> pTile_key)

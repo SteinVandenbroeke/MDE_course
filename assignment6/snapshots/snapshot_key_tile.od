@@ -1,0 +1,406 @@
+
+M:Monster {
+    lives = 4;
+}
+M2:Monster {
+    lives = 10;
+}
+D1:Door
+D0:Door
+WS:WorldState {
+    collectedpoints = 0;
+}
+T8:Obstacle
+T4:Obstacle
+T3:StandardTile
+T6:StandardTile
+T5:StandardTile
+T2:StandardTile
+T7:StandardTile
+tile_hero_place_state_T6:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_T2:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_T1:PNPlaceState {
+    numTokens = 0;
+}
+tile_hero_place_state_T7:PNPlaceState {
+    numTokens = 0;
+}
+_key_state0:PNPlaceState {
+    numTokens = 1;
+}
+tile_hero_place_state_D1:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_T4:PNPlaceState {
+    numTokens = 0;
+}
+tile_hero_place_state_T5:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_T7:PNPlaceState {
+    numTokens = 0;
+}
+tile_hero_place_state_D0:PNPlaceState {
+    numTokens = 0;
+}
+_key_state:PNPlaceState {
+    numTokens = 1;
+}
+tile_hero_place_state_T8:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_T6:PNPlaceState {
+    numTokens = 1;
+}
+tile_monster_place_state_T5:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_T8:PNPlaceState {
+    numTokens = 0;
+}
+tile_hero_place_state_T4:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_D1:PNPlaceState {
+    numTokens = 0;
+}
+tile_hero_place_state_T2:PNPlaceState {
+    numTokens = 1;
+}
+tile_hero_place_state_T3:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_T3:PNPlaceState {
+    numTokens = 0;
+}
+tile_monster_place_state_D0:PNPlaceState {
+    numTokens = 1;
+}
+tile_hero_place_state_T1:PNPlaceState {
+    numTokens = 0;
+}
+C:Clock {
+    time = 0;
+}
+CSM2:CreatureState {
+    moved = False;
+    fought = False;
+}
+CSM:CreatureState {
+    fought = False;
+    moved = False;
+}
+CSH:CreatureState {
+    moved = False;
+    fought = False;
+}
+H:Hero {
+    lives = 5;
+}
+T6_to_T7_move_for_hero:PNTransition
+D0_to_T3_move_for_hero:PNTransition
+T1_to_T4_move_for_monster:PNTransition
+D1_to_T7_move_for_hero:PNTransition
+T4_to_T1_move_for_hero:PNTransition
+T6_to_T7_move_for_monster:PNTransition
+T2_to_T5_move_for_monster:PNTransition
+T6_to_T8_move_for_monster:PNTransition
+T5_to_D0_move_for_hero:PNTransition
+T3_to_D0_move_for_hero:PNTransition
+T5_to_T4_move_for_hero:PNTransition
+T4_to_T5_move_for_hero:PNTransition
+D0_to_T5_move_for_hero:PNTransition
+T2_to_T1_move_for_monster:PNTransition
+D1_to_T7_move_for_monster:PNTransition
+T3_to_T2_move_for_monster:PNTransition
+T4_to_T5_move_for_monster:PNTransition
+T7_to_T6_move_for_monster:PNTransition
+T8_to_D1_move_for_monster:PNTransition
+T2_to_T5_move_for_hero:PNTransition
+T1_to_T2_move_for_hero:PNTransition
+T2_to_T3_move_for_hero:PNTransition
+D1_to_T8_move_for_monster:PNTransition
+T5_to_T2_move_for_monster:PNTransition
+D1_to_T8_move_for_hero:PNTransition
+T8_to_T6_move_for_monster:PNTransition
+T8_to_D1_move_for_hero:PNTransition
+T3_to_T2_move_for_hero:PNTransition
+T7_to_D1_move_for_monster:PNTransition
+T6_to_T8_move_for_hero:PNTransition
+T2_to_T1_move_for_hero:PNTransition
+T2_to_T3_move_for_monster:PNTransition
+T4_to_T1_move_for_monster:PNTransition
+T7_to_T6_move_for_hero:PNTransition
+T7_to_D1_move_for_hero:PNTransition
+D0_to_T5_move_for_monster:PNTransition
+D0_to_T3_move_for_monster:PNTransition
+T1_to_T2_move_for_monster:PNTransition
+T5_to_T2_move_for_hero:PNTransition
+T8_to_T6_move_for_hero:PNTransition
+T5_to_D0_move_for_monster:PNTransition
+T3_to_D0_move_for_monster:PNTransition
+T5_to_T4_move_for_monster:PNTransition
+T1_to_T4_move_for_hero:PNTransition
+K0:Key
+K1:Key
+L2:Level {
+    name = "level2";
+}
+L1:Level {
+    name = "level1";
+}
+O1:Objective {
+    points = 50;
+}
+_key_place:PNPlace
+tile_hero_place_T6:PNPlace
+tile_monster_place_T3:PNPlace
+tile_hero_place_T2:PNPlace
+tile_hero_place_T4:PNPlace
+tile_monster_place_D1:PNPlace
+tile_hero_place_D1:PNPlace
+tile_monster_place_T1:PNPlace
+tile_hero_place_T1:PNPlace
+_key_place0:PNPlace
+tile_hero_place_T8:PNPlace
+tile_monster_place_T2:PNPlace
+tile_monster_place_T4:PNPlace
+tile_monster_place_T7:PNPlace
+tile_monster_place_T5:PNPlace
+tile_monster_place_D0:PNPlace
+tile_hero_place_T5:PNPlace
+tile_monster_place_T6:PNPlace
+tile_hero_place_D0:PNPlace
+tile_hero_place_T3:PNPlace
+tile_monster_place_T8:PNPlace
+tile_hero_place_T7:PNPlace
+T1:Trap
+W:World
+glTileToPlace_monster5:generic_link (D0 -> tile_monster_place_D0)
+glTileToPlace_monster7:generic_link (T1 -> tile_monster_place_T1)
+glTileToPlace_hero2:generic_link (T5 -> tile_hero_place_T5)
+glKeyToPlace0:generic_link (K1 -> _key_place0)
+glTileToPlace_monster1:generic_link (T8 -> tile_monster_place_T8)
+glTileToPlace_hero3:generic_link (T6 -> tile_hero_place_T6)
+glTileToPlace_hero8:generic_link (T7 -> tile_hero_place_T7)
+glTileToPlace_hero7:generic_link (T1 -> tile_hero_place_T1)
+glTileToPlace_hero:generic_link (T2 -> tile_hero_place_T2)
+glTileToPlace_hero6:generic_link (T4 -> tile_hero_place_T4)
+glKeyToPlace:generic_link (K0 -> _key_place)
+glTileToPlace_monster2:generic_link (T5 -> tile_monster_place_T5)
+glTileToPlace_hero5:generic_link (D0 -> tile_hero_place_D0)
+glTileToPlace_monster3:generic_link (T6 -> tile_monster_place_T6)
+glTileToPlace_monster4:generic_link (T3 -> tile_monster_place_T3)
+glTileToPlace_monster0:generic_link (D1 -> tile_monster_place_D1)
+glTileToPlace_monster6:generic_link (T4 -> tile_monster_place_T4)
+glTileToPlace_monster:generic_link (T2 -> tile_monster_place_T2)
+glTileToPlace_hero0:generic_link (D1 -> tile_hero_place_D1)
+glTileToPlace_monster8:generic_link (T7 -> tile_monster_place_T7)
+glTileToPlace_hero4:generic_link (T3 -> tile_hero_place_T3)
+glTileToPlace_hero1:generic_link (T8 -> tile_hero_place_T8)
+L1_T3:LevelToTile (L1 -> T3)
+L1_D0:LevelToTile (L1 -> D0)
+L1_T5:LevelToTile (L1 -> T5)
+L2_T8:LevelToTile (L2 -> T8)
+L2_T6:LevelToTile (L2 -> T6)
+L1_T2:LevelToTile (L1 -> T2)
+L1_T4:LevelToTile (L1 -> T4)
+L1_T1:LevelToTile (L1 -> T1)
+L2_D1:LevelToTile (L2 -> D1)
+L2_T7:LevelToTile (L2 -> T7)
+a:StandardToTileItem (T3 -> K0)
+T5_O1:StandardToTileItem (T5 -> O1)
+T3_K1:StandardToTileItem (T7 -> K1)
+:pn_of (tile_monster_place_state_T1 -> tile_monster_place_T1)
+:pn_of (tile_monster_place_state_T6 -> tile_monster_place_T6)
+:pn_of (tile_hero_place_state_T5 -> tile_hero_place_T5)
+:pn_of (tile_monster_place_state_T8 -> tile_monster_place_T8)
+keyStateToPlace:pn_of (_key_state -> _key_place)
+:pn_of (tile_monster_place_state_T4 -> tile_monster_place_T4)
+:pn_of (tile_monster_place_state_T5 -> tile_monster_place_T5)
+:pn_of (tile_hero_place_state_D1 -> tile_hero_place_D1)
+:pn_of (tile_hero_place_state_T1 -> tile_hero_place_T1)
+:pn_of (tile_monster_place_state_T2 -> tile_monster_place_T2)
+:pn_of (tile_monster_place_state_T7 -> tile_monster_place_T7)
+:pn_of (tile_monster_place_state_D1 -> tile_monster_place_D1)
+keyStateToPlace0:pn_of (_key_state0 -> _key_place0)
+:pn_of (tile_hero_place_state_T4 -> tile_hero_place_T4)
+:pn_of (tile_monster_place_state_D0 -> tile_monster_place_D0)
+:pn_of (tile_hero_place_state_T2 -> tile_hero_place_T2)
+:pn_of (tile_hero_place_state_T6 -> tile_hero_place_T6)
+:pn_of (tile_monster_place_state_T3 -> tile_monster_place_T3)
+:pn_of (tile_hero_place_state_D0 -> tile_hero_place_D0)
+:pn_of (tile_hero_place_state_T3 -> tile_hero_place_T3)
+:pn_of (tile_hero_place_state_T8 -> tile_hero_place_T8)
+:pn_of (tile_hero_place_state_T7 -> tile_hero_place_T7)
+D1_to_T7_trg_for_monster:arc (D1_to_T7_move_for_monster -> tile_monster_place_T7)
+D0_to_T5_trg_for_hero:arc (D0_to_T5_move_for_hero -> tile_hero_place_T5)
+T6_to_T7_src_for_monster:arc (tile_monster_place_T6 -> T6_to_T7_move_for_monster)
+D1_to_T8_trg_for_hero:arc (D1_to_T8_move_for_hero -> tile_hero_place_T8)
+T6_to_T8_trg_for_hero:arc (T6_to_T8_move_for_hero -> tile_hero_place_T8)
+T7_to_T6_trg_for_monster:arc (T7_to_T6_move_for_monster -> tile_monster_place_T6)
+D0_to_T3_src_for_monster:arc (tile_monster_place_D0 -> D0_to_T3_move_for_monster)
+T2_to_T5_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T5_move_for_hero)
+T5_to_T4_trg_for_hero:arc (T5_to_T4_move_for_hero -> tile_hero_place_T4)
+D1_to_T7_src_for_hero:arc (tile_hero_place_D1 -> D1_to_T7_move_for_hero)
+T2_to_T1_trg_for_monster:arc (T2_to_T1_move_for_monster -> tile_monster_place_T1)
+T3_to_T2_trg_for_monster:arc (T3_to_T2_move_for_monster -> tile_monster_place_T2)
+T8_to_D1_trg_for_monster:arc (T8_to_D1_move_for_monster -> tile_monster_place_D1)
+T5_to_D0_trg_for_hero:arc (T5_to_D0_move_for_hero -> tile_hero_place_D0)
+T8_to_T6_trg_for_monster:arc (T8_to_T6_move_for_monster -> tile_monster_place_T6)
+T7_to_D1_trg_for_monster:arc (T7_to_D1_move_for_monster -> tile_monster_place_D1)
+T5_to_D0_trg_for_monster:arc (T5_to_D0_move_for_monster -> tile_monster_place_D0)
+T5_to_T2_trg_for_hero:arc (T5_to_T2_move_for_hero -> tile_hero_place_T2)
+T6_to_T8_src_for_hero:arc (tile_hero_place_T6 -> T6_to_T8_move_for_hero)
+D1_to_T8_trg_for_monster:arc (D1_to_T8_move_for_monster -> tile_monster_place_T8)
+T3_to_T2_src_for_monster:arc (tile_monster_place_T3 -> T3_to_T2_move_for_monster)
+T8_to_D1_src_for_hero:arc (tile_hero_place_T8 -> T8_to_D1_move_for_hero)
+T4_to_T1_src_for_monster:arc (tile_monster_place_T4 -> T4_to_T1_move_for_monster)
+T4_to_T5_trg_for_hero:arc (T4_to_T5_move_for_hero -> tile_hero_place_T5)
+T7_to_T6_trg_for_hero:arc (T7_to_T6_move_for_hero -> tile_hero_place_T6)
+T2_to_T1_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T1_move_for_hero)
+T3_to_D0_src_for_monster:arc (tile_monster_place_T3 -> T3_to_D0_move_for_monster)
+T1_to_T2_trg_for_monster:arc (T1_to_T2_move_for_monster -> tile_monster_place_T2)
+T5_to_D0_src_for_monster:arc (tile_monster_place_T5 -> T5_to_D0_move_for_monster)
+T7_to_D1_trg_for_hero:arc (T7_to_D1_move_for_hero -> tile_hero_place_D1)
+T6_to_T7_src_for_hero:arc (tile_hero_place_T6 -> T6_to_T7_move_for_hero)
+T3_to_D0_trg_for_hero:arc (T3_to_D0_move_for_hero -> tile_hero_place_D0)
+T2_to_T1_trg_for_hero:arc (T2_to_T1_move_for_hero -> tile_hero_place_T1)
+T1_to_T4_trg_for_hero:arc (T1_to_T4_move_for_hero -> tile_hero_place_T4)
+T2_to_T5_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T5_move_for_monster)
+T5_to_T4_src_for_monster:arc (tile_monster_place_T5 -> T5_to_T4_move_for_monster)
+T8_to_T6_src_for_monster:arc (tile_monster_place_T8 -> T8_to_T6_move_for_monster)
+T5_to_T4_trg_for_monster:arc (T5_to_T4_move_for_monster -> tile_monster_place_T4)
+D0_to_T5_src_for_monster:arc (tile_monster_place_D0 -> D0_to_T5_move_for_monster)
+T2_to_T5_trg_for_hero:arc (T2_to_T5_move_for_hero -> tile_hero_place_T5)
+T4_to_T1_trg_for_hero:arc (T4_to_T1_move_for_hero -> tile_hero_place_T1)
+T3_to_D0_trg_for_monster:arc (T3_to_D0_move_for_monster -> tile_monster_place_D0)
+T6_to_T7_trg_for_hero:arc (T6_to_T7_move_for_hero -> tile_hero_place_T7)
+T2_to_T3_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T3_move_for_hero)
+T7_to_T6_src_for_monster:arc (tile_monster_place_T7 -> T7_to_T6_move_for_monster)
+T1_to_T2_src_for_monster:arc (tile_monster_place_T1 -> T1_to_T2_move_for_monster)
+T2_to_T5_trg_for_monster:arc (T2_to_T5_move_for_monster -> tile_monster_place_T5)
+T2_to_T3_trg_for_monster:arc (T2_to_T3_move_for_monster -> tile_monster_place_T3)
+T7_to_D1_src_for_hero:arc (tile_hero_place_T7 -> T7_to_D1_move_for_hero)
+T7_to_D1_src_for_monster:arc (tile_monster_place_T7 -> T7_to_D1_move_for_monster)
+T4_to_T1_src_for_hero:arc (tile_hero_place_T4 -> T4_to_T1_move_for_hero)
+T5_to_D0_src_for_hero:arc (tile_hero_place_T5 -> T5_to_D0_move_for_hero)
+T6_to_T7_trg_for_monster:arc (T6_to_T7_move_for_monster -> tile_monster_place_T7)
+D0_to_T5_src_for_hero:arc (tile_hero_place_D0 -> D0_to_T5_move_for_hero)
+T1_to_T4_trg_for_monster:arc (T1_to_T4_move_for_monster -> tile_monster_place_T4)
+T1_to_T4_src_for_monster:arc (tile_monster_place_T1 -> T1_to_T4_move_for_monster)
+D0_to_T3_trg_for_monster:arc (D0_to_T3_move_for_monster -> tile_monster_place_T3)
+D1_to_T8_src_for_hero:arc (tile_hero_place_D1 -> D1_to_T8_move_for_hero)
+T4_to_T5_trg_for_monster:arc (T4_to_T5_move_for_monster -> tile_monster_place_T5)
+T3_to_D0_src_for_hero:arc (tile_hero_place_T3 -> T3_to_D0_move_for_hero)
+T1_to_T2_trg_for_hero:arc (T1_to_T2_move_for_hero -> tile_hero_place_T2)
+T5_to_T2_trg_for_monster:arc (T5_to_T2_move_for_monster -> tile_monster_place_T2)
+T6_to_T8_src_for_monster:arc (tile_monster_place_T6 -> T6_to_T8_move_for_monster)
+T5_to_T2_src_for_monster:arc (tile_monster_place_T5 -> T5_to_T2_move_for_monster)
+D0_to_T5_trg_for_monster:arc (D0_to_T5_move_for_monster -> tile_monster_place_T5)
+T8_to_D1_trg_for_hero:arc (T8_to_D1_move_for_hero -> tile_hero_place_D1)
+T4_to_T1_trg_for_monster:arc (T4_to_T1_move_for_monster -> tile_monster_place_T1)
+T2_to_T1_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T1_move_for_monster)
+T7_to_T6_src_for_hero:arc (tile_hero_place_T7 -> T7_to_T6_move_for_hero)
+T8_to_T6_trg_for_hero:arc (T8_to_T6_move_for_hero -> tile_hero_place_T6)
+T4_to_T5_src_for_hero:arc (tile_hero_place_T4 -> T4_to_T5_move_for_hero)
+T2_to_T3_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T3_move_for_monster)
+T1_to_T2_src_for_hero:arc (tile_hero_place_T1 -> T1_to_T2_move_for_hero)
+T4_to_T5_src_for_monster:arc (tile_monster_place_T4 -> T4_to_T5_move_for_monster)
+T5_to_T4_src_for_hero:arc (tile_hero_place_T5 -> T5_to_T4_move_for_hero)
+D1_to_T8_src_for_monster:arc (tile_monster_place_D1 -> D1_to_T8_move_for_monster)
+T6_to_T8_trg_for_monster:arc (T6_to_T8_move_for_monster -> tile_monster_place_T8)
+T5_to_T2_src_for_hero:arc (tile_hero_place_T5 -> T5_to_T2_move_for_hero)
+T3_to_T2_src_for_hero:arc (tile_hero_place_T3 -> T3_to_T2_move_for_hero)
+T8_to_D1_src_for_monster:arc (tile_monster_place_T8 -> T8_to_D1_move_for_monster)
+T1_to_T4_src_for_hero:arc (tile_hero_place_T1 -> T1_to_T4_move_for_hero)
+D1_to_T7_trg_for_hero:arc (D1_to_T7_move_for_hero -> tile_hero_place_T7)
+T3_to_T2_trg_for_hero:arc (T3_to_T2_move_for_hero -> tile_hero_place_T2)
+D1_to_T7_src_for_monster:arc (tile_monster_place_D1 -> D1_to_T7_move_for_monster)
+D0_to_T3_trg_for_hero:arc (D0_to_T3_move_for_hero -> tile_hero_place_T3)
+D0_to_T3_src_for_hero:arc (tile_hero_place_D0 -> D0_to_T3_move_for_hero)
+T2_to_T3_trg_for_hero:arc (T2_to_T3_move_for_hero -> tile_hero_place_T3)
+T8_to_T6_src_for_hero:arc (tile_hero_place_T8 -> T8_to_T6_move_for_hero)
+WS_W:WorldStateToWorld (WS -> W)
+D1_K1:DoorToKey (D1 -> K1)
+D0_K0:DoorToKey (D0 -> K0)
+D0_D2:DoorToDoor (D1 -> D0)
+D0_D1:DoorToDoor (D0 -> D1)
+W_L2:WorldToLevel (W -> L2)
+W_L1:WorldToLevel (W -> L1)
+T8_D1:TileToTile (T8 -> D1) {
+    direction = "right";
+}
+T3_D0:TileToTile (T3 -> D0) {
+    direction = "down";
+}
+D0_T3:TileToTile (D0 -> T3) {
+    direction = "up";
+}
+T7_D1:TileToTile (T7 -> D1) {
+    direction = "down";
+}
+T1_T2:TileToTile (T1 -> T2) {
+    direction = "right";
+}
+T1_T4:TileToTile (T1 -> T4) {
+    direction = "down";
+}
+T4_T1:TileToTile (T4 -> T1) {
+    direction = "up";
+}
+D0_T5:TileToTile (D0 -> T5) {
+    direction = "left";
+}
+T2_T1:TileToTile (T2 -> T1) {
+    direction = "left";
+}
+T5_D0:TileToTile (T5 -> D0) {
+    direction = "right";
+}
+T5_T4:TileToTile (T5 -> T4) {
+    direction = "left";
+}
+T8_T6:TileToTile (T8 -> T6) {
+    direction = "up";
+}
+T3_T2:TileToTile (T3 -> T2) {
+    direction = "left";
+}
+T5_T2:TileToTile (T5 -> T2) {
+    direction = "up";
+}
+T4_T5:TileToTile (T4 -> T5) {
+    direction = "right";
+}
+T7_T6:TileToTile (T7 -> T6) {
+    direction = "left";
+}
+T6_T8:TileToTile (T6 -> T8) {
+    direction = "down";
+}
+D1_T7:TileToTile (D1 -> T7) {
+    direction = "up";
+}
+T2_T5:TileToTile (T2 -> T5) {
+    direction = "down";
+}
+D1_T8:TileToTile (D1 -> T8) {
+    direction = "left";
+}
+T2_T3:TileToTile (T2 -> T3) {
+    direction = "right";
+}
+T6_T7:TileToTile (T6 -> T7) {
+    direction = "right";
+}
+M2_T0:CreaturesTile (M2 -> T6)
+H_T0:CreaturesTile (H -> T2)
+M_T0:CreaturesTile (M -> D0)
+S_M2:CreatureStateToCreature (CSM2 -> M2)
+CS_H:CreatureStateToCreature (CSH -> H)
+CS_M:CreatureStateToCreature (CSM -> M)

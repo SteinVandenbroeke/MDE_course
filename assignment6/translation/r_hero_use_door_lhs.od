@@ -1,0 +1,18 @@
+door:RAM_Door
+key:RAM_Key
+doorKey:RAM_DoorToKey (door -> key)
+
+pTile_key:RAM_PNPlace
+pTileState_key:RAM_PNPlaceState
+keyStateToPlace:RAM_pn_of (pTileState_key -> pTile_key)
+glKeyToPlace:RAM_generic_link (key -> pTile_key)
+
+pDoor_hero:RAM_PNPlace
+pDoorState_hero:RAM_PNPlaceState {
+    condition = `"_hero" in get_name(this)`;
+}
+heroDoorStateToPlace:RAM_pn_of (pDoorState_hero -> pDoor_hero)
+glTileDoorHero:RAM_generic_link (door -> pDoor_hero)
+
+transition_hero:RAM_PNTransition
+heroDoorSrcArc:RAM_arc (pDoor_hero -> transition_hero)

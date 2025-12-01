@@ -1,0 +1,18 @@
+tile:RAM_StandardTile
+key:RAM_Key
+tileToKey:RAM_StandardToTileItem (tile -> key)
+
+pTile_key:RAM_PNPlace
+pTileState_key:RAM_PNPlaceState {
+    RAM_numTokens = `1`;
+}
+keyStateToPlace:RAM_pn_of (pTileState_key -> pTile_key)
+glKeyToPlace:RAM_generic_link (key -> pTile_key)
+
+pTile_hero:RAM_PNPlace
+glTileHero:RAM_generic_link (tile -> pTile_hero)
+
+transition_hero:RAM_PNTransition
+heroTileToMove:RAM_arc (pTile_hero -> transition_hero)
+
+heroCollectsKey:RAM_inh_arc (pTile_key -> transition_hero)
