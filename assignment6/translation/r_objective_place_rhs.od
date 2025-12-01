@@ -1,0 +1,13 @@
+tile:RAM_StandardTile
+objective:RAM_Objective
+tileToObjective:RAM_StandardToTileItem (tile -> objective)
+
+pTile_objective:RAM_PNPlace {
+    name = `"_objective_place"`;
+}
+pTileState_objective:RAM_PNPlaceState {
+    name = `"_objective_state"`;
+    RAM_numTokens = `0`;
+}
+objectiveStateToPlace:RAM_pn_of (pTileState_objective -> pTile_objective)
+glObjectiveToPlace:RAM_generic_link (objective -> pTile_objective)

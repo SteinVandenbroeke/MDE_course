@@ -1,0 +1,34 @@
+tile:RAM_StandardTile
+objective:RAM_Objective
+tile_item:RAM_StandardToTileItem (tile -> objective)
+
+pTile_objective:RAM_PNPlace
+pTileState_objective:RAM_PNPlaceState {
+    RAM_numTokens = `0`;
+}
+objectiveStateToPlace:RAM_pn_of (pTileState_objective -> pTile_objective)
+glObjectiveToPlace:RAM_generic_link (objective -> pTile_objective)
+
+pTile_hero:RAM_PNPlace {
+    condition = `"_hero_place" in get_name(this)`;
+}
+glTileHero:RAM_generic_link (tile -> pTile_hero)
+
+transition_hero:RAM_PNTransition {
+    condition = `"_move_for_hero" in get_name(this)`;
+}
+heroTileToMove:RAM_arc (pTile_hero -> transition_hero)
+
+worldState:RAM_WorldState {
+    condition = ```
+        obj = matched("objective")
+
+        current = get_slot_value(this, "collectedpoints")
+        pts = get_slot_value(obj, "points")
+
+        set_slot_value(this, "collectedpoints", current + pts)
+
+        True
+    ```;
+}
+
