@@ -2,7 +2,7 @@ pHero_move:RAM_PNPlace {
     condition = `"pHero_move" in get_name(this)`;
 }
 pHeroState_move:RAM_PNPlaceState {
-    RAM_numTokens = `get_value(this) == 1`;
+    RAM_numTokens = `1`;
 }
 heroStateMoveToHeroMove:RAM_pn_of (pHeroState_move -> pHero_move)
 
@@ -14,8 +14,8 @@ pMonster_move:RAM_PNPlace {
     condition = `"pMonster_move" in get_name(this)`;
 }
 
-# Arc already exists
+# Enable the transitions for hero
 allow_hero_move:RAM_arc (pHero_move -> transition_use_door)
 
-
-
+# After hero uses door, monster should move
+enable_monster_move:RAM_arc (transition_use_door -> pMonster_move)
