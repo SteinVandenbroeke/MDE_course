@@ -1,0 +1,25 @@
+hero:RAM_Hero
+door1:RAM_Door
+door2:RAM_Door
+key:RAM_Key
+doorToDoor:RAM_DoorToDoor (door1 -> door2)
+doorToKey:RAM_DoorToKey (door1 -> key)
+
+# Hero place on door1
+pDoor1_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`;
+}
+glDoor1ToPlace_hero:RAM_generic_link (door1 -> pDoor1_hero)
+
+# Hero place on door2
+pDoor2_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`;
+}
+glDoor2ToPlace_hero:RAM_generic_link (door2 -> pDoor2_hero)
+
+# Key place
+pKey:RAM_PNPlace {
+    condition = `f"key_place_{get_name(matched('key'))}" == get_name(this)`;
+}
+glKeyToPlace:RAM_generic_link (key -> pKey)
+

@@ -1,0 +1,21 @@
+hero:RAM_Hero
+tile:RAM_StandardTile
+key:RAM_Key
+tileToKey:RAM_StandardToTileItem (tile -> key)
+
+# Hero place for this tile
+pTile_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`;
+}
+glTileToPlace_hero:RAM_generic_link (tile -> pTile_hero)
+
+# Key place (key not collected yet)
+pKey:RAM_PNPlace {
+    condition = `f"key_place_{get_name(matched('key'))}" == get_name(this)`;
+}
+pKeyState:RAM_PNPlaceState {
+    RAM_numTokens = `get_value(this) == 0`;
+}
+keyStateToKey:RAM_pn_of (pKeyState -> pKey)
+glKeyToPlace:RAM_generic_link (key -> pKey)
+

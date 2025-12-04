@@ -1,0 +1,7 @@
+theKey:RAM_Key
+pKey:RAM_PNPlace
+pKeyState:RAM_PNPlaceState
+:RAM_pn_of (pKeyState -> pKey)
+glKeyToPlace:RAM_generic_link (theKey -> pKey)
+
+

@@ -1,0 +1,39 @@
+hero:RAM_Hero
+tile:RAM_StandardTile
+key:RAM_Key
+tileToKey:RAM_StandardToTileItem (tile -> key)
+
+pTile_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`;
+}
+glTileToPlace_hero:RAM_generic_link (tile -> pTile_hero)
+
+pKey:RAM_PNPlace {
+    condition = `f"key_place_{get_name(matched('key'))}" == get_name(this)`;
+}
+pKeyState:RAM_PNPlaceState {
+    RAM_numTokens = `0`;
+}
+keyStateToKey:RAM_pn_of (pKeyState -> pKey)
+glKeyToPlace:RAM_generic_link (key -> pKey)
+
+# Transition to collect the key
+transition_collect:RAM_PNTransition {
+    name = `f"collect_key_{get_name(matched('key'))}"`;
+}
+
+# Arc from tile place to collect transition (hero must be on tile)
+arc_tile_to_collect:RAM_arc (pTile_hero -> transition_collect) {
+    name = `f"arc_tile_to_collect_{get_name(matched('key'))}"`;
+}
+
+# Arc from collect transition back to tile place (hero stays on tile)
+arc_collect_to_tile:RAM_arc (transition_collect -> pTile_hero) {
+    name = `f"arc_collect_to_tile_{get_name(matched('key'))}"`;
+}
+
+# Arc from collect transition to key place (mark key as collected)
+arc_collect_to_key:RAM_arc (transition_collect -> pKey) {
+    name = `f"arc_collect_to_key_{get_name(matched('key'))}"`;
+}
+

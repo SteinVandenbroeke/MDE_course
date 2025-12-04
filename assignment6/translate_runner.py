@@ -34,8 +34,13 @@ rule_names = [
     "monster_same_level",
     "hero_lives",
     "hero_must_be_alive_to_move",
-    "trap_tile_lose_life"
+    "trap_tile_lose_life",
+    "key_place",
+    "hero_collect_key",
+    "hero_use_door",
+    "connect_use_door_state",
 ]
+
 
 print("Loading rules")
 rules = loader.load_rules(state, lambda name, kind: f"{CWD}/translation/r_{name}_{kind}.od",

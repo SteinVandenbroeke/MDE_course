@@ -1,0 +1,14 @@
+theKey:RAM_Key
+
+# Place for key (tracks if hero has collected it)
+pKey:RAM_PNPlace {
+    name = `f"key_place_{get_name(matched('theKey'))}"`;
+}
+pKeyState:RAM_PNPlaceState {
+    name = `f"key_place_state_{get_name(matched('theKey'))}"`;
+    RAM_numTokens = `0`;
+}
+:RAM_pn_of (pKeyState -> pKey)
+glKeyToPlace:RAM_generic_link (theKey -> pKey)
+
+
