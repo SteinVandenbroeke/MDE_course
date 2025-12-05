@@ -20,7 +20,7 @@ pKey:RAM_PNPlace {
 }
 glKeyToPlace:RAM_generic_link (key -> pKey)
 
-# Transition to use door already exists
+# use door already exists
 transition_use_door:RAM_PNTransition {
     condition = `f"use_door_{get_name(matched('door1'))}_to_{get_name(matched('door2'))}" in get_name(this)`;
 }

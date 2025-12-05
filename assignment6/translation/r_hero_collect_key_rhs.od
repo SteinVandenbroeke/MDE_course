@@ -17,23 +17,28 @@ pKeyState:RAM_PNPlaceState {
 keyStateToKey:RAM_pn_of (pKeyState -> pKey)
 glKeyToPlace:RAM_generic_link (key -> pKey)
 
-# Transition to collect the key
+# transition to collect the key
 transition_collect:RAM_PNTransition {
     name = `f"collect_key_{get_name(matched('key'))}"`;
 }
 
-# Arc from tile place to collect transition (hero must be on tile)
+# arc from tile place to collect transition, hero must be on tile
 arc_tile_to_collect:RAM_arc (pTile_hero -> transition_collect) {
     name = `f"arc_tile_to_collect_{get_name(matched('key'))}"`;
 }
 
-# Arc from collect transition back to tile place (hero stays on tile)
+# arc from collect transition back to tile place, hero stays on tile
 arc_collect_to_tile:RAM_arc (transition_collect -> pTile_hero) {
     name = `f"arc_collect_to_tile_{get_name(matched('key'))}"`;
 }
 
-# Arc from collect transition to key place (mark key as collected)
+# arc from collect transition to key place, mark key as collected
 arc_collect_to_key:RAM_arc (transition_collect -> pKey) {
     name = `f"arc_collect_to_key_{get_name(matched('key'))}"`;
+}
+
+# inhibitor arc from key place to transition
+inh_arc_key_to_collect:RAM_inh_arc (pKey -> transition_collect) {
+    name = `f"inh_arc_key_to_collect_{get_name(matched('key'))}"`;
 }
 

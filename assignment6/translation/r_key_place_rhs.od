@@ -1,6 +1,6 @@
 theKey:RAM_Key
 
-# Place for key (tracks if hero has collected it)
+# tracks if hero has collected the key
 pKey:RAM_PNPlace {
     name = `f"key_place_{get_name(matched('theKey'))}"`;
 }

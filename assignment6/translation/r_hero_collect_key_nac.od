@@ -17,7 +17,7 @@ pKeyState:RAM_PNPlaceState {
 keyStateToKey:RAM_pn_of (pKeyState -> pKey)
 glKeyToPlace:RAM_generic_link (key -> pKey)
 
-# Transition to collect key already exists
+# transition to collect key already exists
 transition_collect:RAM_PNTransition {
     condition = `f"collect_key_{get_name(matched('key'))}" in get_name(this)`;
 }

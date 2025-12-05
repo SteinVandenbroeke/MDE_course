@@ -1,0 +1,26 @@
+pHero_move:RAM_PNPlace {
+    condition = `"pHero_move" in get_name(this)`;
+}
+pHeroState_move:RAM_PNPlaceState {
+    RAM_numTokens = `1`;
+}
+heroStateMoveToHeroMove:RAM_pn_of (pHeroState_move -> pHero_move)
+
+transition_collect:RAM_PNTransition {
+    condition = `"collect_key" in get_name(this)`;
+}
+
+pMonster_move:RAM_PNPlace {
+    condition = `"pMonster_move" in get_name(this)`;
+}
+
+# enable the transitions for hero
+allow_hero_move:RAM_arc (pHero_move -> transition_collect) {
+    name = `f"allow_hero_move_{get_name(matched('transition_collect'))}"`;
+}
+
+# after hero collects key, monster should move
+enable_monster_move:RAM_arc (transition_collect -> pMonster_move) {
+    name = `f"enable_monster_move_{get_name(matched('transition_collect'))}"`;
+}
+

@@ -14,8 +14,12 @@ pMonster_move:RAM_PNPlace {
     condition = `"pMonster_move" in get_name(this)`;
 }
 
-# Enable the transitions for hero
-allow_hero_move:RAM_arc (pHero_move -> transition_use_door)
+# enable the transitions for hero
+allow_hero_move:RAM_arc (pHero_move -> transition_use_door) {
+    name = `f"allow_hero_move_{get_name(matched('transition_use_door'))}"`;
+}
 
-# After hero uses door, monster should move
-enable_monster_move:RAM_arc (transition_use_door -> pMonster_move)
+# after hero uses door, monster should move
+enable_monster_move:RAM_arc (transition_use_door -> pMonster_move) {
+    name = `f"enable_monster_move_{get_name(matched('transition_use_door'))}"`;
+}

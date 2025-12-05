@@ -37,6 +37,7 @@ rule_names = [
     "trap_tile_lose_life",
     "key_place",
     "hero_collect_key",
+    "connect_collect_key_state",
     "hero_use_door",
     "connect_use_door_state",
 ]

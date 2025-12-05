@@ -6,8 +6,8 @@ pHeroState_move:RAM_PNPlaceState {
 }
 heroStateMoveToHeroMove:RAM_pn_of (pHeroState_move -> pHero_move)
 
-transition_use_door:RAM_PNTransition {
-    condition = `"use_door" in get_name(this)`;
+transition_collect:RAM_PNTransition {
+    condition = `"collect_key" in get_name(this)`;
 }
 
 pMonster_move:RAM_PNPlace {
@@ -15,7 +15,5 @@ pMonster_move:RAM_PNPlace {
 }
 
 # arc already exists
-allow_hero_move:RAM_arc (pHero_move -> transition_use_door)
-
-
+allow_hero_move:RAM_arc (pHero_move -> transition_collect)
 

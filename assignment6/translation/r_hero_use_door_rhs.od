@@ -20,27 +20,27 @@ pKey:RAM_PNPlace {
 }
 glKeyToPlace:RAM_generic_link (key -> pKey)
 
-# Transition to use door (traverse from door1 to door2)
+# transition to use door
 transition_use_door:RAM_PNTransition {
     name = `f"use_door_{get_name(matched('door1'))}_to_{get_name(matched('door2'))}"`;
 }
 
-# Arc from door1 place to transition (hero must be on door1)
+# hero must be on door1
 arc_door1_to_use:RAM_arc (pDoor1_hero -> transition_use_door) {
     name = `f"arc_door1_to_use_{get_name(matched('door1'))}_to_{get_name(matched('door2'))}"`;
 }
 
-# Arc from key place to transition (requires key)
+# requires key
 arc_key_to_use:RAM_arc (pKey -> transition_use_door) {
     name = `f"arc_key_to_use_{get_name(matched('door1'))}_to_{get_name(matched('door2'))}"`;
 }
 
-# Arc from transition to door2 place (hero moves to door2)
+# hero moves to door2
 arc_use_to_door2:RAM_arc (transition_use_door -> pDoor2_hero) {
     name = `f"arc_use_to_door2_{get_name(matched('door1'))}_to_{get_name(matched('door2'))}"`;
 }
 
-# Arc from transition back to key place (key is reusable, so we return it)
+# key is reusable, so we return it
 arc_use_to_key:RAM_arc (transition_use_door -> pKey) {
     name = `f"arc_use_to_key_{get_name(matched('door1'))}_to_{get_name(matched('door2'))}"`;
 }
