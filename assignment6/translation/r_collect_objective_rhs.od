@@ -1,0 +1,54 @@
+tile:RAM_StandardTile
+objective:RAM_Objective
+tileToobjective:RAM_StandardToTileItem (tile -> objective)
+
+hero_place_from:RAM_PNPlace {
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+hero_place_to:RAM_PNPlace {
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+glTileHeroPlaceTo:RAM_generic_link (tile -> hero_place_to)
+
+move_transition:RAM_PNTransition
+arc_from:RAM_arc (hero_place_from -> move_transition)
+arc_to:RAM_arc (move_transition -> hero_place_to)
+
+pHero_move:RAM_PNPlace {
+    condition = `get_name(this) == "pHero_move"`;
+}
+pMonster_move:RAM_PNPlace {
+    condition = `get_name(this) == "pMonster_move"`;
+}
+
+allow_hero_move:RAM_arc (pHero_move -> move_transition)
+enable_monster_move:RAM_arc (move_transition -> pMonster_move)
+
+objective_to_collect:RAM_PNPlace {
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_objective:RAM_PNPlace {
+    condition = `get_name(this).startswith("collected_")`;
+}
+globjectiveToCollect:RAM_generic_link (objective -> objective_to_collect)
+globjectiveCollected:RAM_generic_link (objective -> collected_objective)
+
+# new transition move+collect objective
+transitionCollect:RAM_PNTransition {
+    name = `get_name(matched("move_transition")) + "_and_collect_objective"`;
+}
+
+# hero moves between same tiles but via collect transition
+fromArcCollect:RAM_arc (hero_place_from -> transitionCollect)
+toArcCollect:RAM_arc (transitionCollect -> hero_place_to)
+
+# - objective_to_collect + collected_objective
+consArc:RAM_arc (objective_to_collect -> transitionCollect)
+prodArc:RAM_arc (transitionCollect -> collected_objective)
+
+# inh: deshabilita el movimiento simple mientras el objective NO se ha recogido
+inhArc:RAM_inh_arc (objective_to_collect -> move_transition)
+
+# fase hero -> move+collect -> monstruo
+phase_fromHero:RAM_arc (pHero_move -> transitionCollect)
+phase_toMonster:RAM_arc (transitionCollect -> pMonster_move)

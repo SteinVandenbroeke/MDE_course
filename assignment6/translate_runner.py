@@ -36,7 +36,8 @@ rule_names = [
     "hero_must_be_alive_to_move",
     "trap_tile_lose_life",
     "item_tile",
-    "collect_key"
+    "collect_key",
+    "collect_objective",
 ]
 
 print("Loading rules")

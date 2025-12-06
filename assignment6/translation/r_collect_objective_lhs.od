@@ -1,0 +1,41 @@
+tile:RAM_StandardTile
+objective:RAM_Objective
+tileToobjective:RAM_StandardToTileItem (tile -> objective)
+
+# movement from tile -> tile (hero)
+hero_place_from:RAM_PNPlace {
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+hero_place_to:RAM_PNPlace {
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+glTileHeroPlaceTo:RAM_generic_link (tile -> hero_place_to)
+
+move_transition:RAM_PNTransition {
+    condition = `get_name(this).endswith("_move_for_hero")`;
+}
+
+arc_from:RAM_arc (hero_place_from -> move_transition)
+arc_to:RAM_arc (move_transition -> hero_place_to)
+
+# phase places
+pHero_move:RAM_PNPlace {
+    condition = `get_name(this) == "pHero_move"`;
+}
+pMonster_move:RAM_PNPlace {
+    condition = `get_name(this) == "pMonster_move"`;
+}
+
+allow_hero_move:RAM_arc (pHero_move -> move_transition)
+enable_monster_move:RAM_arc (move_transition -> pMonster_move)
+
+# objective places (not collected / collected)
+objective_to_collect:RAM_PNPlace {
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_objective:RAM_PNPlace {
+    condition = `get_name(this).startswith("collected_")`;
+}
+globjectiveToCollect:RAM_generic_link (objective -> objective_to_collect)
+globjectiveCollected:RAM_generic_link (objective -> collected_objective)
+
