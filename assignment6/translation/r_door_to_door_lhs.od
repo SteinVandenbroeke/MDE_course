@@ -1,15 +1,29 @@
 fromDoor:RAM_Door
 toDoor:RAM_Door
+key:RAM_Key
 
 doorToDoor:RAM_DoorToDoor (fromDoor -> toDoor)
+doorToKey:RAM_DoorToKey (fromDoor -> key)
 
+# hero src
 pfromDoor_hero:RAM_PNPlace {
-    condition = `"_hero" in get_name(this)`; 
+    condition = `"_hero" in get_name(this)`;
 }
-glFromDoorToPlace_hero:RAM_generic_link (fromDoor -> pfromDoor_hero)
+glfromDoorToPlace_hero:RAM_generic_link (fromDoor -> pfromDoor_hero)
 
+# hero trg
 ptoDoor_hero:RAM_PNPlace {
-    condition = `"_hero" in get_name(this)`; 
+    condition = `"_hero" in get_name(this)`;
 }
-glToDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
+gltoDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
 
+# key places
+key_to_collect:RAM_PNPlace {
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_key:RAM_PNPlace {
+    condition = `get_name(this).startswith("collected_")`;
+}
+
+glKeyToCollect:RAM_generic_link (key -> key_to_collect)
+glKeyCollected:RAM_generic_link (key -> collected_key)

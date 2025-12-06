@@ -1,22 +1,42 @@
 fromDoor:RAM_Door
 toDoor:RAM_Door
+key:RAM_Key
 
 doorToDoor:RAM_DoorToDoor (fromDoor -> toDoor)
+doorToKey:RAM_DoorToKey (fromDoor -> key)
 
 pfromDoor_hero:RAM_PNPlace {
-    condition = `"_hero" in get_name(this)`; 
+    condition = `"_hero" in get_name(this)`;
 }
-glFromDoorToPlace_hero:RAM_generic_link (fromDoor -> pfromDoor_hero)
+glfromDoorToPlace_hero:RAM_generic_link (fromDoor -> pfromDoor_hero)
 
 ptoDoor_hero:RAM_PNPlace {
-    condition = `"_hero" in get_name(this)`; 
+    condition = `"_hero" in get_name(this)`;
 }
-glToDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
+gltoDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
 
-# New door transition, without key
-doorMove:RAM_PNTransition {
+# key places
+key_to_collect:RAM_PNPlace {
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_key:RAM_PNPlace {
+    condition = `get_name(this).startswith("collected_")`;
+}
+
+glKeyToCollect:RAM_generic_link (key -> key_to_collect)
+glKeyCollected:RAM_generic_link (key -> collected_key)
+
+# door transition
+door_move:RAM_PNTransition {
     name = `f"door_move_{get_name(matched('fromDoor'))}_to_{get_name(matched('toDoor'))}"`;
 }
 
-fromDoorArc:RAM_arc (pfromDoor_hero -> doorMove)
-toDoorArc:RAM_arc (doorMove -> ptoDoor_hero)
+# move hero fromDoor to toDoor
+fromDoorArc:RAM_arc (pfromDoor_hero -> door_move)
+toDoorArc:RAM_arc (door_move -> ptoDoor_hero)
+
+# To fire door_move:
+# Token in collected_key
+# NO token in key_to_collect
+hasKeyArc:RAM_arc (collected_key -> door_move)
+inhKeyArc:RAM_inh_arc (key_to_collect -> door_move)
