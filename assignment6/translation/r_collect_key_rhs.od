@@ -21,6 +21,9 @@ pMonster_move:RAM_PNPlace {
     condition = `"pMonster_move" in get_name(this)`;
 }
 
+allow_hero_move:RAM_arc (pHero_move -> move_transition)
+enable_monster_move:RAM_arc (move_transition -> pMonster_move)
+
 key_to_collect:RAM_PNPlace{
     condition = `get_name(this).endswith("_to_collect")`;
 }
