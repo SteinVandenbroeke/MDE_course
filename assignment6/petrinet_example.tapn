@@ -307,7 +307,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="410" yCoord="201"/>
-      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="238"/>
+      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="239"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -545,7 +545,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="195" yCoord="163"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="135"/>
+      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="129"/>
     </arc>
     <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T0" target="T1_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -564,7 +564,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="410" yCoord="119"/>
-      <arcpath arcPointType="false" id="1" xCoord="615" yCoord="165"/>
+      <arcpath arcPointType="false" id="1" xCoord="615" yCoord="162"/>
     </arc>
     <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_hero" target="T1" type="timed" weight="1">
       <hlinscription>
@@ -583,7 +583,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="615" yCoord="167"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="195"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="194"/>
     </arc>
     <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="T0_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -602,7 +602,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="400" yCoord="190"/>
-      <arcpath arcPointType="false" id="1" xCoord="195" yCoord="165"/>
+      <arcpath arcPointType="false" id="1" xCoord="195" yCoord="167"/>
     </arc>
     <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_monster" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -621,7 +621,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="195" yCoord="283"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="255"/>
+      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="249"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_monster" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -640,7 +640,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="615" yCoord="287"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="315"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="314"/>
     </arc>
     <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="T1_place_monster" type="normal" weight="1">
       <hlinscription>
@@ -659,7 +659,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="410" yCoord="245"/>
-      <arcpath arcPointType="false" id="1" xCoord="615" yCoord="285"/>
+      <arcpath arcPointType="false" id="1" xCoord="615" yCoord="282"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="T0_place_monster" type="normal" weight="1">
       <hlinscription>
@@ -678,7 +678,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="400" yCoord="310"/>
-      <arcpath arcPointType="false" id="1" xCoord="195" yCoord="285"/>
+      <arcpath arcPointType="false" id="1" xCoord="195" yCoord="287"/>
     </arc>
     <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T1" type="timed" weight="1">
       <hlinscription>
@@ -697,7 +697,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="781" yCoord="65"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="180"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="187"/>
     </arc>
     <arc id="A9" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T0" type="timed" weight="1">
       <hlinscription>
@@ -716,7 +716,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="780" yCoord="62"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="105"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="112"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T0" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -735,7 +735,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="410" yCoord="126"/>
-      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="240"/>
+      <arcpath arcPointType="false" id="1" xCoord="781" yCoord="236"/>
     </arc>
     <arc id="A11" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -754,7 +754,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="410" yCoord="201"/>
-      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="240"/>
+      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="239"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -773,7 +773,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="780" yCoord="240"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="240"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="235"/>
     </arc>
     <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -792,7 +792,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="780" yCoord="243"/>
-      <arcpath arcPointType="false" id="1" xCoord="405" yCoord="300"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="307"/>
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="pHero_move" type="normal" weight="1">
       <hlinscription>
@@ -835,7 +835,7 @@
       <arcpath arcPointType="false" id="1" xCoord="465" yCoord="360"/>
       <arcpath arcPointType="false" id="2" xCoord="870" yCoord="360"/>
       <arcpath arcPointType="false" id="3" xCoord="870" yCoord="45"/>
-      <arcpath arcPointType="false" id="4" xCoord="810" yCoord="60"/>
+      <arcpath arcPointType="false" id="4" xCoord="810" yCoord="57"/>
     </arc>
     <arc id="A16" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pheroLives" target="T0" type="timed" weight="1">
       <hlinscription>
@@ -855,7 +855,7 @@
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="269" yCoord="495"/>
       <arcpath arcPointType="false" id="1" xCoord="255" yCoord="120"/>
-      <arcpath arcPointType="false" id="2" xCoord="405" yCoord="120"/>
+      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="122"/>
     </arc>
     <arc id="A17" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T0" target="pheroLives" type="normal" weight="1">
       <hlinscription>
@@ -875,7 +875,7 @@
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="400" yCoord="115"/>
       <arcpath arcPointType="false" id="1" xCoord="240" yCoord="120"/>
-      <arcpath arcPointType="false" id="2" xCoord="270" yCoord="495"/>
+      <arcpath arcPointType="false" id="2" xCoord="269" yCoord="495"/>
     </arc>
     <arc id="A18" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pheroLives" target="T1" type="timed" weight="1">
       <hlinscription>
@@ -895,7 +895,7 @@
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="270" yCoord="495"/>
       <arcpath arcPointType="false" id="1" xCoord="270" yCoord="195"/>
-      <arcpath arcPointType="false" id="2" xCoord="405" yCoord="195"/>
+      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="197"/>
     </arc>
     <arc id="A19" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pheroLives" type="normal" weight="1">
       <hlinscription>
@@ -935,7 +935,7 @@
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="270" yCoord="495"/>
       <arcpath arcPointType="false" id="1" xCoord="270" yCoord="240"/>
-      <arcpath arcPointType="false" id="2" xCoord="405" yCoord="240"/>
+      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="242"/>
     </arc>
     <arc id="A21" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="pheroLives" type="normal" weight="1">
       <hlinscription>
@@ -955,7 +955,7 @@
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="400" yCoord="235"/>
       <arcpath arcPointType="false" id="1" xCoord="285" yCoord="240"/>
-      <arcpath arcPointType="false" id="2" xCoord="270" yCoord="495"/>
+      <arcpath arcPointType="false" id="2" xCoord="271" yCoord="495"/>
     </arc>
     <arc id="A22" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pheroLives" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -975,7 +975,7 @@
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="272" yCoord="495"/>
       <arcpath arcPointType="false" id="1" xCoord="300" yCoord="315"/>
-      <arcpath arcPointType="false" id="2" xCoord="405" yCoord="315"/>
+      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="317"/>
     </arc>
     <arc id="A23" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="pheroLives" type="normal" weight="1">
       <hlinscription>
@@ -995,7 +995,7 @@
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="400" yCoord="324"/>
       <arcpath arcPointType="false" id="1" xCoord="315" yCoord="330"/>
-      <arcpath arcPointType="false" id="2" xCoord="270" yCoord="495"/>
+      <arcpath arcPointType="false" id="2" xCoord="274" yCoord="495"/>
     </arc>
   </net>
   <net active="true" id="Monster_same_level" type="P/T net">
@@ -1590,8 +1590,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="195" yCoord="163"/>
-      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="129"/>
+      <arcpath arcPointType="false" id="0" xCoord="195" yCoord="162"/>
+      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="121"/>
     </arc>
     <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T0" target="T1_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -1647,7 +1647,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="190"/>
+      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="196"/>
       <arcpath arcPointType="false" id="1" xCoord="195" yCoord="167"/>
     </arc>
     <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_monster" target="T2" type="timed" weight="1">
@@ -1666,8 +1666,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="195" yCoord="283"/>
-      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="249"/>
+      <arcpath arcPointType="false" id="0" xCoord="195" yCoord="282"/>
+      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="241"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_monster" target="Trap" type="timed" weight="1">
       <hlinscription>
@@ -1800,7 +1800,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="410" yCoord="201"/>
-      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="239"/>
+      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="238"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -1882,126 +1882,6 @@
       <arcpath arcPointType="false" id="2" xCoord="870" yCoord="360"/>
       <arcpath arcPointType="false" id="3" xCoord="870" yCoord="45"/>
       <arcpath arcPointType="false" id="4" xCoord="810" yCoord="57"/>
-    </arc>
-    <arc id="A16" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pheroLives" target="T0" type="timed" weight="1">
-      <hlinscription>
-        <text>1'dot</text>
-        <structure>
-          <numberof>
-            <subterm>
-              <numberconstant value="1">
-                <positive/>
-              </numberconstant>
-            </subterm>
-            <subterm>
-              <useroperator declaration="dot"/>
-            </subterm>
-          </numberof>
-        </structure>
-      </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="269" yCoord="495"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="120"/>
-      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="122"/>
-    </arc>
-    <arc id="A17" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T0" target="pheroLives" type="normal" weight="1">
-      <hlinscription>
-        <text>1'dot</text>
-        <structure>
-          <numberof>
-            <subterm>
-              <numberconstant value="1">
-                <positive/>
-              </numberconstant>
-            </subterm>
-            <subterm>
-              <useroperator declaration="dot"/>
-            </subterm>
-          </numberof>
-        </structure>
-      </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="115"/>
-      <arcpath arcPointType="false" id="1" xCoord="240" yCoord="120"/>
-      <arcpath arcPointType="false" id="2" xCoord="269" yCoord="495"/>
-    </arc>
-    <arc id="A18" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pheroLives" target="T1" type="timed" weight="1">
-      <hlinscription>
-        <text>1'dot</text>
-        <structure>
-          <numberof>
-            <subterm>
-              <numberconstant value="1">
-                <positive/>
-              </numberconstant>
-            </subterm>
-            <subterm>
-              <useroperator declaration="dot"/>
-            </subterm>
-          </numberof>
-        </structure>
-      </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="495"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="195"/>
-      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="197"/>
-    </arc>
-    <arc id="A19" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pheroLives" type="normal" weight="1">
-      <hlinscription>
-        <text>1'dot</text>
-        <structure>
-          <numberof>
-            <subterm>
-              <numberconstant value="1">
-                <positive/>
-              </numberconstant>
-            </subterm>
-            <subterm>
-              <useroperator declaration="dot"/>
-            </subterm>
-          </numberof>
-        </structure>
-      </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="204"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="210"/>
-      <arcpath arcPointType="false" id="2" xCoord="270" yCoord="495"/>
-    </arc>
-    <arc id="A20" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pheroLives" target="T2" type="timed" weight="1">
-      <hlinscription>
-        <text>1'dot</text>
-        <structure>
-          <numberof>
-            <subterm>
-              <numberconstant value="1">
-                <positive/>
-              </numberconstant>
-            </subterm>
-            <subterm>
-              <useroperator declaration="dot"/>
-            </subterm>
-          </numberof>
-        </structure>
-      </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="495"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="240"/>
-      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="242"/>
-    </arc>
-    <arc id="A21" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="pheroLives" type="normal" weight="1">
-      <hlinscription>
-        <text>1'dot</text>
-        <structure>
-          <numberof>
-            <subterm>
-              <numberconstant value="1">
-                <positive/>
-              </numberconstant>
-            </subterm>
-            <subterm>
-              <useroperator declaration="dot"/>
-            </subterm>
-          </numberof>
-        </structure>
-      </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="235"/>
-      <arcpath arcPointType="false" id="1" xCoord="285" yCoord="240"/>
-      <arcpath arcPointType="false" id="2" xCoord="271" yCoord="495"/>
     </arc>
     <arc id="A22" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pheroLives" target="Trap" type="timed" weight="1">
       <hlinscription>
@@ -2259,7 +2139,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="267" yCoord="922"/>
+      <arcpath arcPointType="false" id="0" xCoord="268" yCoord="923"/>
       <arcpath arcPointType="false" id="1" xCoord="1015" yCoord="414"/>
     </arc>
     <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_t1" target="T1_place_hero" type="normal" weight="1">
@@ -2278,8 +2158,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1020" yCoord="420"/>
-      <arcpath arcPointType="false" id="1" xCoord="1064" yCoord="885"/>
+      <arcpath arcPointType="false" id="0" xCoord="1021" yCoord="421"/>
+      <arcpath arcPointType="false" id="1" xCoord="1065" yCoord="886"/>
     </arc>
     <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_hero" target="T1" type="timed" weight="1">
       <hlinscription>
@@ -2297,8 +2177,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="900"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="914"/>
+      <arcpath arcPointType="false" id="0" xCoord="1052" yCoord="900"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="914"/>
     </arc>
     <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="T0_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -2316,8 +2196,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="916"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="929"/>
+      <arcpath arcPointType="false" id="0" xCoord="639" yCoord="917"/>
+      <arcpath arcPointType="false" id="1" xCoord="269" yCoord="931"/>
     </arc>
     <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_monster" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -2335,8 +2215,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="1047"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="961"/>
+      <arcpath arcPointType="false" id="0" xCoord="269" yCoord="1048"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="962"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_monster" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -2354,8 +2234,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="1020"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="1034"/>
+      <arcpath arcPointType="false" id="0" xCoord="1052" yCoord="1021"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="1034"/>
     </arc>
     <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="T1_place_monster" type="normal" weight="1">
       <hlinscription>
@@ -2373,8 +2253,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="959"/>
-      <arcpath arcPointType="false" id="1" xCoord="1050" yCoord="1018"/>
+      <arcpath arcPointType="false" id="0" xCoord="651" yCoord="959"/>
+      <arcpath arcPointType="false" id="1" xCoord="1052" yCoord="1018"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="T0_place_monster" type="normal" weight="1">
       <hlinscription>
@@ -2392,8 +2272,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="1036"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="1049"/>
+      <arcpath arcPointType="false" id="0" xCoord="639" yCoord="1037"/>
+      <arcpath arcPointType="false" id="1" xCoord="269" yCoord="1051"/>
     </arc>
     <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T1" type="timed" weight="1">
       <hlinscription>
@@ -2411,8 +2291,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="798"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="907"/>
+      <arcpath arcPointType="false" id="0" xCoord="1217" yCoord="799"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="908"/>
     </arc>
     <arc id="A9" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="Move_to_t1" type="timed" weight="1">
       <hlinscription>
@@ -2430,8 +2310,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1223" yCoord="782"/>
-      <arcpath arcPointType="false" id="1" xCoord="1020" yCoord="420"/>
+      <arcpath arcPointType="false" id="0" xCoord="1224" yCoord="783"/>
+      <arcpath arcPointType="false" id="1" xCoord="1021" yCoord="421"/>
     </arc>
     <arc id="A11" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -2449,8 +2329,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="921"/>
-      <arcpath arcPointType="false" id="1" xCoord="1215" yCoord="974"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="921"/>
+      <arcpath arcPointType="false" id="1" xCoord="1217" yCoord="975"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -2468,8 +2348,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="974"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="952"/>
+      <arcpath arcPointType="false" id="0" xCoord="1217" yCoord="976"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="954"/>
     </arc>
     <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -2487,8 +2367,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="976"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="1027"/>
+      <arcpath arcPointType="false" id="0" xCoord="1217" yCoord="977"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="1028"/>
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="pHero_move" type="normal" weight="1">
       <hlinscription>
@@ -2506,10 +2386,10 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="1041"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="1041"/>
       <arcpath arcPointType="false" id="1" xCoord="1275" yCoord="1050"/>
       <arcpath arcPointType="false" id="2" xCoord="1275" yCoord="795"/>
-      <arcpath arcPointType="false" id="3" xCoord="1245" yCoord="795"/>
+      <arcpath arcPointType="false" id="3" xCoord="1246" yCoord="796"/>
     </arc>
     <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="pHero_move" type="normal" weight="1">
       <hlinscription>
@@ -2527,11 +2407,11 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="966"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="966"/>
       <arcpath arcPointType="false" id="1" xCoord="900" yCoord="1095"/>
       <arcpath arcPointType="false" id="2" xCoord="1305" yCoord="1095"/>
       <arcpath arcPointType="false" id="3" xCoord="1305" yCoord="780"/>
-      <arcpath arcPointType="false" id="4" xCoord="1245" yCoord="792"/>
+      <arcpath arcPointType="false" id="4" xCoord="1245" yCoord="793"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_t1" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -2549,8 +2429,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1020" yCoord="420"/>
-      <arcpath arcPointType="false" id="1" xCoord="1225" yCoord="961"/>
+      <arcpath arcPointType="false" id="0" xCoord="1021" yCoord="421"/>
+      <arcpath arcPointType="false" id="1" xCoord="1225" yCoord="962"/>
     </arc>
     <arc id="A18" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -2568,8 +2448,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="794"/>
-      <arcpath arcPointType="false" id="1" xCoord="259" yCoord="729"/>
+      <arcpath arcPointType="false" id="0" xCoord="1217" yCoord="794"/>
+      <arcpath arcPointType="false" id="1" xCoord="259" yCoord="731"/>
     </arc>
     <arc id="A19" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_hero" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -2587,8 +2467,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="915"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="735"/>
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="917"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="737"/>
     </arc>
     <arc id="A25" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="uncollected_objective" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -2606,8 +2486,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="198" yCoord="450"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="705"/>
+      <arcpath arcPointType="false" id="0" xCoord="199" yCoord="449"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="706"/>
     </arc>
     <arc id="A26" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="uncollected_key" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -2625,8 +2505,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="390"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="705"/>
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="392"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="706"/>
     </arc>
     <arc id="A29" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_collect" target="uncollected_objective" type="normal" weight="1">
       <hlinscription>
@@ -2644,8 +2524,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="705"/>
-      <arcpath arcPointType="false" id="1" xCoord="198" yCoord="450"/>
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="706"/>
+      <arcpath arcPointType="false" id="1" xCoord="199" yCoord="449"/>
     </arc>
     <arc id="A30" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_collect" target="uncollected_key" type="normal" weight="1">
       <hlinscription>
@@ -2663,8 +2543,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="705"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="390"/>
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="706"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="392"/>
     </arc>
     <arc id="A23" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="uncollected_key" target="Collect_key" type="timed" weight="1">
       <hlinscription>
@@ -2682,8 +2562,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="372"/>
-      <arcpath arcPointType="false" id="1" xCoord="520" yCoord="316"/>
+      <arcpath arcPointType="false" id="0" xCoord="269" yCoord="373"/>
+      <arcpath arcPointType="false" id="1" xCoord="520" yCoord="317"/>
     </arc>
     <arc id="A24" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="uncollected_objective" target="Collect_objective" type="timed" weight="1">
       <hlinscription>
@@ -2701,8 +2581,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="210" yCoord="433"/>
-      <arcpath arcPointType="false" id="1" xCoord="520" yCoord="400"/>
+      <arcpath arcPointType="false" id="0" xCoord="210" yCoord="434"/>
+      <arcpath arcPointType="false" id="1" xCoord="521" yCoord="400"/>
     </arc>
     <arc id="A27" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Collect_key" target="Collected_key" type="normal" weight="1">
       <hlinscription>
@@ -2720,8 +2600,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="530" yCoord="315"/>
-      <arcpath arcPointType="false" id="1" xCoord="691" yCoord="260"/>
+      <arcpath arcPointType="false" id="0" xCoord="531" yCoord="315"/>
+      <arcpath arcPointType="false" id="1" xCoord="692" yCoord="259"/>
     </arc>
     <arc id="A28" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Collect_objective" target="Collected_objective" type="normal" weight="1">
       <hlinscription>
@@ -2739,8 +2619,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="530" yCoord="405"/>
-      <arcpath arcPointType="false" id="1" xCoord="705" yCoord="446"/>
+      <arcpath arcPointType="false" id="0" xCoord="531" yCoord="406"/>
+      <arcpath arcPointType="false" id="1" xCoord="707" yCoord="448"/>
     </arc>
     <arc id="A31" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_collect" target="Collect_items_T1" type="normal" weight="1">
       <hlinscription>
@@ -2758,8 +2638,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="260" yCoord="711"/>
-      <arcpath arcPointType="false" id="1" xCoord="440" yCoord="506"/>
+      <arcpath arcPointType="false" id="0" xCoord="261" yCoord="713"/>
+      <arcpath arcPointType="false" id="1" xCoord="441" yCoord="507"/>
     </arc>
     <arc id="A32" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collect_items_T1" target="Collect_objective" type="timed" weight="1">
       <hlinscription>
@@ -2777,8 +2657,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="459" yCoord="483"/>
-      <arcpath arcPointType="false" id="1" xCoord="520" yCoord="407"/>
+      <arcpath arcPointType="false" id="0" xCoord="461" yCoord="485"/>
+      <arcpath arcPointType="false" id="1" xCoord="520" yCoord="414"/>
     </arc>
     <arc id="A33" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collect_items_T1" target="Collect_key" type="timed" weight="1">
       <hlinscription>
@@ -2796,8 +2676,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="456" yCoord="481"/>
-      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="330"/>
+      <arcpath arcPointType="false" id="0" xCoord="456" yCoord="482"/>
+      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="331"/>
     </arc>
     <arc id="A34" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Collect_key" target="Collect_items_T1" type="normal" weight="1">
       <hlinscription>
@@ -2815,8 +2695,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="525" yCoord="330"/>
-      <arcpath arcPointType="false" id="1" xCoord="456" yCoord="481"/>
+      <arcpath arcPointType="false" id="0" xCoord="525" yCoord="331"/>
+      <arcpath arcPointType="false" id="1" xCoord="456" yCoord="482"/>
     </arc>
     <arc id="A35" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Collect_objective" target="Collect_items_T1" type="normal" weight="1">
       <hlinscription>
@@ -2834,8 +2714,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="520" yCoord="414"/>
-      <arcpath arcPointType="false" id="1" xCoord="460" yCoord="484"/>
+      <arcpath arcPointType="false" id="0" xCoord="520" yCoord="407"/>
+      <arcpath arcPointType="false" id="1" xCoord="459" yCoord="485"/>
     </arc>
     <arc id="A36" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Items_to_collect" target="Collect_objective" type="timed" weight="1">
       <hlinscription>
@@ -2853,8 +2733,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="552" yCoord="570"/>
-      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="420"/>
+      <arcpath arcPointType="false" id="0" xCoord="552" yCoord="572"/>
+      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="421"/>
     </arc>
     <arc id="A37" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Items_to_collect" target="Collect_key" type="timed" weight="1">
       <hlinscription>
@@ -2872,8 +2752,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="553" yCoord="570"/>
-      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="330"/>
+      <arcpath arcPointType="false" id="0" xCoord="554" yCoord="572"/>
+      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="331"/>
     </arc>
     <arc id="A38" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Items_to_collect" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -2891,8 +2771,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="541" yCoord="591"/>
-      <arcpath arcPointType="false" id="1" xCoord="260" yCoord="717"/>
+      <arcpath arcPointType="false" id="0" xCoord="541" yCoord="592"/>
+      <arcpath arcPointType="false" id="1" xCoord="259" yCoord="724"/>
     </arc>
     <arc id="A39" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_collect" target="Items_to_collect" type="normal" weight="1">
       <hlinscription>
@@ -2910,8 +2790,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="260" yCoord="723"/>
-      <arcpath arcPointType="false" id="1" xCoord="541" yCoord="591"/>
+      <arcpath arcPointType="false" id="0" xCoord="261" yCoord="718"/>
+      <arcpath arcPointType="false" id="1" xCoord="541" yCoord="592"/>
     </arc>
     <arc id="A40" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collect_items_T1" target="All_collected" type="timed" weight="1">
       <hlinscription>
@@ -2929,8 +2809,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="465" yCoord="494"/>
-      <arcpath arcPointType="false" id="1" xCoord="864" yCoord="476"/>
+      <arcpath arcPointType="false" id="0" xCoord="465" yCoord="496"/>
+      <arcpath arcPointType="false" id="1" xCoord="865" yCoord="477"/>
     </arc>
     <arc id="A41" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collected_objective" target="All_collected" type="timed" weight="1">
       <hlinscription>
@@ -2949,7 +2829,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="735" yCoord="452"/>
-      <arcpath arcPointType="false" id="1" xCoord="865" yCoord="471"/>
+      <arcpath arcPointType="false" id="1" xCoord="865" yCoord="468"/>
     </arc>
     <arc id="A42" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collected_key" target="All_collected" type="timed" weight="1">
       <hlinscription>
@@ -2967,8 +2847,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="714" yCoord="267"/>
-      <arcpath arcPointType="false" id="1" xCoord="866" yCoord="456"/>
+      <arcpath arcPointType="false" id="0" xCoord="714" yCoord="266"/>
+      <arcpath arcPointType="false" id="1" xCoord="866" yCoord="462"/>
     </arc>
     <arc id="A43" inscription="1" nameOffsetX="0" nameOffsetY="0" source="All_collected" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -2986,8 +2866,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="875" yCoord="465"/>
-      <arcpath arcPointType="false" id="1" xCoord="1221" yCoord="963"/>
+      <arcpath arcPointType="false" id="0" xCoord="876" yCoord="466"/>
+      <arcpath arcPointType="false" id="1" xCoord="1223" yCoord="963"/>
     </arc>
     <arc id="A45" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collected_key" target="Move_to_t1" type="timed" weight="1">
       <hlinscription>
@@ -3005,8 +2885,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="719" yCoord="261"/>
-      <arcpath arcPointType="false" id="1" xCoord="1015" yCoord="400"/>
+      <arcpath arcPointType="false" id="0" xCoord="720" yCoord="261"/>
+      <arcpath arcPointType="false" id="1" xCoord="1017" yCoord="400"/>
     </arc>
     <arc id="A46" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collected_objective" target="Move_to_t1" type="timed" weight="1">
       <hlinscription>
@@ -3043,8 +2923,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="865" yCoord="461"/>
-      <arcpath arcPointType="false" id="1" xCoord="714" yCoord="267"/>
+      <arcpath arcPointType="false" id="0" xCoord="866" yCoord="456"/>
+      <arcpath arcPointType="false" id="1" xCoord="715" yCoord="266"/>
     </arc>
     <arc id="A47" inscription="1" nameOffsetX="0" nameOffsetY="0" source="All_collected" target="Collected_objective" type="normal" weight="1">
       <hlinscription>
@@ -3062,8 +2942,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="865" yCoord="466"/>
-      <arcpath arcPointType="false" id="1" xCoord="735" yCoord="452"/>
+      <arcpath arcPointType="false" id="0" xCoord="865" yCoord="472"/>
+      <arcpath arcPointType="false" id="1" xCoord="735" yCoord="454"/>
     </arc>
     <arc id="A45" inscription="1" nameOffsetX="0" nameOffsetY="0" source="All_collected" target="T1_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -3081,8 +2961,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="870" yCoord="480"/>
-      <arcpath arcPointType="false" id="1" xCoord="1059" yCoord="886"/>
+      <arcpath arcPointType="false" id="0" xCoord="870" yCoord="482"/>
+      <arcpath arcPointType="false" id="1" xCoord="1061" yCoord="886"/>
     </arc>
   </net>
   <net active="true" id="Collect_key" type="P/T net">
@@ -3284,8 +3164,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="267" yCoord="922"/>
-      <arcpath arcPointType="false" id="1" xCoord="1015" yCoord="411"/>
+      <arcpath arcPointType="false" id="0" xCoord="268" yCoord="921"/>
+      <arcpath arcPointType="false" id="1" xCoord="1013" yCoord="411"/>
     </arc>
     <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_t1" target="T1_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -3303,7 +3183,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1020" yCoord="420"/>
+      <arcpath arcPointType="false" id="0" xCoord="1019" yCoord="419"/>
       <arcpath arcPointType="false" id="1" xCoord="1064" yCoord="885"/>
     </arc>
     <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_hero" target="T1" type="timed" weight="1">
@@ -3322,8 +3202,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="901"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="914"/>
+      <arcpath arcPointType="false" id="0" xCoord="1051" yCoord="900"/>
+      <arcpath arcPointType="false" id="1" xCoord="649" yCoord="915"/>
     </arc>
     <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="T0_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -3341,8 +3221,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="916"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="929"/>
+      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="915"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="930"/>
     </arc>
     <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_monster" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -3360,8 +3240,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="1047"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="961"/>
+      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="1045"/>
+      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="960"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_monster" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -3379,8 +3259,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="1021"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="1034"/>
+      <arcpath arcPointType="false" id="0" xCoord="1051" yCoord="1019"/>
+      <arcpath arcPointType="false" id="1" xCoord="649" yCoord="1034"/>
     </arc>
     <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="T1_place_monster" type="normal" weight="1">
       <hlinscription>
@@ -3398,8 +3278,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="959"/>
-      <arcpath arcPointType="false" id="1" xCoord="1050" yCoord="1018"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="960"/>
+      <arcpath arcPointType="false" id="1" xCoord="1051" yCoord="1017"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="T0_place_monster" type="normal" weight="1">
       <hlinscription>
@@ -3417,7 +3297,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="1036"/>
+      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="1034"/>
       <arcpath arcPointType="false" id="1" xCoord="270" yCoord="1049"/>
     </arc>
     <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T1" type="timed" weight="1">
@@ -3437,7 +3317,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="798"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="907"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="906"/>
     </arc>
     <arc id="A9" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="Move_to_t1" type="timed" weight="1">
       <hlinscription>
@@ -3455,8 +3335,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1223" yCoord="782"/>
-      <arcpath arcPointType="false" id="1" xCoord="1020" yCoord="420"/>
+      <arcpath arcPointType="false" id="0" xCoord="1223" yCoord="783"/>
+      <arcpath arcPointType="false" id="1" xCoord="1019" yCoord="419"/>
     </arc>
     <arc id="A11" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -3474,8 +3354,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="921"/>
-      <arcpath arcPointType="false" id="1" xCoord="1215" yCoord="974"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="921"/>
+      <arcpath arcPointType="false" id="1" xCoord="1215" yCoord="972"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -3494,7 +3374,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="974"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="952"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="951"/>
     </arc>
     <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -3512,8 +3392,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="976"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="1027"/>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="977"/>
+      <arcpath arcPointType="false" id="1" xCoord="651" yCoord="1026"/>
     </arc>
     <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="pHero_move" type="normal" weight="1">
       <hlinscription>
@@ -3531,10 +3411,10 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="1041"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="1040"/>
       <arcpath arcPointType="false" id="1" xCoord="1275" yCoord="1050"/>
       <arcpath arcPointType="false" id="2" xCoord="1275" yCoord="795"/>
-      <arcpath arcPointType="false" id="3" xCoord="1245" yCoord="795"/>
+      <arcpath arcPointType="false" id="3" xCoord="1245" yCoord="796"/>
     </arc>
     <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="pHero_move" type="normal" weight="1">
       <hlinscription>
@@ -3552,11 +3432,11 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="966"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="966"/>
       <arcpath arcPointType="false" id="1" xCoord="900" yCoord="1095"/>
       <arcpath arcPointType="false" id="2" xCoord="1305" yCoord="1095"/>
       <arcpath arcPointType="false" id="3" xCoord="1305" yCoord="780"/>
-      <arcpath arcPointType="false" id="4" xCoord="1245" yCoord="792"/>
+      <arcpath arcPointType="false" id="4" xCoord="1245" yCoord="794"/>
     </arc>
     <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_t1" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -3574,8 +3454,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1020" yCoord="420"/>
-      <arcpath arcPointType="false" id="1" xCoord="1225" yCoord="961"/>
+      <arcpath arcPointType="false" id="0" xCoord="1019" yCoord="419"/>
+      <arcpath arcPointType="false" id="1" xCoord="1226" yCoord="960"/>
     </arc>
     <arc id="A18" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -3593,8 +3473,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="794"/>
-      <arcpath arcPointType="false" id="1" xCoord="259" yCoord="729"/>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="796"/>
+      <arcpath arcPointType="false" id="1" xCoord="260" yCoord="728"/>
     </arc>
     <arc id="A19" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_hero" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -3613,7 +3493,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="255" yCoord="915"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="735"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="734"/>
     </arc>
     <arc id="A26" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="uncollected_key" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -3631,8 +3511,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="390"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="705"/>
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="389"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="704"/>
     </arc>
     <arc id="A30" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_collect" target="uncollected_key" type="normal" weight="1">
       <hlinscription>
@@ -3650,8 +3530,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="705"/>
-      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="390"/>
+      <arcpath arcPointType="false" id="0" xCoord="255" yCoord="704"/>
+      <arcpath arcPointType="false" id="1" xCoord="255" yCoord="389"/>
     </arc>
     <arc id="A23" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="uncollected_key" target="Collect_key" type="timed" weight="1">
       <hlinscription>
@@ -3669,8 +3549,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="372"/>
-      <arcpath arcPointType="false" id="1" xCoord="520" yCoord="316"/>
+      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="370"/>
+      <arcpath arcPointType="false" id="1" xCoord="521" yCoord="315"/>
     </arc>
     <arc id="A27" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Collect_key" target="Collected_key" type="normal" weight="1">
       <hlinscription>
@@ -3689,7 +3569,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="530" yCoord="315"/>
-      <arcpath arcPointType="false" id="1" xCoord="691" yCoord="260"/>
+      <arcpath arcPointType="false" id="1" xCoord="689" yCoord="260"/>
     </arc>
     <arc id="A31" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_collect" target="Collect_items_T1" type="normal" weight="1">
       <hlinscription>
@@ -3707,8 +3587,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="260" yCoord="711"/>
-      <arcpath arcPointType="false" id="1" xCoord="440" yCoord="506"/>
+      <arcpath arcPointType="false" id="0" xCoord="262" yCoord="711"/>
+      <arcpath arcPointType="false" id="1" xCoord="438" yCoord="506"/>
     </arc>
     <arc id="A33" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collect_items_T1" target="Collect_key" type="timed" weight="1">
       <hlinscription>
@@ -3726,8 +3606,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="456" yCoord="481"/>
-      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="330"/>
+      <arcpath arcPointType="false" id="0" xCoord="455" yCoord="483"/>
+      <arcpath arcPointType="false" id="1" xCoord="526" yCoord="330"/>
     </arc>
     <arc id="A34" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Collect_key" target="Collect_items_T1" type="normal" weight="1">
       <hlinscription>
@@ -3745,8 +3625,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="525" yCoord="330"/>
-      <arcpath arcPointType="false" id="1" xCoord="456" yCoord="481"/>
+      <arcpath arcPointType="false" id="0" xCoord="526" yCoord="330"/>
+      <arcpath arcPointType="false" id="1" xCoord="455" yCoord="483"/>
     </arc>
     <arc id="A37" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Items_to_collect" target="Collect_key" type="timed" weight="1">
       <hlinscription>
@@ -3765,7 +3645,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="553" yCoord="570"/>
-      <arcpath arcPointType="false" id="1" xCoord="525" yCoord="330"/>
+      <arcpath arcPointType="false" id="1" xCoord="526" yCoord="330"/>
     </arc>
     <arc id="A38" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Items_to_collect" target="Move_to_T1_collect" type="timed" weight="1">
       <hlinscription>
@@ -3783,7 +3663,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="541" yCoord="591"/>
+      <arcpath arcPointType="false" id="0" xCoord="543" yCoord="591"/>
       <arcpath arcPointType="false" id="1" xCoord="260" yCoord="723"/>
     </arc>
     <arc id="A39" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_collect" target="Items_to_collect" type="normal" weight="1">
@@ -3803,7 +3683,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="260" yCoord="717"/>
-      <arcpath arcPointType="false" id="1" xCoord="541" yCoord="591"/>
+      <arcpath arcPointType="false" id="1" xCoord="543" yCoord="591"/>
     </arc>
     <arc id="A40" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collect_items_T1" target="All_collected" type="timed" weight="1">
       <hlinscription>
@@ -3821,8 +3701,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="464" yCoord="489"/>
-      <arcpath arcPointType="false" id="1" xCoord="700" yCoord="376"/>
+      <arcpath arcPointType="false" id="0" xCoord="462" yCoord="489"/>
+      <arcpath arcPointType="false" id="1" xCoord="700" yCoord="374"/>
     </arc>
     <arc id="A42" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collected_key" target="All_collected" type="timed" weight="1">
       <hlinscription>
@@ -3840,8 +3720,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="705" yCoord="270"/>
-      <arcpath arcPointType="false" id="1" xCoord="705" yCoord="360"/>
+      <arcpath arcPointType="false" id="0" xCoord="704" yCoord="270"/>
+      <arcpath arcPointType="false" id="1" xCoord="704" yCoord="360"/>
     </arc>
     <arc id="A43" inscription="1" nameOffsetX="0" nameOffsetY="0" source="All_collected" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -3859,8 +3739,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="710" yCoord="370"/>
-      <arcpath arcPointType="false" id="1" xCoord="1220" yCoord="964"/>
+      <arcpath arcPointType="false" id="0" xCoord="709" yCoord="370"/>
+      <arcpath arcPointType="false" id="1" xCoord="1219" yCoord="964"/>
     </arc>
     <arc id="A45" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collected_key" target="Move_to_t1" type="timed" weight="1">
       <hlinscription>
@@ -3878,8 +3758,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="719" yCoord="261"/>
-      <arcpath arcPointType="false" id="1" xCoord="1015" yCoord="401"/>
+      <arcpath arcPointType="false" id="0" xCoord="717" yCoord="262"/>
+      <arcpath arcPointType="false" id="1" xCoord="1015" yCoord="400"/>
     </arc>
     <arc id="A44" inscription="1" nameOffsetX="0" nameOffsetY="0" source="All_collected" target="Collected_key" type="normal" weight="1">
       <hlinscription>
@@ -3897,8 +3777,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="705" yCoord="360"/>
-      <arcpath arcPointType="false" id="1" xCoord="705" yCoord="270"/>
+      <arcpath arcPointType="false" id="0" xCoord="704" yCoord="360"/>
+      <arcpath arcPointType="false" id="1" xCoord="704" yCoord="270"/>
     </arc>
     <arc id="A45" inscription="1" nameOffsetX="0" nameOffsetY="0" source="All_collected" target="T1_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -3916,8 +3796,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="710" yCoord="380"/>
-      <arcpath arcPointType="false" id="1" xCoord="1057" yCoord="888"/>
+      <arcpath arcPointType="false" id="0" xCoord="709" yCoord="379"/>
+      <arcpath arcPointType="false" id="1" xCoord="1057" yCoord="887"/>
     </arc>
   </net>
   <net active="true" id="Collect_keyCopy" type="P/T net">
@@ -4117,8 +3997,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="269" yCoord="926"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="816"/>
+      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="926"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="815"/>
     </arc>
     <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_t1" target="T1_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -4136,7 +4016,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="809"/>
+      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="808"/>
       <arcpath arcPointType="false" id="1" xCoord="1050" yCoord="897"/>
     </arc>
     <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_hero" target="T1" type="timed" weight="1">
@@ -4155,7 +4035,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="901"/>
+      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="900"/>
       <arcpath arcPointType="false" id="1" xCoord="650" yCoord="914"/>
     </arc>
     <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="T0_place_hero" type="normal" weight="1">
@@ -4174,8 +4054,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="916"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="929"/>
+      <arcpath arcPointType="false" id="0" xCoord="639" yCoord="916"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="930"/>
     </arc>
     <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_monster" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -4194,7 +4074,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="270" yCoord="1047"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="961"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="961"/>
     </arc>
     <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_monster" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -4212,7 +4092,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="1021"/>
+      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="1020"/>
       <arcpath arcPointType="false" id="1" xCoord="650" yCoord="1034"/>
     </arc>
     <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="T1_place_monster" type="normal" weight="1">
@@ -4231,7 +4111,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="959"/>
+      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="958"/>
       <arcpath arcPointType="false" id="1" xCoord="1050" yCoord="1018"/>
     </arc>
     <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="T0_place_monster" type="normal" weight="1">
@@ -4250,8 +4130,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="640" yCoord="1036"/>
-      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="1049"/>
+      <arcpath arcPointType="false" id="0" xCoord="639" yCoord="1036"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="1050"/>
     </arc>
     <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T1" type="timed" weight="1">
       <hlinscription>
@@ -4269,7 +4149,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="798"/>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="797"/>
       <arcpath arcPointType="false" id="1" xCoord="650" yCoord="907"/>
     </arc>
     <arc id="A9" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="Move_to_t1" type="timed" weight="1">
@@ -4289,7 +4169,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="795"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="802"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="801"/>
     </arc>
     <arc id="A11" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -4307,8 +4187,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="921"/>
-      <arcpath arcPointType="false" id="1" xCoord="1215" yCoord="974"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="922"/>
+      <arcpath arcPointType="false" id="1" xCoord="1215" yCoord="973"/>
     </arc>
     <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
       <hlinscription>
@@ -4327,7 +4207,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="974"/>
-      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="952"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="951"/>
     </arc>
     <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T3" type="timed" weight="1">
       <hlinscription>
@@ -4364,7 +4244,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="1041"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="1042"/>
       <arcpath arcPointType="false" id="1" xCoord="1275" yCoord="1050"/>
       <arcpath arcPointType="false" id="2" xCoord="1275" yCoord="795"/>
       <arcpath arcPointType="false" id="3" xCoord="1245" yCoord="795"/>
@@ -4385,7 +4265,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="966"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="966"/>
       <arcpath arcPointType="false" id="1" xCoord="900" yCoord="1095"/>
       <arcpath arcPointType="false" id="2" xCoord="1305" yCoord="1095"/>
       <arcpath arcPointType="false" id="3" xCoord="1305" yCoord="780"/>
@@ -4407,8 +4287,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="816"/>
-      <arcpath arcPointType="false" id="1" xCoord="1216" yCoord="971"/>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="816"/>
+      <arcpath arcPointType="false" id="1" xCoord="1215" yCoord="970"/>
     </arc>
     <arc id="I16" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Key_to_collect" target="Move_to_t1" type="tapnInhibitor" weight="1">
       <arcpath arcPointType="false" id="0" xCoord="397" yCoord="343"/>
@@ -4449,12 +4329,12 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="621"/>
-      <arcpath arcPointType="false" id="1" xCoord="920" yCoord="341"/>
+      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="622"/>
+      <arcpath arcPointType="false" id="1" xCoord="919" yCoord="341"/>
     </arc>
     <arc id="I19" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Objective_to_collect" target="Move_to_t1" type="tapnInhibitor" weight="1">
-      <arcpath arcPointType="false" id="0" xCoord="279" yCoord="342"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="806"/>
+      <arcpath arcPointType="false" id="0" xCoord="280" yCoord="342"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="805"/>
     </arc>
     <arc id="A20" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_hero" target="Move_to_T1_and_collect_all_items" type="timed" weight="1">
       <hlinscription>
@@ -4472,8 +4352,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="267" yCoord="921"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="639"/>
+      <arcpath arcPointType="false" id="0" xCoord="268" yCoord="920"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="638"/>
     </arc>
     <arc id="A21" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_and_collect_all_items" target="pMonster_move" type="normal" weight="1">
       <hlinscription>
@@ -4491,8 +4371,8 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="633"/>
-      <arcpath arcPointType="false" id="1" xCoord="1217" yCoord="967"/>
+      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="632"/>
+      <arcpath arcPointType="false" id="1" xCoord="1218" yCoord="966"/>
     </arc>
     <arc id="A22" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Move_to_T1_and_collect_all_items" target="T1_place_hero" type="normal" weight="1">
       <hlinscription>
@@ -4511,7 +4391,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="649" yCoord="639"/>
-      <arcpath arcPointType="false" id="1" xCoord="1052" yCoord="892"/>
+      <arcpath arcPointType="false" id="1" xCoord="1053" yCoord="892"/>
     </arc>
     <arc id="A23" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="Move_to_T1_and_collect_all_items" type="timed" weight="1">
       <hlinscription>
@@ -4529,7 +4409,7 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="1216" yCoord="791"/>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="791"/>
       <arcpath arcPointType="false" id="1" xCoord="650" yCoord="627"/>
     </arc>
     <arc id="A24" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Key_to_collect" target="Move_to_T1_and_collect_all_items" type="timed" weight="1">
@@ -4549,7 +4429,7 @@
         </structure>
       </hlinscription>
       <arcpath arcPointType="false" id="0" xCoord="400" yCoord="341"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="625"/>
+      <arcpath arcPointType="false" id="1" xCoord="641" yCoord="624"/>
     </arc>
     <arc id="A25" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Objective_to_collect" target="Move_to_T1_and_collect_all_items" type="timed" weight="1">
       <hlinscription>
@@ -4567,8 +4447,953 @@
           </numberof>
         </structure>
       </hlinscription>
-      <arcpath arcPointType="false" id="0" xCoord="282" yCoord="340"/>
-      <arcpath arcPointType="false" id="1" xCoord="640" yCoord="632"/>
+      <arcpath arcPointType="false" id="0" xCoord="282" yCoord="339"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="631"/>
+    </arc>
+  </net>
+  <net active="true" id="Door" type="P/T net">
+    <place displayName="true" id="T0_place_hero" initialMarking="1" invariant="&lt; inf" name="T0_place_hero" nameOffsetX="0" nameOffsetY="0" positionX="165" positionY="150">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>1'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="1">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <place displayName="true" id="T1_place_hero" initialMarking="0" invariant="&lt; inf" name="T1_place_hero" nameOffsetX="0" nameOffsetY="0" positionX="615" positionY="150">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+    </place>
+    <place displayName="true" id="T0_place_monster" initialMarking="0" invariant="&lt; inf" name="T0_place_monster" nameOffsetX="0" nameOffsetY="0" positionX="165" positionY="270">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+    </place>
+    <place displayName="true" id="T1_place_monster" initialMarking="0" invariant="&lt; inf" name="T1_place_monster" nameOffsetX="0" nameOffsetY="0" positionX="615" positionY="270">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+    </place>
+    <place displayName="true" id="pHero_move" initialMarking="1" invariant="&lt; inf" name="pHero_move" nameOffsetX="0" nameOffsetY="0" positionX="780" positionY="45">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>1'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="1">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <place displayName="true" id="pMonster_move" initialMarking="0" invariant="&lt; inf" name="pMonster_move" nameOffsetX="0" nameOffsetY="0" positionX="780" positionY="225">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+    </place>
+    <place displayName="true" id="Collect_key" initialMarking="1" invariant="&lt; inf" name="Collect_key" nameOffsetX="0" nameOffsetY="0" positionX="255" positionY="495">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>1'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="1">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Random" id="T0" infiniteServer="false" name="T0" nameOffsetX="0" nameOffsetY="0" player="0" positionX="390" positionY="105" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Random" id="T1" infiniteServer="false" name="T1" nameOffsetX="0" nameOffsetY="0" player="0" positionX="390" positionY="180" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Random" id="T2" infiniteServer="false" name="T2" nameOffsetX="0" nameOffsetY="0" player="0" positionX="390" positionY="225" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Oldest" id="Door" infiniteServer="false" name="Door" nameOffsetX="0" nameOffsetY="0" player="0" positionX="390" positionY="300" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <arc id="A0" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_hero" target="T0" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="195" yCoord="162"/>
+      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="121"/>
+    </arc>
+    <arc id="A1" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T0" target="T1_place_hero" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="410" yCoord="119"/>
+      <arcpath arcPointType="false" id="1" xCoord="615" yCoord="162"/>
+    </arc>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_hero" target="T1" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="615" yCoord="167"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="194"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="T0_place_hero" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="196"/>
+      <arcpath arcPointType="false" id="1" xCoord="195" yCoord="167"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_monster" target="T2" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="195" yCoord="282"/>
+      <arcpath arcPointType="false" id="1" xCoord="400" yCoord="241"/>
+    </arc>
+    <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_monster" target="Door" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="615" yCoord="287"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="314"/>
+    </arc>
+    <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="T1_place_monster" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="410" yCoord="245"/>
+      <arcpath arcPointType="false" id="1" xCoord="615" yCoord="282"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Door" target="T0_place_monster" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="311"/>
+      <arcpath arcPointType="false" id="1" xCoord="195" yCoord="287"/>
+    </arc>
+    <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T1" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="781" yCoord="65"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="187"/>
+    </arc>
+    <arc id="A9" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T0" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="780" yCoord="62"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="112"/>
+    </arc>
+    <arc id="A10" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T0" target="pMonster_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="410" yCoord="126"/>
+      <arcpath arcPointType="false" id="1" xCoord="781" yCoord="236"/>
+    </arc>
+    <arc id="A11" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pMonster_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="410" yCoord="201"/>
+      <arcpath arcPointType="false" id="1" xCoord="780" yCoord="239"/>
+    </arc>
+    <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="780" yCoord="240"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="235"/>
+    </arc>
+    <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="Door" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="780" yCoord="243"/>
+      <arcpath arcPointType="false" id="1" xCoord="410" yCoord="307"/>
+    </arc>
+    <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="Door" target="pHero_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="410" yCoord="321"/>
+      <arcpath arcPointType="false" id="1" xCoord="840" yCoord="315"/>
+      <arcpath arcPointType="false" id="2" xCoord="840" yCoord="60"/>
+      <arcpath arcPointType="false" id="3" xCoord="810" yCoord="60"/>
+    </arc>
+    <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="pHero_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="405" yCoord="255"/>
+      <arcpath arcPointType="false" id="1" xCoord="465" yCoord="360"/>
+      <arcpath arcPointType="false" id="2" xCoord="870" yCoord="360"/>
+      <arcpath arcPointType="false" id="3" xCoord="870" yCoord="45"/>
+      <arcpath arcPointType="false" id="4" xCoord="810" yCoord="57"/>
+    </arc>
+    <arc id="A22" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collect_key" target="Door" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="272" yCoord="495"/>
+      <arcpath arcPointType="false" id="1" xCoord="300" yCoord="315"/>
+      <arcpath arcPointType="false" id="2" xCoord="400" yCoord="321"/>
+    </arc>
+  </net>
+  <net active="true" id="Collect_keyCopyCopy" type="P/T net">
+    <place displayName="true" id="T0_place_hero" initialMarking="1" invariant="&lt; inf" name="T0_place_hero" nameOffsetX="0" nameOffsetY="0" positionX="240" positionY="915">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>1'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="1">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <place displayName="true" id="T1_place_hero" initialMarking="0" invariant="&lt; inf" name="T1_place_hero" nameOffsetX="0" nameOffsetY="0" positionX="1050" positionY="885">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+    </place>
+    <place displayName="true" id="T0_place_monster" initialMarking="0" invariant="&lt; inf" name="T0_place_monster" nameOffsetX="0" nameOffsetY="0" positionX="240" positionY="1035">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+    </place>
+    <place displayName="true" id="T1_place_monster" initialMarking="1" invariant="&lt; inf" name="T1_place_monster" nameOffsetX="0" nameOffsetY="0" positionX="1050" positionY="1005">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>1'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="1">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <place displayName="true" id="pHero_move" initialMarking="1" invariant="&lt; inf" name="pHero_move" nameOffsetX="0" nameOffsetY="0" positionX="1215" positionY="780">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>1'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="1">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <place displayName="true" id="pMonster_move" initialMarking="0" invariant="&lt; inf" name="pMonster_move" nameOffsetX="0" nameOffsetY="0" positionX="1215" positionY="960">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+    </place>
+    <place displayName="true" id="Collect_key" initialMarking="1" invariant="&lt; inf" name="Collect_key" nameOffsetX="0" nameOffsetY="0" positionX="780" positionY="315">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>1'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="1">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <place displayName="true" id="Key_to_collect" initialMarking="0" invariant="&lt; inf" name="Key_to_collect" nameOffsetX="0" nameOffsetY="0" positionX="375" positionY="315">
+      <type>
+        <text>dot</text>
+        <structure>
+          <usersort declaration="dot"/>
+        </structure>
+      </type>
+      <hlinitialMarking>
+        <text>0'dot</text>
+        <structure>
+          <add>
+            <subterm>
+              <numberof>
+                <subterm>
+                  <numberconstant value="0">
+                    <positive/>
+                  </numberconstant>
+                </subterm>
+                <subterm>
+                  <useroperator declaration="dot"/>
+                </subterm>
+              </numberof>
+            </subterm>
+          </add>
+        </structure>
+      </hlinitialMarking>
+    </place>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Random" id="T1" infiniteServer="false" name="T1" nameOffsetX="0" nameOffsetY="0" player="0" positionX="630" positionY="900" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Random" id="T2" infiniteServer="false" name="T2" nameOffsetX="0" nameOffsetY="0" player="0" positionX="630" positionY="945" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Random" id="T3" infiniteServer="false" name="T3" nameOffsetX="0" nameOffsetY="0" player="0" positionX="630" positionY="1020" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <transition angle="0" displayName="true" distribution="constant" firingMode="Oldest" id="use_door_d0_d1" infiniteServer="false" name="use_door_d0_d1" nameOffsetX="0" nameOffsetY="0" player="0" positionX="630" positionY="615" priority="0" urgent="false" value="1.0" weight="1.0"/>
+    <arc id="A2" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_hero" target="T1" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="900"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="914"/>
+    </arc>
+    <arc id="A3" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="T0_place_hero" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="639" yCoord="916"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="930"/>
+    </arc>
+    <arc id="A4" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_monster" target="T2" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="270" yCoord="1046"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="961"/>
+    </arc>
+    <arc id="A5" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T1_place_monster" target="T3" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="1050" yCoord="1020"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="1034"/>
+    </arc>
+    <arc id="A6" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="T1_place_monster" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="958"/>
+      <arcpath arcPointType="false" id="1" xCoord="1050" yCoord="1018"/>
+    </arc>
+    <arc id="A7" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="T0_place_monster" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="639" yCoord="1036"/>
+      <arcpath arcPointType="false" id="1" xCoord="270" yCoord="1050"/>
+    </arc>
+    <arc id="A8" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="T1" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="797"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="907"/>
+    </arc>
+    <arc id="A11" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T1" target="pMonster_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="922"/>
+      <arcpath arcPointType="false" id="1" xCoord="1215" yCoord="973"/>
+    </arc>
+    <arc id="A12" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T2" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="974"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="951"/>
+    </arc>
+    <arc id="A13" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pMonster_move" target="T3" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="976"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="1027"/>
+    </arc>
+    <arc id="A14" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T3" target="pHero_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="1042"/>
+      <arcpath arcPointType="false" id="1" xCoord="1275" yCoord="1050"/>
+      <arcpath arcPointType="false" id="2" xCoord="1275" yCoord="795"/>
+      <arcpath arcPointType="false" id="3" xCoord="1245" yCoord="795"/>
+    </arc>
+    <arc id="A15" inscription="1" nameOffsetX="0" nameOffsetY="0" source="T2" target="pHero_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="966"/>
+      <arcpath arcPointType="false" id="1" xCoord="900" yCoord="1095"/>
+      <arcpath arcPointType="false" id="2" xCoord="1305" yCoord="1095"/>
+      <arcpath arcPointType="false" id="3" xCoord="1305" yCoord="780"/>
+      <arcpath arcPointType="false" id="4" xCoord="1245" yCoord="792"/>
+    </arc>
+    <arc id="A20" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="T0_place_hero" target="use_door_d0_d1" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="268" yCoord="920"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="635"/>
+    </arc>
+    <arc id="A21" inscription="1" nameOffsetX="0" nameOffsetY="0" source="use_door_d0_d1" target="pMonster_move" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="650" yCoord="628"/>
+      <arcpath arcPointType="false" id="1" xCoord="1218" yCoord="966"/>
+    </arc>
+    <arc id="A22" inscription="1" nameOffsetX="0" nameOffsetY="0" source="use_door_d0_d1" target="T1_place_hero" type="normal" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="649" yCoord="636"/>
+      <arcpath arcPointType="false" id="1" xCoord="1053" yCoord="892"/>
+    </arc>
+    <arc id="A23" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="pHero_move" target="use_door_d0_d1" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="1215" yCoord="791"/>
+      <arcpath arcPointType="false" id="1" xCoord="650" yCoord="622"/>
+    </arc>
+    <arc id="I21" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Key_to_collect" target="use_door_d0_d1" type="tapnInhibitor" weight="1">
+      <arcpath arcPointType="false" id="0" xCoord="400" yCoord="341"/>
+      <arcpath arcPointType="false" id="1" xCoord="639" yCoord="626"/>
+    </arc>
+    <arc id="A24" inscription="[0,inf)" nameOffsetX="0" nameOffsetY="0" source="Collect_key" target="use_door_d0_d1" type="timed" weight="1">
+      <hlinscription>
+        <text>1'dot</text>
+        <structure>
+          <numberof>
+            <subterm>
+              <numberconstant value="1">
+                <positive/>
+              </numberconstant>
+            </subterm>
+            <subterm>
+              <useroperator declaration="dot"/>
+            </subterm>
+          </numberof>
+        </structure>
+      </hlinscription>
+      <arcpath arcPointType="false" id="0" xCoord="788" yCoord="343"/>
+      <arcpath arcPointType="false" id="1" xCoord="645" yCoord="615"/>
     </arc>
   </net>
   <feature isColored="false" isGame="false" isStochastic="false" isTimed="false"/>

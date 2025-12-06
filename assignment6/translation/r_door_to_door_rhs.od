@@ -1,0 +1,22 @@
+fromDoor:RAM_Door
+toDoor:RAM_Door
+
+doorToDoor:RAM_DoorToDoor (fromDoor -> toDoor)
+
+pfromDoor_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`; 
+}
+glFromDoorToPlace_hero:RAM_generic_link (fromDoor -> pfromDoor_hero)
+
+ptoDoor_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`; 
+}
+glToDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
+
+# New door transition, without key
+doorMove:RAM_PNTransition {
+    name = `f"door_move_{get_name(matched('fromDoor'))}_to_{get_name(matched('toDoor'))}"`;
+}
+
+fromDoorArc:RAM_arc (pfromDoor_hero -> doorMove)
+toDoorArc:RAM_arc (doorMove -> ptoDoor_hero)

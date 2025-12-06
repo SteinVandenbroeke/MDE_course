@@ -1,0 +1,15 @@
+fromDoor:RAM_Door
+toDoor:RAM_Door
+
+doorToDoor:RAM_DoorToDoor (fromDoor -> toDoor)
+
+pfromDoor_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`; 
+}
+glFromDoorToPlace_hero:RAM_generic_link (fromDoor -> pfromDoor_hero)
+
+ptoDoor_hero:RAM_PNPlace {
+    condition = `"_hero" in get_name(this)`; 
+}
+glToDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
+

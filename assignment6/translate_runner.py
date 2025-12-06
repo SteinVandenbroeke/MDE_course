@@ -38,6 +38,7 @@ rule_names = [
     "item_tile",
     "collect_key",
     "collect_objective",
+    "door_to_door",
 ]
 
 print("Loading rules")
