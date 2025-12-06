@@ -5,6 +5,7 @@ key:RAM_Key
 doorToDoor:RAM_DoorToDoor (fromDoor -> toDoor)
 doorToKey:RAM_DoorToKey (fromDoor -> key)
 
+# hero door
 pfromDoor_hero:RAM_PNPlace {
     condition = `"_hero" in get_name(this)`;
 }
@@ -15,19 +16,31 @@ ptoDoor_hero:RAM_PNPlace {
 }
 gltoDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
 
-# key places
-key_to_collect:RAM_PNPlace {
+# key - to collect/collected
+key_to_collect:RAM_PNPlace{
     condition = `get_name(this).endswith("_to_collect")`;
 }
-collected_key:RAM_PNPlace {
+collected_key:RAM_PNPlace{
     condition = `get_name(this).startswith("collected_")`;
 }
-
 glKeyToCollect:RAM_generic_link (key -> key_to_collect)
 glKeyCollected:RAM_generic_link (key -> collected_key)
 
+# level
+fromLevel:RAM_Level
+toLevel:RAM_Level
+
+fromLevelToDoor:RAM_LevelToTile (fromLevel -> fromDoor)
+toLevelToDoor:RAM_LevelToTile (toLevel -> toDoor)
+
+pFromLevel:RAM_PNPlace
+glLevelFromToPlace:RAM_generic_link (fromLevel -> pFromLevel)
+
+pToLevel:RAM_PNPlace
+glLevelToToPlace:RAM_generic_link (toLevel -> pToLevel)
+
 # door transition
-door_move:RAM_PNTransition {
+door_move:RAM_PNTransition{
     name = `f"door_move_{get_name(matched('fromDoor'))}_to_{get_name(matched('toDoor'))}"`;
 }
 
@@ -39,4 +52,8 @@ toDoorArc:RAM_arc (door_move -> ptoDoor_hero)
 # Token in collected_key
 # NO token in key_to_collect
 hasKeyArc:RAM_arc (collected_key -> door_move)
-inhKeyArc:RAM_inh_arc (key_to_collect -> door_move)
+inhArc:RAM_inh_arc (key_to_collect -> door_move)
+
+#level
+levelFromArc:RAM_arc (pFromLevel -> door_move)
+levelToArc:RAM_arc (door_move -> pToLevel)

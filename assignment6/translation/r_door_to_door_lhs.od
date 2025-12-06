@@ -17,13 +17,25 @@ ptoDoor_hero:RAM_PNPlace {
 }
 gltoDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
 
-# key places
-key_to_collect:RAM_PNPlace {
+# key - to collect/collected
+key_to_collect:RAM_PNPlace{
     condition = `get_name(this).endswith("_to_collect")`;
 }
-collected_key:RAM_PNPlace {
+collected_key:RAM_PNPlace{
     condition = `get_name(this).startswith("collected_")`;
 }
-
 glKeyToCollect:RAM_generic_link (key -> key_to_collect)
 glKeyCollected:RAM_generic_link (key -> collected_key)
+
+# level
+fromLevel:RAM_Level
+toLevel:RAM_Level
+
+fromLevelToDoor:RAM_LevelToTile (fromLevel -> fromDoor)
+toLevelToDoor:RAM_LevelToTile (toLevel -> toDoor)
+
+pFromLevel:RAM_PNPlace
+glLevelFromToPlace:RAM_generic_link (fromLevel -> pFromLevel)
+
+pToLevel:RAM_PNPlace
+glLevelToToPlace:RAM_generic_link (toLevel -> pToLevel)
