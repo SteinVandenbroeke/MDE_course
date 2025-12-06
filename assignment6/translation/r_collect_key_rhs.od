@@ -1,0 +1,41 @@
+tile:RAM_StandardTile
+key:RAM_Key
+tileToKey:RAM_StandardToTileItem (tile -> key)
+
+hero_place_from:RAM_PNPlace{
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+hero_place_to:RAM_PNPlace{
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+glTileHeroPlaceTo:RAM_generic_link (tile -> hero_place_to)
+
+move_transition:RAM_PNTransition
+arc_from:RAM_arc (hero_place_from -> move_transition)
+arc_to:RAM_arc (move_transition -> hero_place_to)
+
+key_to_collect:RAM_PNPlace{
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_key:RAM_PNPlace{
+    condition = `get_name(this).startswith("collected_")`;
+}
+glKeyToCollect:RAM_generic_link (key -> key_to_collect)
+glKeyCollected:RAM_generic_link (key -> collected_key)
+
+# new transition move+collect keys
+
+transitionCollect:RAM_PNTransition{
+    name = `get_name(matched("move_transition")) + "_and_collect_key"`;
+}
+
+fromArcCollect:RAM_arc (hero_place_from -> transitionCollect)
+toArcCollect:RAM_arc (transitionCollect -> hero_place_to)
+
+# - key_to_collect + collected_key
+consArc:RAM_arc (key_to_collect -> transitionCollect)
+prodArc:RAM_arc (transitionCollect -> collected_key)
+
+# inh if key not collected yet
+inhArc:RAM_inh_arc (key_to_collect -> move_transition)
+

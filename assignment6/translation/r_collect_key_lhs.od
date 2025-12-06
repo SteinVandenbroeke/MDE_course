@@ -1,0 +1,32 @@
+tile:RAM_StandardTile
+key:RAM_Key
+tileToKey:RAM_StandardToTileItem (tile -> key)
+
+#movement from tile -> to tile
+hero_place_from:RAM_PNPlace{
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+hero_place_to:RAM_PNPlace{
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+glTileHeroPlaceTo:RAM_generic_link (tile -> hero_place_to)
+
+# which transition to move
+move_transition:RAM_PNTransition {
+    condition = `get_name(this).endswith("_move_for_hero")`;
+}
+
+# arcs that make the movement
+arc_from:RAM_arc (hero_place_from -> move_transition)
+arc_to:RAM_arc (move_transition -> hero_place_to)
+
+# key places (not collected / collected)
+key_to_collect:RAM_PNPlace{
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_key:RAM_PNPlace{
+    condition = `get_name(this).startswith("collected_")`;
+}
+glKeyToCollect:RAM_generic_link (key -> key_to_collect)
+glKeyCollected:RAM_generic_link (key -> collected_key)
+

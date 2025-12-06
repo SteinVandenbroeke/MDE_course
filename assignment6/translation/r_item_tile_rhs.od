@@ -1,0 +1,30 @@
+item:RAM_Item
+
+# objective_to_collect, item_to_collect respectively
+toCollect_item:RAM_PNPlace {
+    name = `f"{get_name(matched('item'))}_to_collect"`;
+}
+
+toCollect_item_State:RAM_PNPlaceState {
+    name = `f"{get_name(matched('item'))}_toCollect_item_State"`;
+    RAM_numTokens = `1`;
+}
+
+toCollect_item_State_to_item:RAM_pn_of (toCollect_item_State -> toCollect_item)
+
+glitemToCollectToPlace:RAM_generic_link (item -> toCollect_item)
+
+# collected_item, collected_objective respectively
+collected_item:RAM_PNPlace {
+    name = `f"collected_{get_name(matched('item'))}"`;
+}
+
+collected_item_State:RAM_PNPlaceState {
+    name = `f"{get_name(matched('item'))}_collected_item_State"`;
+    RAM_numTokens = `0`;
+}
+
+collected_item_State_to_item:RAM_pn_of (collected_item_State -> collected_item)
+
+glitemCollectedToPlace:RAM_generic_link (item -> collected_item)
+

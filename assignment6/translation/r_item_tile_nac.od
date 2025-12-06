@@ -1,0 +1,7 @@
+item:RAM_Item
+
+toCollect_item:RAM_PNPlace {
+    name = `f"{get_name(matched('item'))}_to_collect"`;
+}
+
+glitemToCollectToPlace:RAM_generic_link (item -> toCollect_item)

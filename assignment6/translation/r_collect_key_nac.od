@@ -1,0 +1,22 @@
+tile:RAM_StandardTile
+key:RAM_Key
+tileToKey:RAM_StandardToTileItem (tile -> key)
+
+hero_place_from:RAM_PNPlace{
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+hero_place_to:RAM_PNPlace{
+    condition = `get_name(this).startswith("tile_hero_place_")`;
+}
+glTileHeroPlaceTo:RAM_generic_link (tile -> hero_place_to)
+
+move_transition:RAM_PNTransition
+arc_from:RAM_arc (hero_place_from -> move_transition)
+arc_to:RAM_arc (move_transition -> hero_place_to)
+
+existingCollect:RAM_PNTransition{
+    condition = `get_name(this) == get_name(matched("move_transition")) + "_and_collect_key"`;
+}
+
+fromArcCollect:RAM_arc (hero_place_from -> existingCollect)
+toArcCollect:RAM_arc (existingCollect -> hero_place_to)

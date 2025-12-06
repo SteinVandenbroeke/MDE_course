@@ -1,0 +1,1445 @@
+test
+Now loading MM
+Ramify
+Rules loaded:
+    /Users/arianafernandez/Desktop/muMLE-development/MDE_course/assignment6/petrinet/operational_semantics/r_fire_transition_nac.od
+    /Users/arianafernandez/Desktop/muMLE-development/MDE_course/assignment6/petrinet/operational_semantics/r_fire_transition_nac2.od
+    /Users/arianafernandez/Desktop/muMLE-development/MDE_course/assignment6/petrinet/operational_semantics/r_fire_transition_lhs.od
+    /Users/arianafernandez/Desktop/muMLE-development/MDE_course/assignment6/petrinet/operational_semantics/r_fire_transition_rhs.od
+Load Model
+Ready!
+Start simulation
+Decision maker: InteractiveDecisionMaker()
+--------------
+  
+  D1:Door
+  D0:Door
+  L2:Level {
+      name = "level2";
+  }
+  L1:Level {
+      name = "level1";
+  }
+  CSM:CreatureState {
+      moved = False;
+      fought = False;
+  }
+  CSH:CreatureState {
+      fought = False;
+      moved = False;
+  }
+  CSM2:CreatureState {
+      fought = False;
+      moved = False;
+  }
+  tile_monster_place_state_T6:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_T6:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T7:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T8:PNPlaceState {
+      numTokens = 0;
+  }
+  pHeroState_move:PNPlaceState {
+      numTokens = 1;
+  }
+  pHeroLivesState:PNPlaceState {
+      numTokens = 5;
+  }
+  K0_toCollect_item_State:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_T5:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T8:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T1:PNPlaceState {
+      numTokens = 0;
+  }
+  K0_collected_item_State:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T7:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_D0:PNPlaceState {
+      numTokens = 0;
+  }
+  p_rep_L1_state:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_T1:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T3:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T4:PNPlaceState {
+      numTokens = 0;
+  }
+  pMonsterState_move:PNPlaceState {
+      numTokens = 0;
+  }
+  O1_toCollect_item_State:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_monster_place_state_T3:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T5:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T2:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_D1:PNPlaceState {
+      numTokens = 0;
+  }
+  O1_collected_item_State:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_D0:PNPlaceState {
+      numTokens = 1;
+  }
+  p_rep_L2_state:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T2:PNPlaceState {
+      numTokens = 0;
+  }
+  K1_collected_item_State:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T4:PNPlaceState {
+      numTokens = 0;
+  }
+  K1_toCollect_item_State:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_monster_place_state_D1:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_T3:PNPlace
+  tile_monster_place_T7:PNPlace
+  tile_hero_place_T8:PNPlace
+  tile_hero_place_T7:PNPlace
+  collected_K1:PNPlace
+  collected_K0:PNPlace
+  K1_to_collect:PNPlace
+  tile_monster_place_T8:PNPlace
+  collected_O1:PNPlace
+  tile_hero_place_T2:PNPlace
+  tile_hero_place_T4:PNPlace
+  tile_monster_place_T4:PNPlace
+  pheroLives:PNPlace
+  tile_monster_place_T1:PNPlace
+  tile_monster_place_D1:PNPlace
+  K0_to_collect:PNPlace
+  tile_monster_place_T6:PNPlace
+  tile_hero_place_D1:PNPlace
+  O1_to_collect:PNPlace
+  tile_hero_place_D0:PNPlace
+  tile_hero_place_T5:PNPlace
+  tile_monster_place_T2:PNPlace
+  tile_hero_place_T6:PNPlace
+  tile_hero_place_T1:PNPlace
+  pHero_move:PNPlace
+  p_rep_L1:PNPlace
+  tile_monster_place_D0:PNPlace
+  p_rep_L2:PNPlace
+  tile_hero_place_T3:PNPlace
+  pMonster_move:PNPlace
+  tile_monster_place_T5:PNPlace
+  O1:Objective {
+      points = 50;
+  }
+  D0_to_T3_move_for_hero:PNTransition
+  D1_to_T8_move_for_hero:PNTransition
+  T7_to_T6_move_for_hero:PNTransition
+  T6_to_T8_move_for_hero:PNTransition
+  T6_to_T7_move_for_monster:PNTransition
+  T5_to_T4_move_for_hero:PNTransition
+  T7_to_D1_move_for_hero:PNTransition
+  T2_to_T5_move_for_monster:PNTransition
+  D1_to_T7_move_for_hero:PNTransition
+  T5_to_D0_move_for_monster:PNTransition
+  T7_to_T6_move_for_monster:PNTransition
+  T6_to_T8_move_for_monster:PNTransition
+  T5_to_T2_move_for_hero:PNTransition
+  D0_to_T3_move_for_hero_and_collect_key:PNTransition
+  D0_to_T3_move_for_monster:PNTransition
+  T5_to_D0_move_for_hero:PNTransition
+  T2_to_T1_move_for_monster:PNTransition
+  T8_to_T6_move_for_monster:PNTransition
+  T3_to_T2_move_for_hero:PNTransition
+  D0_to_T5_move_for_monster:PNTransition
+  T3_to_T2_move_for_monster:PNTransition
+  T2_to_T3_move_for_monster:PNTransition
+  T4_to_T1_move_for_hero:PNTransition
+  T5_to_T2_move_for_monster:PNTransition
+  T1_to_T4_move_for_hero:PNTransition
+  D1_to_T7_move_for_hero_and_collect_key:PNTransition
+  T4_to_T1_move_for_monster:PNTransition
+  T2_to_T1_move_for_hero:PNTransition
+  T4_to_T5_move_for_monster:PNTransition
+  T3_to_D0_move_for_hero:PNTransition
+  D0_to_T5_move_for_hero:PNTransition
+  T2_to_T5_move_for_hero:PNTransition
+  T8_to_T6_move_for_hero:PNTransition
+  D1_to_T8_move_for_monster:PNTransition
+  T8_to_D1_move_for_monster:PNTransition
+  T8_to_D1_move_for_hero:PNTransition
+  T1_to_T2_move_for_monster:PNTransition
+  T6_to_T7_move_for_hero:PNTransition
+  T6_to_T7_move_for_hero_and_collect_key:PNTransition
+  T1_to_T4_move_for_monster:PNTransition
+  T2_to_T3_move_for_hero:PNTransition
+  T5_to_T4_move_for_monster:PNTransition
+  T7_to_D1_move_for_monster:PNTransition
+  T2_to_T3_move_for_hero_and_collect_key:PNTransition
+  T1_to_T2_move_for_hero:PNTransition
+  T3_to_D0_move_for_monster:PNTransition
+  T4_to_T5_move_for_hero:PNTransition
+  D1_to_T7_move_for_monster:PNTransition
+  T8:Obstacle
+  T4:Obstacle
+  M2:Monster {
+      lives = 10;
+  }
+  M:Monster {
+      lives = 4;
+  }
+  T1:Trap
+  WS:WorldState {
+      collectedpoints = 0;
+  }
+  H:Hero {
+      lives = 5;
+  }
+  T2:StandardTile
+  T6:StandardTile
+  T5:StandardTile
+  T3:StandardTile
+  T7:StandardTile
+  C:Clock {
+      time = 0;
+  }
+  W:World
+  K0:Key
+  K1:Key
+  W_L2:WorldToLevel (W -> L2)
+  W_L1:WorldToLevel (W -> L1)
+  D1_K1:DoorToKey (D1 -> K1)
+  D0_K0:DoorToKey (D0 -> K0)
+  :pn_of (tile_hero_place_state_T7 -> tile_hero_place_T7)
+  :pn_of (tile_hero_place_state_T3 -> tile_hero_place_T3)
+  toCollect_item_State_to_item1:pn_of (O1_toCollect_item_State -> O1_to_collect)
+  :pn_of (tile_hero_place_state_T2 -> tile_hero_place_T2)
+  :pn_of (pMonsterState_move -> pMonster_move)
+  heroLivesStateToHeroLives:pn_of (pHeroLivesState -> pheroLives)
+  :pn_of (tile_hero_place_state_T1 -> tile_hero_place_T1)
+  :pn_of (tile_hero_place_state_D1 -> tile_hero_place_D1)
+  collected_item_State_to_item:pn_of (K1_collected_item_State -> collected_K1)
+  :pn_of (tile_monster_place_state_D0 -> tile_monster_place_D0)
+  :pn_of (tile_monster_place_state_T3 -> tile_monster_place_T3)
+  :pn_of (tile_monster_place_state_T6 -> tile_monster_place_T6)
+  :pn_of (tile_monster_place_state_T7 -> tile_monster_place_T7)
+  pLevelStateTopLevel:pn_of (p_rep_L1_state -> p_rep_L1)
+  pLevelStateTopLevel0:pn_of (p_rep_L2_state -> p_rep_L2)
+  :pn_of (tile_monster_place_state_T5 -> tile_monster_place_T5)
+  :pn_of (tile_hero_place_state_T8 -> tile_hero_place_T8)
+  :pn_of (tile_hero_place_state_D0 -> tile_hero_place_D0)
+  :pn_of (tile_monster_place_state_T4 -> tile_monster_place_T4)
+  :pn_of (tile_monster_place_state_T1 -> tile_monster_place_T1)
+  :pn_of (tile_hero_place_state_T6 -> tile_hero_place_T6)
+  collected_item_State_to_item1:pn_of (O1_collected_item_State -> collected_O1)
+  :pn_of (tile_hero_place_state_T5 -> tile_hero_place_T5)
+  toCollect_item_State_to_item0:pn_of (K0_toCollect_item_State -> K0_to_collect)
+  :pn_of (tile_hero_place_state_T4 -> tile_hero_place_T4)
+  toCollect_item_State_to_item:pn_of (K1_toCollect_item_State -> K1_to_collect)
+  :pn_of (tile_monster_place_state_D1 -> tile_monster_place_D1)
+  collected_item_State_to_item0:pn_of (K0_collected_item_State -> collected_K0)
+  :pn_of (pHeroState_move -> pHero_move)
+  :pn_of (tile_monster_place_state_T8 -> tile_monster_place_T8)
+  :pn_of (tile_monster_place_state_T2 -> tile_monster_place_T2)
+  L2_T8:LevelToTile (L2 -> T8)
+  L1_T5:LevelToTile (L1 -> T5)
+  L2_D1:LevelToTile (L2 -> D1)
+  L2_T6:LevelToTile (L2 -> T6)
+  L1_T4:LevelToTile (L1 -> T4)
+  L2_T7:LevelToTile (L2 -> T7)
+  L1_T2:LevelToTile (L1 -> T2)
+  L1_T1:LevelToTile (L1 -> T1)
+  L1_T3:LevelToTile (L1 -> T3)
+  L1_D0:LevelToTile (L1 -> D0)
+  T3_K1:StandardToTileItem (T7 -> K1)
+  T5_O1:StandardToTileItem (T5 -> O1)
+  a:StandardToTileItem (T3 -> K0)
+  CS_H:CreatureStateToCreature (CSH -> H)
+  S_M2:CreatureStateToCreature (CSM2 -> M2)
+  CS_M:CreatureStateToCreature (CSM -> M)
+  enable_monster_move31:arc (D1_to_T7_move_for_monster -> pHero_move)
+  allow_hero_move3:arc (pHero_move -> T2_to_T5_move_for_hero)
+  level_L1_to_T4_level_lock_for_monster0:arc (p_rep_L1 -> T4_to_T5_move_for_monster)
+  consArc:arc (K0_to_collect -> D0_to_T3_move_for_hero_and_collect_key)
+  return_lives_T8_to_D1_move_for_hero:arc (T8_to_D1_move_for_hero -> pheroLives)
+  arc_lives_check_T6_to_T7_move_for_monster:arc (pheroLives -> T6_to_T7_move_for_monster)
+  level_L2_to_T6_level_lock_for_monster2:arc (p_rep_L2 -> T8_to_T6_move_for_monster)
+  allow_monster_move10:arc (pMonster_move -> T2_to_T5_move_for_monster)
+  allow_hero_move18:arc (pHero_move -> T5_to_T4_move_for_hero)
+  T2_to_T1_trg_for_hero:arc (T2_to_T1_move_for_hero -> tile_hero_place_T1)
+  T4_to_T1_trg_for_monster:arc (T4_to_T1_move_for_monster -> tile_monster_place_T1)
+  return_lives_T2_to_T3_move_for_hero:arc (T2_to_T3_move_for_hero -> pheroLives)
+  D1_to_T8_trg_for_monster:arc (D1_to_T8_move_for_monster -> tile_monster_place_T8)
+  allow_monster_move16:arc (pMonster_move -> D1_to_T8_move_for_monster)
+  arc_lives_check_T5_to_T4_move_for_monster:arc (pheroLives -> T5_to_T4_move_for_monster)
+  return_lives_D1_to_T8_move_for_monster:arc (D1_to_T8_move_for_monster -> pheroLives)
+  return_lives_T8_to_T6_move_for_hero:arc (T8_to_T6_move_for_hero -> pheroLives)
+  enable_monster_move0:arc (D1_to_T8_move_for_hero -> pMonster_move)
+  T1_to_T2_trg_for_hero:arc (T1_to_T2_move_for_hero -> tile_hero_place_T2)
+  allow_hero_move4:arc (pHero_move -> T3_to_T2_move_for_hero)
+  T2_to_T5_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T5_move_for_hero)
+  allow_monster_move19:arc (pMonster_move -> T7_to_D1_move_for_monster)
+  return_lives_T2_to_T5_move_for_hero:arc (T2_to_T5_move_for_hero -> pheroLives)
+  allow_hero_move9:arc (pHero_move -> T6_to_T8_move_for_hero)
+  arc_lives_check_D0_to_T3_move_for_monster:arc (pheroLives -> D0_to_T3_move_for_monster)
+  T5_to_T4_trg_for_hero:arc (T5_to_T4_move_for_hero -> tile_hero_place_T4)
+  allow_hero_move5:arc (pHero_move -> D0_to_T3_move_for_hero)
+  keep_token_in_level6:arc (T8_to_T6_move_for_monster -> p_rep_L2)
+  T3_to_T2_trg_for_hero:arc (T3_to_T2_move_for_hero -> tile_hero_place_T2)
+  T1_to_T2_src_for_monster:arc (tile_monster_place_T1 -> T1_to_T2_move_for_monster)
+  arc_lives_check_T5_to_T2_move_for_hero:arc (pheroLives -> T5_to_T2_move_for_hero)
+  enable_monster_move29:arc (T5_to_T2_move_for_monster -> pHero_move)
+  allow_hero_move15:arc (pHero_move -> T4_to_T1_move_for_hero)
+  return_lives_D0_to_T3_move_for_monster:arc (D0_to_T3_move_for_monster -> pheroLives)
+  enable_monster_move18:arc (T5_to_T4_move_for_hero -> pMonster_move)
+  arc_lives_check_D1_to_T8_move_for_monster:arc (pheroLives -> D1_to_T8_move_for_monster)
+  allow_monster_move12:arc (pMonster_move -> T1_to_T4_move_for_monster)
+  T8_to_T6_trg_for_monster:arc (T8_to_T6_move_for_monster -> tile_monster_place_T6)
+  enable_monster_move4:arc (T3_to_T2_move_for_hero -> pMonster_move)
+  return_lives_T7_to_T6_move_for_hero:arc (T7_to_T6_move_for_hero -> pheroLives)
+  level_L1_to_T4_level_lock_for_monster:arc (p_rep_L1 -> T5_to_T4_move_for_monster)
+  allow_monster_move5:arc (pMonster_move -> T6_to_T7_move_for_monster)
+  allow_hero_move1:arc (pHero_move -> D0_to_T5_move_for_hero)
+  toArcCollect:arc (D0_to_T3_move_for_hero_and_collect_key -> tile_hero_place_T3)
+  allow_hero_move16:arc (pHero_move -> T2_to_T1_move_for_hero)
+  arc_lives_check_T1_to_T2_move_for_monster:arc (pheroLives -> T1_to_T2_move_for_monster)
+  return_lives_T3_to_T2_move_for_hero:arc (T3_to_T2_move_for_hero -> pheroLives)
+  toArcCollect1:arc (T6_to_T7_move_for_hero_and_collect_key -> tile_hero_place_T7)
+  keep_token_in_level19:arc (T5_to_T4_move_for_monster -> p_rep_L1)
+  T5_to_D0_src_for_hero:arc (tile_hero_place_T5 -> T5_to_D0_move_for_hero)
+  keep_token_in_level15:arc (T3_to_T2_move_for_monster -> p_rep_L1)
+  allow_hero_move12:arc (pHero_move -> D1_to_T7_move_for_hero)
+  keep_token_in_level5:arc (T6_to_T7_move_for_monster -> p_rep_L2)
+  enable_monster_move12:arc (D1_to_T7_move_for_hero -> pMonster_move)
+  keep_token_in_level9:arc (T3_to_D0_move_for_monster -> p_rep_L1)
+  enable_monster_move14:arc (T8_to_D1_move_for_hero -> pMonster_move)
+  keep_token_in_level20:arc (T4_to_T5_move_for_monster -> p_rep_L1)
+  allow_monster_move4:arc (pMonster_move -> T5_to_D0_move_for_monster)
+  allow_hero_move:arc (pHero_move -> T3_to_D0_move_for_hero)
+  T3_to_T2_src_for_hero:arc (tile_hero_place_T3 -> T3_to_T2_move_for_hero)
+  T5_to_T4_src_for_monster:arc (tile_monster_place_T5 -> T5_to_T4_move_for_monster)
+  T4_to_T1_trg_for_hero:arc (T4_to_T1_move_for_hero -> tile_hero_place_T1)
+  T1_to_T4_trg_for_monster:arc (T1_to_T4_move_for_monster -> tile_monster_place_T4)
+  T5_to_D0_trg_for_hero:arc (T5_to_D0_move_for_hero -> tile_hero_place_D0)
+  fromArcCollect0:arc (tile_hero_place_T2 -> T2_to_T3_move_for_hero_and_collect_key)
+  arc_lives_check_T2_to_T5_move_for_monster:arc (pheroLives -> T2_to_T5_move_for_monster)
+  allow_hero_move2:arc (pHero_move -> T1_to_T4_move_for_hero)
+  arc_lives_check_T5_to_D0_move_for_hero:arc (pheroLives -> T5_to_D0_move_for_hero)
+  allow_monster_move0:arc (pMonster_move -> T3_to_D0_move_for_monster)
+  prodArc:arc (D0_to_T3_move_for_hero_and_collect_key -> collected_K0)
+  arc_lives_check_T3_to_D0_move_for_hero:arc (pheroLives -> T3_to_D0_move_for_hero)
+  enable_monster_move37:arc (T3_to_T2_move_for_monster -> pHero_move)
+  level_L2_to_T6_level_lock_for_monster0:arc (p_rep_L2 -> T7_to_T6_move_for_monster)
+  enable_monster_move23:arc (D0_to_T5_move_for_monster -> pHero_move)
+  level_L2_to_D1_level_lock_for_monster2:arc (p_rep_L2 -> D1_to_T7_move_for_monster)
+  arc_lives_check_T8_to_T6_move_for_monster:arc (pheroLives -> T8_to_T6_move_for_monster)
+  D1_to_T7_src_for_hero:arc (tile_hero_place_D1 -> D1_to_T7_move_for_hero)
+  keep_token_in_level11:arc (T2_to_T1_move_for_monster -> p_rep_L1)
+  D0_to_T5_trg_for_monster:arc (D0_to_T5_move_for_monster -> tile_monster_place_T5)
+  allow_hero_move7:arc (pHero_move -> T2_to_T3_move_for_hero)
+  arc_lives_check_T5_to_T4_move_for_hero:arc (pheroLives -> T5_to_T4_move_for_hero)
+  allow_monster_move3:arc (pMonster_move -> T1_to_T2_move_for_monster)
+  return_lives_T3_to_D0_move_for_hero:arc (T3_to_D0_move_for_hero -> pheroLives)
+  arc_lives_check_T3_to_D0_move_for_monster:arc (pheroLives -> T3_to_D0_move_for_monster)
+  keep_token_in_level18:arc (T1_to_T4_move_for_monster -> p_rep_L1)
+  arc_lives_check_T4_to_T1_move_for_monster:arc (pheroLives -> T4_to_T1_move_for_monster)
+  keep_token_in_level0:arc (D1_to_T8_move_for_monster -> p_rep_L2)
+  return_lives_T1_to_T4_move_for_monster:arc (T1_to_T4_move_for_monster -> pheroLives)
+  T3_to_T2_src_for_monster:arc (tile_monster_place_T3 -> T3_to_T2_move_for_monster)
+  keep_token_in_level:arc (T8_to_D1_move_for_monster -> p_rep_L2)
+  T2_to_T5_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T5_move_for_monster)
+  T7_to_D1_src_for_hero:arc (tile_hero_place_T7 -> T7_to_D1_move_for_hero)
+  enable_monster_move39:arc (T4_to_T1_move_for_monster -> pHero_move)
+  level_L1_to_T2_level_lock_for_monster1:arc (p_rep_L1 -> T2_to_T5_move_for_monster)
+  return_lives_T8_to_D1_move_for_monster:arc (T8_to_D1_move_for_monster -> pheroLives)
+  arc_lives_check_T3_to_T2_move_for_hero:arc (pheroLives -> T3_to_T2_move_for_hero)
+  T6_to_T8_src_for_hero:arc (tile_hero_place_T6 -> T6_to_T8_move_for_hero)
+  D1_to_T7_src_for_monster:arc (tile_monster_place_D1 -> D1_to_T7_move_for_monster)
+  toArcCollect0:arc (T2_to_T3_move_for_hero_and_collect_key -> tile_hero_place_T3)
+  allow_hero_move13:arc (pHero_move -> T5_to_D0_move_for_hero)
+  return_lives_T5_to_D0_move_for_monster:arc (T5_to_D0_move_for_monster -> pheroLives)
+  T3_to_D0_trg_for_monster:arc (T3_to_D0_move_for_monster -> tile_monster_place_D0)
+  keep_token_in_level13:arc (T2_to_T5_move_for_monster -> p_rep_L1)
+  D1_to_T8_src_for_monster:arc (tile_monster_place_D1 -> D1_to_T8_move_for_monster)
+  enable_monster_move24:arc (D0_to_T3_move_for_monster -> pHero_move)
+  T6_to_T7_trg_for_hero:arc (T6_to_T7_move_for_hero -> tile_hero_place_T7)
+  T2_to_T3_trg_for_hero:arc (T2_to_T3_move_for_hero -> tile_hero_place_T3)
+  T1_to_T4_trg_for_hero:arc (T1_to_T4_move_for_hero -> tile_hero_place_T4)
+  enable_monster_move41:arc (T7_to_D1_move_for_monster -> pHero_move)
+  T2_to_T3_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T3_move_for_monster)
+  enable_monster_move20:arc (T8_to_T6_move_for_hero -> pMonster_move)
+  return_lives_T2_to_T3_move_for_monster:arc (T2_to_T3_move_for_monster -> pheroLives)
+  enable_monster_move40:arc (T2_to_T3_move_for_monster -> pHero_move)
+  prodArc0:arc (T2_to_T3_move_for_hero_and_collect_key -> collected_K0)
+  allow_hero_move11:arc (pHero_move -> T1_to_T2_move_for_hero)
+  enable_monster_move:arc (T3_to_D0_move_for_hero -> pMonster_move)
+  return_lives_D0_to_T5_move_for_hero:arc (D0_to_T5_move_for_hero -> pheroLives)
+  T3_to_T2_trg_for_monster:arc (T3_to_T2_move_for_monster -> tile_monster_place_T2)
+  arc_lives_check_T3_to_T2_move_for_monster:arc (pheroLives -> T3_to_T2_move_for_monster)
+  prodArc2:arc (D1_to_T7_move_for_hero_and_collect_key -> collected_K1)
+  return_lives_D1_to_T8_move_for_hero:arc (D1_to_T8_move_for_hero -> pheroLives)
+  enable_monster_move38:arc (D1_to_T8_move_for_monster -> pHero_move)
+  T2_to_T1_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T1_move_for_hero)
+  keep_token_in_level16:arc (T2_to_T3_move_for_monster -> p_rep_L1)
+  arc_lives_check_T7_to_T6_move_for_monster:arc (pheroLives -> T7_to_T6_move_for_monster)
+  keep_token_in_level2:arc (D1_to_T7_move_for_monster -> p_rep_L2)
+  enable_monster_move16:arc (T2_to_T1_move_for_hero -> pMonster_move)
+  keep_token_in_level17:arc (T4_to_T1_move_for_monster -> p_rep_L1)
+  enable_monster_move11:arc (T1_to_T2_move_for_hero -> pMonster_move)
+  arc_lives_check_T7_to_T6_move_for_hero:arc (pheroLives -> T7_to_T6_move_for_hero)
+  arc_lives_check_T8_to_T6_move_for_hero:arc (pheroLives -> T8_to_T6_move_for_hero)
+  enable_monster_move22:arc (T3_to_D0_move_for_monster -> pHero_move)
+  enable_monster_move35:arc (T8_to_T6_move_for_monster -> pHero_move)
+  return_lives_T5_to_T2_move_for_hero:arc (T5_to_T2_move_for_hero -> pheroLives)
+  T1_to_T2_trg_for_monster:arc (T1_to_T2_move_for_monster -> tile_monster_place_T2)
+  T6_to_T7_trg_for_monster:arc (T6_to_T7_move_for_monster -> tile_monster_place_T7)
+  T4_to_T5_trg_for_monster:arc (T4_to_T5_move_for_monster -> tile_monster_place_T5)
+  enable_monster_move17:arc (T5_to_T2_move_for_hero -> pMonster_move)
+  toArcCollect2:arc (D1_to_T7_move_for_hero_and_collect_key -> tile_hero_place_T7)
+  level_L1_to_T1_level_lock_for_monster:arc (p_rep_L1 -> T4_to_T1_move_for_monster)
+  arc_lives_check_D1_to_T8_move_for_hero:arc (pheroLives -> D1_to_T8_move_for_hero)
+  fromArcCollect1:arc (tile_hero_place_T6 -> T6_to_T7_move_for_hero_and_collect_key)
+  fromArcCollect:arc (tile_hero_place_D0 -> D0_to_T3_move_for_hero_and_collect_key)
+  return_lives_T6_to_T8_move_for_monster:arc (T6_to_T8_move_for_monster -> pheroLives)
+  T8_to_T6_trg_for_hero:arc (T8_to_T6_move_for_hero -> tile_hero_place_T6)
+  arc_lives_check_D0_to_T5_move_for_monster:arc (pheroLives -> D0_to_T5_move_for_monster)
+  keep_token_in_level14:arc (T5_to_T2_move_for_monster -> p_rep_L1)
+  allow_hero_move19:arc (pHero_move -> T7_to_T6_move_for_hero)
+  D1_to_T7_trg_for_monster:arc (D1_to_T7_move_for_monster -> tile_monster_place_T7)
+  T7_to_T6_trg_for_monster:arc (T7_to_T6_move_for_monster -> tile_monster_place_T6)
+  T7_to_T6_trg_for_hero:arc (T7_to_T6_move_for_hero -> tile_hero_place_T6)
+  return_lives_T5_to_T4_move_for_hero:arc (T5_to_T4_move_for_hero -> pheroLives)
+  allow_hero_move6:arc (pHero_move -> T4_to_T5_move_for_hero)
+  level_L1_to_D0_level_lock_for_monster:arc (p_rep_L1 -> D0_to_T5_move_for_monster)
+  enable_monster_move42:arc (T7_to_T6_move_for_monster -> pHero_move)
+  return_lives_T1_to_T4_move_for_hero:arc (T1_to_T4_move_for_hero -> pheroLives)
+  T2_to_T1_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T1_move_for_monster)
+  enable_monster_move26:arc (T5_to_D0_move_for_monster -> pHero_move)
+  allow_monster_move15:arc (pMonster_move -> T3_to_T2_move_for_monster)
+  arc_lives_check_D0_to_T5_move_for_hero:arc (pheroLives -> D0_to_T5_move_for_hero)
+  return_lives_T5_to_T4_move_for_monster:arc (T5_to_T4_move_for_monster -> pheroLives)
+  keep_token_in_level8:arc (D0_to_T3_move_for_monster -> p_rep_L1)
+  enable_monster_move10:arc (T7_to_D1_move_for_hero -> pMonster_move)
+  keep_token_in_level10:arc (T5_to_D0_move_for_monster -> p_rep_L1)
+  enable_monster_move5:arc (D0_to_T3_move_for_hero -> pMonster_move)
+  level_L1_to_T2_level_lock_for_monster3:arc (p_rep_L1 -> T3_to_T2_move_for_monster)
+  enable_monster_move15:arc (T4_to_T1_move_for_hero -> pMonster_move)
+  D0_to_T5_src_for_monster:arc (tile_monster_place_D0 -> D0_to_T5_move_for_monster)
+  allow_monster_move18:arc (pMonster_move -> T2_to_T3_move_for_monster)
+  enable_monster_move13:arc (T5_to_D0_move_for_hero -> pMonster_move)
+  T8_to_D1_trg_for_monster:arc (T8_to_D1_move_for_monster -> tile_monster_place_D1)
+  arc_lives_check_T2_to_T1_move_for_monster:arc (pheroLives -> T2_to_T1_move_for_monster)
+  D0_to_T3_trg_for_hero:arc (D0_to_T3_move_for_hero -> tile_hero_place_T3)
+  enable_monster_move25:arc (T1_to_T2_move_for_monster -> pHero_move)
+  allow_monster_move6:arc (pMonster_move -> T4_to_T5_move_for_monster)
+  level_L2_to_T6_level_lock_for_monster1:arc (p_rep_L2 -> T6_to_T7_move_for_monster)
+  T5_to_T4_trg_for_monster:arc (T5_to_T4_move_for_monster -> tile_monster_place_T4)
+  T8_to_D1_trg_for_hero:arc (T8_to_D1_move_for_hero -> tile_hero_place_D1)
+  arc_lives_check_T1_to_T4_move_for_hero:arc (pheroLives -> T1_to_T4_move_for_hero)
+  arc_lives_check_T6_to_T8_move_for_monster:arc (pheroLives -> T6_to_T8_move_for_monster)
+  enable_monster_move21:arc (T5_to_T4_move_for_monster -> pHero_move)
+  return_lives_D1_to_T7_move_for_monster:arc (D1_to_T7_move_for_monster -> pheroLives)
+  allow_hero_move14:arc (pHero_move -> T8_to_D1_move_for_hero)
+  allow_hero_move20:arc (pHero_move -> T8_to_T6_move_for_hero)
+  level_L1_to_T2_level_lock_for_monster0:arc (p_rep_L1 -> T1_to_T2_move_for_monster)
+  T8_to_D1_src_for_monster:arc (tile_monster_place_T8 -> T8_to_D1_move_for_monster)
+  enable_monster_move36:arc (T8_to_D1_move_for_monster -> pHero_move)
+  return_lives_T1_to_T2_move_for_hero:arc (T1_to_T2_move_for_hero -> pheroLives)
+  T5_to_D0_trg_for_monster:arc (T5_to_D0_move_for_monster -> tile_monster_place_D0)
+  T6_to_T8_trg_for_hero:arc (T6_to_T8_move_for_hero -> tile_hero_place_T8)
+  allow_monster_move9:arc (pMonster_move -> D1_to_T7_move_for_monster)
+  enable_monster_move1:arc (D0_to_T5_move_for_hero -> pMonster_move)
+  T5_to_T2_src_for_hero:arc (tile_hero_place_T5 -> T5_to_T2_move_for_hero)
+  D1_to_T8_src_for_hero:arc (tile_hero_place_D1 -> D1_to_T8_move_for_hero)
+  level_L1_to_D0_level_lock_for_monster2:arc (p_rep_L1 -> T5_to_D0_move_for_monster)
+  arc_lives_check_T4_to_T1_move_for_hero:arc (pheroLives -> T4_to_T1_move_for_hero)
+  level_L1_to_T1_level_lock_for_monster0:arc (p_rep_L1 -> T1_to_T4_move_for_monster)
+  arc_lives_check_T4_to_T5_move_for_monster:arc (pheroLives -> T4_to_T5_move_for_monster)
+  arc_lives_check_T6_to_T8_move_for_hero:arc (pheroLives -> T6_to_T8_move_for_hero)
+  T5_to_T2_trg_for_monster:arc (T5_to_T2_move_for_monster -> tile_monster_place_T2)
+  enable_monster_move8:arc (T6_to_T7_move_for_hero -> pMonster_move)
+  enable_monster_move30:arc (T6_to_T8_move_for_monster -> pHero_move)
+  D0_to_T3_trg_for_monster:arc (D0_to_T3_move_for_monster -> tile_monster_place_T3)
+  T2_to_T5_trg_for_monster:arc (T2_to_T5_move_for_monster -> tile_monster_place_T5)
+  T6_to_T8_src_for_monster:arc (tile_monster_place_T6 -> T6_to_T8_move_for_monster)
+  return_lives_D0_to_T3_move_for_hero:arc (D0_to_T3_move_for_hero -> pheroLives)
+  return_lives_T8_to_T6_move_for_monster:arc (T8_to_T6_move_for_monster -> pheroLives)
+  return_lives_T5_to_T2_move_for_monster:arc (T5_to_T2_move_for_monster -> pheroLives)
+  return_lives_T4_to_T5_move_for_hero:arc (T4_to_T5_move_for_hero -> pheroLives)
+  T7_to_T6_src_for_monster:arc (tile_monster_place_T7 -> T7_to_T6_move_for_monster)
+  T6_to_T7_src_for_monster:arc (tile_monster_place_T6 -> T6_to_T7_move_for_monster)
+  allow_monster_move11:arc (pMonster_move -> T2_to_T1_move_for_monster)
+  arc_lives_check_T4_to_T5_move_for_hero:arc (pheroLives -> T4_to_T5_move_for_hero)
+  allow_monster_move20:arc (pMonster_move -> T7_to_T6_move_for_monster)
+  arc_lives_check_T5_to_T2_move_for_monster:arc (pheroLives -> T5_to_T2_move_for_monster)
+  return_lives_T3_to_T2_move_for_monster:arc (T3_to_T2_move_for_monster -> pheroLives)
+  arc_lives_check_D1_to_T7_move_for_monster:arc (pheroLives -> D1_to_T7_move_for_monster)
+  T4_to_T5_src_for_hero:arc (tile_hero_place_T4 -> T4_to_T5_move_for_hero)
+  level_L1_to_T2_level_lock_for_monster:arc (p_rep_L1 -> T2_to_T1_move_for_monster)
+  T3_to_D0_src_for_monster:arc (tile_monster_place_T3 -> T3_to_D0_move_for_monster)
+  D0_to_T5_trg_for_hero:arc (D0_to_T5_move_for_hero -> tile_hero_place_T5)
+  enable_monster_move34:arc (T1_to_T4_move_for_monster -> pHero_move)
+  T2_to_T5_trg_for_hero:arc (T2_to_T5_move_for_hero -> tile_hero_place_T5)
+  return_lives_T1_to_T2_move_for_monster:arc (T1_to_T2_move_for_monster -> pheroLives)
+  allow_hero_move0:arc (pHero_move -> D1_to_T8_move_for_hero)
+  T2_to_T3_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T3_move_for_hero)
+  arc_lives_check_T2_to_T5_move_for_hero:arc (pheroLives -> T2_to_T5_move_for_hero)
+  return_lives_T6_to_T7_move_for_hero:arc (T6_to_T7_move_for_hero -> pheroLives)
+  allow_monster_move17:arc (pMonster_move -> T4_to_T1_move_for_monster)
+  consArc0:arc (K0_to_collect -> T2_to_T3_move_for_hero_and_collect_key)
+  T7_to_D1_trg_for_hero:arc (T7_to_D1_move_for_hero -> tile_hero_place_D1)
+  arc_lives_check_T5_to_D0_move_for_monster:arc (pheroLives -> T5_to_D0_move_for_monster)
+  enable_monster_move3:arc (T2_to_T5_move_for_hero -> pMonster_move)
+  T4_to_T5_src_for_monster:arc (tile_monster_place_T4 -> T4_to_T5_move_for_monster)
+  T1_to_T2_src_for_hero:arc (tile_hero_place_T1 -> T1_to_T2_move_for_hero)
+  enable_monster_move28:arc (T4_to_T5_move_for_monster -> pHero_move)
+  allow_hero_move10:arc (pHero_move -> T7_to_D1_move_for_hero)
+  D0_to_T5_src_for_hero:arc (tile_hero_place_D0 -> D0_to_T5_move_for_hero)
+  prodArc1:arc (T6_to_T7_move_for_hero_and_collect_key -> collected_K1)
+  level_L2_to_D1_level_lock_for_monster0:arc (p_rep_L2 -> D1_to_T8_move_for_monster)
+  level_L2_to_D1_level_lock_for_monster:arc (p_rep_L2 -> T8_to_D1_move_for_monster)
+  level_L1_to_D0_level_lock_for_monster1:arc (p_rep_L1 -> T3_to_D0_move_for_monster)
+  T7_to_D1_trg_for_monster:arc (T7_to_D1_move_for_monster -> tile_monster_place_D1)
+  allow_monster_move:arc (pMonster_move -> T5_to_T4_move_for_monster)
+  enable_monster_move33:arc (T2_to_T1_move_for_monster -> pHero_move)
+  level_L1_to_D0_level_lock_for_monster0:arc (p_rep_L1 -> D0_to_T3_move_for_monster)
+  T8_to_T6_src_for_monster:arc (tile_monster_place_T8 -> T8_to_T6_move_for_monster)
+  return_lives_D0_to_T5_move_for_monster:arc (D0_to_T5_move_for_monster -> pheroLives)
+  allow_monster_move14:arc (pMonster_move -> T8_to_D1_move_for_monster)
+  allow_hero_move8:arc (pHero_move -> T6_to_T7_move_for_hero)
+  D0_to_T3_src_for_monster:arc (tile_monster_place_D0 -> D0_to_T3_move_for_monster)
+  arc_lives_check_T6_to_T7_move_for_hero:arc (pheroLives -> T6_to_T7_move_for_hero)
+  T5_to_D0_src_for_monster:arc (tile_monster_place_T5 -> T5_to_D0_move_for_monster)
+  return_lives_T6_to_T8_move_for_hero:arc (T6_to_T8_move_for_hero -> pheroLives)
+  return_lives_T3_to_D0_move_for_monster:arc (T3_to_D0_move_for_monster -> pheroLives)
+  T5_to_T2_src_for_monster:arc (tile_monster_place_T5 -> T5_to_T2_move_for_monster)
+  D0_to_T3_src_for_hero:arc (tile_hero_place_D0 -> D0_to_T3_move_for_hero)
+  enable_monster_move9:arc (T6_to_T8_move_for_hero -> pMonster_move)
+  T8_to_D1_src_for_hero:arc (tile_hero_place_T8 -> T8_to_D1_move_for_hero)
+  keep_token_in_level7:arc (D0_to_T5_move_for_monster -> p_rep_L1)
+  T5_to_T2_trg_for_hero:arc (T5_to_T2_move_for_hero -> tile_hero_place_T2)
+  return_lives_T5_to_D0_move_for_hero:arc (T5_to_D0_move_for_hero -> pheroLives)
+  arc_lives_check_T1_to_T2_move_for_hero:arc (pheroLives -> T1_to_T2_move_for_hero)
+  return_lives_T7_to_D1_move_for_hero:arc (T7_to_D1_move_for_hero -> pheroLives)
+  arc_lives_check_T1_to_T4_move_for_monster:arc (pheroLives -> T1_to_T4_move_for_monster)
+  T2_to_T3_trg_for_monster:arc (T2_to_T3_move_for_monster -> tile_monster_place_T3)
+  arc_lives_check_T2_to_T3_move_for_monster:arc (pheroLives -> T2_to_T3_move_for_monster)
+  arc_lives_check_T7_to_D1_move_for_monster:arc (pheroLives -> T7_to_D1_move_for_monster)
+  return_lives_T7_to_T6_move_for_monster:arc (T7_to_T6_move_for_monster -> pheroLives)
+  return_lives_T2_to_T1_move_for_monster:arc (T2_to_T1_move_for_monster -> pheroLives)
+  arc_lives_check_D0_to_T3_move_for_hero:arc (pheroLives -> D0_to_T3_move_for_hero)
+  T3_to_D0_src_for_hero:arc (tile_hero_place_T3 -> T3_to_D0_move_for_hero)
+  consArc2:arc (K1_to_collect -> D1_to_T7_move_for_hero_and_collect_key)
+  T5_to_T4_src_for_hero:arc (tile_hero_place_T5 -> T5_to_T4_move_for_hero)
+  T4_to_T1_src_for_hero:arc (tile_hero_place_T4 -> T4_to_T1_move_for_hero)
+  D1_to_T7_trg_for_hero:arc (D1_to_T7_move_for_hero -> tile_hero_place_T7)
+  enable_monster_move32:arc (T2_to_T5_move_for_monster -> pHero_move)
+  keep_token_in_level4:arc (T7_to_T6_move_for_monster -> p_rep_L2)
+  level_L1_to_T2_level_lock_for_monster2:arc (p_rep_L1 -> T5_to_T2_move_for_monster)
+  T1_to_T4_src_for_monster:arc (tile_monster_place_T1 -> T1_to_T4_move_for_monster)
+  D1_to_T8_trg_for_hero:arc (D1_to_T8_move_for_hero -> tile_hero_place_T8)
+  keep_token_in_level1:arc (T7_to_D1_move_for_monster -> p_rep_L2)
+  arc_lives_check_T2_to_T1_move_for_hero:arc (pheroLives -> T2_to_T1_move_for_hero)
+  level_L1_to_T2_level_lock_for_monster4:arc (p_rep_L1 -> T2_to_T3_move_for_monster)
+  arc_lives_check_T2_to_T3_move_for_hero:arc (pheroLives -> T2_to_T3_move_for_hero)
+  allow_monster_move2:arc (pMonster_move -> D0_to_T3_move_for_monster)
+  T7_to_T6_src_for_hero:arc (tile_hero_place_T7 -> T7_to_T6_move_for_hero)
+  arc_lives_check_T7_to_D1_move_for_hero:arc (pheroLives -> T7_to_D1_move_for_hero)
+  return_lives_D1_to_T7_move_for_hero:arc (D1_to_T7_move_for_hero -> pheroLives)
+  T7_to_D1_src_for_monster:arc (tile_monster_place_T7 -> T7_to_D1_move_for_monster)
+  T8_to_T6_src_for_hero:arc (tile_hero_place_T8 -> T8_to_T6_move_for_hero)
+  consArc1:arc (K1_to_collect -> T6_to_T7_move_for_hero_and_collect_key)
+  allow_monster_move1:arc (pMonster_move -> D0_to_T5_move_for_monster)
+  T1_to_T4_src_for_hero:arc (tile_hero_place_T1 -> T1_to_T4_move_for_hero)
+  T6_to_T8_trg_for_monster:arc (T6_to_T8_move_for_monster -> tile_monster_place_T8)
+  arc_lives_check_T8_to_D1_move_for_hero:arc (pheroLives -> T8_to_D1_move_for_hero)
+  T4_to_T5_trg_for_hero:arc (T4_to_T5_move_for_hero -> tile_hero_place_T5)
+  allow_monster_move13:arc (pMonster_move -> T8_to_T6_move_for_monster)
+  allow_monster_move8:arc (pMonster_move -> T6_to_T8_move_for_monster)
+  enable_monster_move19:arc (T7_to_T6_move_for_hero -> pMonster_move)
+  fromArcCollect2:arc (tile_hero_place_D1 -> D1_to_T7_move_for_hero_and_collect_key)
+  keep_token_in_level12:arc (T1_to_T2_move_for_monster -> p_rep_L1)
+  return_lives_T6_to_T7_move_for_monster:arc (T6_to_T7_move_for_monster -> pheroLives)
+  arc_lives_check_D1_to_T7_move_for_hero:arc (pheroLives -> D1_to_T7_move_for_hero)
+  keep_token_in_level3:arc (T6_to_T8_move_for_monster -> p_rep_L2)
+  return_lives_T2_to_T5_move_for_monster:arc (T2_to_T5_move_for_monster -> pheroLives)
+  level_L2_to_D1_level_lock_for_monster1:arc (p_rep_L2 -> T7_to_D1_move_for_monster)
+  T6_to_T7_src_for_hero:arc (tile_hero_place_T6 -> T6_to_T7_move_for_hero)
+  return_lives_T4_to_T1_move_for_monster:arc (T4_to_T1_move_for_monster -> pheroLives)
+  T2_to_T1_trg_for_monster:arc (T2_to_T1_move_for_monster -> tile_monster_place_T1)
+  enable_monster_move2:arc (T1_to_T4_move_for_hero -> pMonster_move)
+  T4_to_T1_src_for_monster:arc (tile_monster_place_T4 -> T4_to_T1_move_for_monster)
+  level_L2_to_T6_level_lock_for_monster:arc (p_rep_L2 -> T6_to_T8_move_for_monster)
+  enable_monster_move7:arc (T2_to_T3_move_for_hero -> pMonster_move)
+  allow_monster_move7:arc (pMonster_move -> T5_to_T2_move_for_monster)
+  enable_monster_move6:arc (T4_to_T5_move_for_hero -> pMonster_move)
+  allow_hero_move17:arc (pHero_move -> T5_to_T2_move_for_hero)
+  return_lives_T4_to_T5_move_for_monster:arc (T4_to_T5_move_for_monster -> pheroLives)
+  enable_monster_move27:arc (T6_to_T7_move_for_monster -> pHero_move)
+  return_lives_T7_to_D1_move_for_monster:arc (T7_to_D1_move_for_monster -> pheroLives)
+  T3_to_D0_trg_for_hero:arc (T3_to_D0_move_for_hero -> tile_hero_place_D0)
+  arc_lives_check_T8_to_D1_move_for_monster:arc (pheroLives -> T8_to_D1_move_for_monster)
+  WS_W:WorldStateToWorld (WS -> W)
+  glTileToPlace_hero2:generic_link (T5 -> tile_hero_place_T5)
+  glitemToCollectToPlace0:generic_link (K0 -> K0_to_collect)
+  glTileToPlace_hero8:generic_link (T7 -> tile_hero_place_T7)
+  glTileToPlace_monster0:generic_link (D1 -> tile_monster_place_D1)
+  glTileToPlace_monster6:generic_link (T4 -> tile_monster_place_T4)
+  glTileToPlace_hero5:generic_link (D0 -> tile_hero_place_D0)
+  glTileToPlace_monster7:generic_link (T1 -> tile_monster_place_T1)
+  glTileToPlace_monster8:generic_link (T7 -> tile_monster_place_T7)
+  glLevelToPlace_hero0:generic_link (L2 -> p_rep_L2)
+  glTileToPlace_hero0:generic_link (D1 -> tile_hero_place_D1)
+  glTileToPlace_monster3:generic_link (T6 -> tile_monster_place_T6)
+  glTileToPlace_hero6:generic_link (T4 -> tile_hero_place_T4)
+  glWorld_To_move_order_monster:generic_link (W -> pMonster_move)
+  glTileToPlace_monster4:generic_link (T3 -> tile_monster_place_T3)
+  glLevelToPlace_hero:generic_link (L1 -> p_rep_L1)
+  glTileToPlace_monster1:generic_link (T8 -> tile_monster_place_T8)
+  glitemCollectedToPlace1:generic_link (O1 -> collected_O1)
+  glTileToPlace_hero7:generic_link (T1 -> tile_hero_place_T1)
+  glHeroToLives:generic_link (H -> pheroLives)
+  glTileToPlace_hero4:generic_link (T3 -> tile_hero_place_T3)
+  glitemCollectedToPlace0:generic_link (K0 -> collected_K0)
+  place_is_trap_tile:generic_link (T1 -> tile_hero_place_T1)
+  glTileToPlace_hero:generic_link (T2 -> tile_hero_place_T2)
+  glWorld_To_move_order_hero:generic_link (W -> pHero_move)
+  glTileToPlace_monster5:generic_link (D0 -> tile_monster_place_D0)
+  glitemToCollectToPlace:generic_link (K1 -> K1_to_collect)
+  place_is_trap_tile0:generic_link (T1 -> tile_hero_place_T1)
+  glitemCollectedToPlace:generic_link (K1 -> collected_K1)
+  glitemToCollectToPlace1:generic_link (O1 -> O1_to_collect)
+  glTileToPlace_monster2:generic_link (T5 -> tile_monster_place_T5)
+  glTileToPlace_hero3:generic_link (T6 -> tile_hero_place_T6)
+  glTileToPlace_hero1:generic_link (T8 -> tile_hero_place_T8)
+  glTileToPlace_monster:generic_link (T2 -> tile_monster_place_T2)
+  inhArc:inh_arc (K0_to_collect -> D0_to_T3_move_for_hero)
+  inhArc1:inh_arc (K1_to_collect -> T6_to_T7_move_for_hero)
+  inhArc0:inh_arc (K0_to_collect -> T2_to_T3_move_for_hero)
+  inhArc2:inh_arc (K1_to_collect -> D1_to_T7_move_for_hero)
+  D1_T7:TileToTile (D1 -> T7) {
+      direction = "up";
+  }
+  T5_D0:TileToTile (T5 -> D0) {
+      direction = "right";
+  }
+  T6_T8:TileToTile (T6 -> T8) {
+      direction = "down";
+  }
+  T4_T5:TileToTile (T4 -> T5) {
+      direction = "right";
+  }
+  T3_T2:TileToTile (T3 -> T2) {
+      direction = "left";
+  }
+  D1_T8:TileToTile (D1 -> T8) {
+      direction = "left";
+  }
+  T1_T4:TileToTile (T1 -> T4) {
+      direction = "down";
+  }
+  D0_T3:TileToTile (D0 -> T3) {
+      direction = "up";
+  }
+  T7_D1:TileToTile (T7 -> D1) {
+      direction = "down";
+  }
+  T2_T3:TileToTile (T2 -> T3) {
+      direction = "right";
+  }
+  T8_T6:TileToTile (T8 -> T6) {
+      direction = "up";
+  }
+  T1_T2:TileToTile (T1 -> T2) {
+      direction = "right";
+  }
+  T2_T5:TileToTile (T2 -> T5) {
+      direction = "down";
+  }
+  T4_T1:TileToTile (T4 -> T1) {
+      direction = "up";
+  }
+  T6_T7:TileToTile (T6 -> T7) {
+      direction = "right";
+  }
+  T2_T1:TileToTile (T2 -> T1) {
+      direction = "left";
+  }
+  T3_D0:TileToTile (T3 -> D0) {
+      direction = "down";
+  }
+  T7_T6:TileToTile (T7 -> T6) {
+      direction = "left";
+  }
+  T5_T2:TileToTile (T5 -> T2) {
+      direction = "up";
+  }
+  T5_T4:TileToTile (T5 -> T4) {
+      direction = "left";
+  }
+  D0_T5:TileToTile (D0 -> T5) {
+      direction = "left";
+  }
+  T8_D1:TileToTile (T8 -> D1) {
+      direction = "right";
+  }
+  D0_D1:DoorToDoor (D0 -> D1)
+  D0_D2:DoorToDoor (D1 -> D0)
+  M2_T0:CreaturesTile (M2 -> T6)
+  H_T0:CreaturesTile (H -> T2)
+  M_T0:CreaturesTile (M -> D0)
+--------------
+CONFORM
+
+  a. fire_transition
+      {'t': 'T2_to_T1_move_for_hero'}
+  b. fire_transition
+      {'t': 'T2_to_T5_move_for_hero'}
+  c. fire_transition
+      {'t': 'T2_to_T3_move_for_hero_and_collect_key'}
+Select action: PNPlace tile_hero_place_state_T2 now has 0 tokens
+PNPlace K0_toCollect_item_State now has 0 tokens
+PNPlace tile_hero_place_state_T3 now has 1 tokens
+PNPlace K0_collected_item_State now has 1 tokens
+    ▸ executed rule 'fire_transition'
+          {'t': 'T2_to_T3_move_for_hero_and_collect_key'}
+--------------
+  
+  D1:Door
+  D0:Door
+  L2:Level {
+      name = "level2";
+  }
+  L1:Level {
+      name = "level1";
+  }
+  CSM:CreatureState {
+      fought = False;
+      moved = False;
+  }
+  CSH:CreatureState {
+      moved = False;
+      fought = False;
+  }
+  CSM2:CreatureState {
+      fought = False;
+      moved = False;
+  }
+  tile_monster_place_state_T6:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_T6:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T7:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T8:PNPlaceState {
+      numTokens = 0;
+  }
+  pHeroState_move:PNPlaceState {
+      numTokens = 1;
+  }
+  pHeroLivesState:PNPlaceState {
+      numTokens = 5;
+  }
+  K0_toCollect_item_State:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T5:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T8:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T1:PNPlaceState {
+      numTokens = 0;
+  }
+  K0_collected_item_State:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_T7:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_D0:PNPlaceState {
+      numTokens = 0;
+  }
+  p_rep_L1_state:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_T1:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T3:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_hero_place_state_T4:PNPlaceState {
+      numTokens = 0;
+  }
+  pMonsterState_move:PNPlaceState {
+      numTokens = 0;
+  }
+  O1_toCollect_item_State:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_monster_place_state_T3:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T5:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_T2:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_hero_place_state_D1:PNPlaceState {
+      numTokens = 0;
+  }
+  O1_collected_item_State:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_D0:PNPlaceState {
+      numTokens = 1;
+  }
+  p_rep_L2_state:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T2:PNPlaceState {
+      numTokens = 0;
+  }
+  K1_collected_item_State:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_state_T4:PNPlaceState {
+      numTokens = 0;
+  }
+  K1_toCollect_item_State:PNPlaceState {
+      numTokens = 1;
+  }
+  tile_monster_place_state_D1:PNPlaceState {
+      numTokens = 0;
+  }
+  tile_monster_place_T3:PNPlace
+  tile_monster_place_T7:PNPlace
+  tile_hero_place_T8:PNPlace
+  tile_hero_place_T7:PNPlace
+  collected_K1:PNPlace
+  collected_K0:PNPlace
+  K1_to_collect:PNPlace
+  tile_monster_place_T8:PNPlace
+  collected_O1:PNPlace
+  tile_hero_place_T2:PNPlace
+  tile_hero_place_T4:PNPlace
+  tile_monster_place_T4:PNPlace
+  pheroLives:PNPlace
+  tile_monster_place_T1:PNPlace
+  tile_monster_place_D1:PNPlace
+  K0_to_collect:PNPlace
+  tile_monster_place_T6:PNPlace
+  tile_hero_place_D1:PNPlace
+  O1_to_collect:PNPlace
+  tile_hero_place_D0:PNPlace
+  tile_hero_place_T5:PNPlace
+  tile_monster_place_T2:PNPlace
+  tile_hero_place_T6:PNPlace
+  tile_hero_place_T1:PNPlace
+  pHero_move:PNPlace
+  p_rep_L1:PNPlace
+  tile_monster_place_D0:PNPlace
+  p_rep_L2:PNPlace
+  tile_hero_place_T3:PNPlace
+  pMonster_move:PNPlace
+  tile_monster_place_T5:PNPlace
+  O1:Objective {
+      points = 50;
+  }
+  D0_to_T3_move_for_hero:PNTransition
+  D1_to_T8_move_for_hero:PNTransition
+  T7_to_T6_move_for_hero:PNTransition
+  T6_to_T8_move_for_hero:PNTransition
+  T6_to_T7_move_for_monster:PNTransition
+  T5_to_T4_move_for_hero:PNTransition
+  T7_to_D1_move_for_hero:PNTransition
+  T2_to_T5_move_for_monster:PNTransition
+  D1_to_T7_move_for_hero:PNTransition
+  T5_to_D0_move_for_monster:PNTransition
+  T7_to_T6_move_for_monster:PNTransition
+  T6_to_T8_move_for_monster:PNTransition
+  T5_to_T2_move_for_hero:PNTransition
+  D0_to_T3_move_for_hero_and_collect_key:PNTransition
+  D0_to_T3_move_for_monster:PNTransition
+  T5_to_D0_move_for_hero:PNTransition
+  T2_to_T1_move_for_monster:PNTransition
+  T8_to_T6_move_for_monster:PNTransition
+  T3_to_T2_move_for_hero:PNTransition
+  D0_to_T5_move_for_monster:PNTransition
+  T3_to_T2_move_for_monster:PNTransition
+  T2_to_T3_move_for_monster:PNTransition
+  T4_to_T1_move_for_hero:PNTransition
+  T5_to_T2_move_for_monster:PNTransition
+  T1_to_T4_move_for_hero:PNTransition
+  D1_to_T7_move_for_hero_and_collect_key:PNTransition
+  T4_to_T1_move_for_monster:PNTransition
+  T2_to_T1_move_for_hero:PNTransition
+  T4_to_T5_move_for_monster:PNTransition
+  T3_to_D0_move_for_hero:PNTransition
+  D0_to_T5_move_for_hero:PNTransition
+  T2_to_T5_move_for_hero:PNTransition
+  T8_to_T6_move_for_hero:PNTransition
+  D1_to_T8_move_for_monster:PNTransition
+  T8_to_D1_move_for_monster:PNTransition
+  T8_to_D1_move_for_hero:PNTransition
+  T1_to_T2_move_for_monster:PNTransition
+  T6_to_T7_move_for_hero:PNTransition
+  T6_to_T7_move_for_hero_and_collect_key:PNTransition
+  T1_to_T4_move_for_monster:PNTransition
+  T2_to_T3_move_for_hero:PNTransition
+  T5_to_T4_move_for_monster:PNTransition
+  T7_to_D1_move_for_monster:PNTransition
+  T2_to_T3_move_for_hero_and_collect_key:PNTransition
+  T1_to_T2_move_for_hero:PNTransition
+  T3_to_D0_move_for_monster:PNTransition
+  T4_to_T5_move_for_hero:PNTransition
+  D1_to_T7_move_for_monster:PNTransition
+  T8:Obstacle
+  T4:Obstacle
+  M2:Monster {
+      lives = 10;
+  }
+  M:Monster {
+      lives = 4;
+  }
+  T1:Trap
+  WS:WorldState {
+      collectedpoints = 0;
+  }
+  H:Hero {
+      lives = 5;
+  }
+  T2:StandardTile
+  T6:StandardTile
+  T5:StandardTile
+  T3:StandardTile
+  T7:StandardTile
+  C:Clock {
+      time = 0;
+  }
+  W:World
+  K0:Key
+  K1:Key
+  W_L2:WorldToLevel (W -> L2)
+  W_L1:WorldToLevel (W -> L1)
+  D1_K1:DoorToKey (D1 -> K1)
+  D0_K0:DoorToKey (D0 -> K0)
+  :pn_of (tile_hero_place_state_T7 -> tile_hero_place_T7)
+  :pn_of (tile_hero_place_state_T3 -> tile_hero_place_T3)
+  toCollect_item_State_to_item1:pn_of (O1_toCollect_item_State -> O1_to_collect)
+  :pn_of (tile_hero_place_state_T2 -> tile_hero_place_T2)
+  :pn_of (pMonsterState_move -> pMonster_move)
+  heroLivesStateToHeroLives:pn_of (pHeroLivesState -> pheroLives)
+  :pn_of (tile_hero_place_state_T1 -> tile_hero_place_T1)
+  :pn_of (tile_hero_place_state_D1 -> tile_hero_place_D1)
+  collected_item_State_to_item:pn_of (K1_collected_item_State -> collected_K1)
+  :pn_of (tile_monster_place_state_D0 -> tile_monster_place_D0)
+  :pn_of (tile_monster_place_state_T3 -> tile_monster_place_T3)
+  :pn_of (tile_monster_place_state_T6 -> tile_monster_place_T6)
+  :pn_of (tile_monster_place_state_T7 -> tile_monster_place_T7)
+  pLevelStateTopLevel:pn_of (p_rep_L1_state -> p_rep_L1)
+  pLevelStateTopLevel0:pn_of (p_rep_L2_state -> p_rep_L2)
+  :pn_of (tile_monster_place_state_T5 -> tile_monster_place_T5)
+  :pn_of (tile_hero_place_state_T8 -> tile_hero_place_T8)
+  :pn_of (tile_hero_place_state_D0 -> tile_hero_place_D0)
+  :pn_of (tile_monster_place_state_T4 -> tile_monster_place_T4)
+  :pn_of (tile_monster_place_state_T1 -> tile_monster_place_T1)
+  :pn_of (tile_hero_place_state_T6 -> tile_hero_place_T6)
+  collected_item_State_to_item1:pn_of (O1_collected_item_State -> collected_O1)
+  :pn_of (tile_hero_place_state_T5 -> tile_hero_place_T5)
+  toCollect_item_State_to_item0:pn_of (K0_toCollect_item_State -> K0_to_collect)
+  :pn_of (tile_hero_place_state_T4 -> tile_hero_place_T4)
+  toCollect_item_State_to_item:pn_of (K1_toCollect_item_State -> K1_to_collect)
+  :pn_of (tile_monster_place_state_D1 -> tile_monster_place_D1)
+  collected_item_State_to_item0:pn_of (K0_collected_item_State -> collected_K0)
+  :pn_of (pHeroState_move -> pHero_move)
+  :pn_of (tile_monster_place_state_T8 -> tile_monster_place_T8)
+  :pn_of (tile_monster_place_state_T2 -> tile_monster_place_T2)
+  L2_T8:LevelToTile (L2 -> T8)
+  L1_T5:LevelToTile (L1 -> T5)
+  L2_D1:LevelToTile (L2 -> D1)
+  L2_T6:LevelToTile (L2 -> T6)
+  L1_T4:LevelToTile (L1 -> T4)
+  L2_T7:LevelToTile (L2 -> T7)
+  L1_T2:LevelToTile (L1 -> T2)
+  L1_T1:LevelToTile (L1 -> T1)
+  L1_T3:LevelToTile (L1 -> T3)
+  L1_D0:LevelToTile (L1 -> D0)
+  T3_K1:StandardToTileItem (T7 -> K1)
+  T5_O1:StandardToTileItem (T5 -> O1)
+  a:StandardToTileItem (T3 -> K0)
+  CS_H:CreatureStateToCreature (CSH -> H)
+  S_M2:CreatureStateToCreature (CSM2 -> M2)
+  CS_M:CreatureStateToCreature (CSM -> M)
+  enable_monster_move31:arc (D1_to_T7_move_for_monster -> pHero_move)
+  allow_hero_move3:arc (pHero_move -> T2_to_T5_move_for_hero)
+  level_L1_to_T4_level_lock_for_monster0:arc (p_rep_L1 -> T4_to_T5_move_for_monster)
+  consArc:arc (K0_to_collect -> D0_to_T3_move_for_hero_and_collect_key)
+  return_lives_T8_to_D1_move_for_hero:arc (T8_to_D1_move_for_hero -> pheroLives)
+  arc_lives_check_T6_to_T7_move_for_monster:arc (pheroLives -> T6_to_T7_move_for_monster)
+  level_L2_to_T6_level_lock_for_monster2:arc (p_rep_L2 -> T8_to_T6_move_for_monster)
+  allow_monster_move10:arc (pMonster_move -> T2_to_T5_move_for_monster)
+  allow_hero_move18:arc (pHero_move -> T5_to_T4_move_for_hero)
+  T2_to_T1_trg_for_hero:arc (T2_to_T1_move_for_hero -> tile_hero_place_T1)
+  T4_to_T1_trg_for_monster:arc (T4_to_T1_move_for_monster -> tile_monster_place_T1)
+  return_lives_T2_to_T3_move_for_hero:arc (T2_to_T3_move_for_hero -> pheroLives)
+  D1_to_T8_trg_for_monster:arc (D1_to_T8_move_for_monster -> tile_monster_place_T8)
+  allow_monster_move16:arc (pMonster_move -> D1_to_T8_move_for_monster)
+  arc_lives_check_T5_to_T4_move_for_monster:arc (pheroLives -> T5_to_T4_move_for_monster)
+  return_lives_D1_to_T8_move_for_monster:arc (D1_to_T8_move_for_monster -> pheroLives)
+  return_lives_T8_to_T6_move_for_hero:arc (T8_to_T6_move_for_hero -> pheroLives)
+  enable_monster_move0:arc (D1_to_T8_move_for_hero -> pMonster_move)
+  T1_to_T2_trg_for_hero:arc (T1_to_T2_move_for_hero -> tile_hero_place_T2)
+  allow_hero_move4:arc (pHero_move -> T3_to_T2_move_for_hero)
+  T2_to_T5_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T5_move_for_hero)
+  allow_monster_move19:arc (pMonster_move -> T7_to_D1_move_for_monster)
+  return_lives_T2_to_T5_move_for_hero:arc (T2_to_T5_move_for_hero -> pheroLives)
+  allow_hero_move9:arc (pHero_move -> T6_to_T8_move_for_hero)
+  arc_lives_check_D0_to_T3_move_for_monster:arc (pheroLives -> D0_to_T3_move_for_monster)
+  T5_to_T4_trg_for_hero:arc (T5_to_T4_move_for_hero -> tile_hero_place_T4)
+  allow_hero_move5:arc (pHero_move -> D0_to_T3_move_for_hero)
+  keep_token_in_level6:arc (T8_to_T6_move_for_monster -> p_rep_L2)
+  T3_to_T2_trg_for_hero:arc (T3_to_T2_move_for_hero -> tile_hero_place_T2)
+  T1_to_T2_src_for_monster:arc (tile_monster_place_T1 -> T1_to_T2_move_for_monster)
+  arc_lives_check_T5_to_T2_move_for_hero:arc (pheroLives -> T5_to_T2_move_for_hero)
+  enable_monster_move29:arc (T5_to_T2_move_for_monster -> pHero_move)
+  allow_hero_move15:arc (pHero_move -> T4_to_T1_move_for_hero)
+  return_lives_D0_to_T3_move_for_monster:arc (D0_to_T3_move_for_monster -> pheroLives)
+  enable_monster_move18:arc (T5_to_T4_move_for_hero -> pMonster_move)
+  arc_lives_check_D1_to_T8_move_for_monster:arc (pheroLives -> D1_to_T8_move_for_monster)
+  allow_monster_move12:arc (pMonster_move -> T1_to_T4_move_for_monster)
+  T8_to_T6_trg_for_monster:arc (T8_to_T6_move_for_monster -> tile_monster_place_T6)
+  enable_monster_move4:arc (T3_to_T2_move_for_hero -> pMonster_move)
+  return_lives_T7_to_T6_move_for_hero:arc (T7_to_T6_move_for_hero -> pheroLives)
+  level_L1_to_T4_level_lock_for_monster:arc (p_rep_L1 -> T5_to_T4_move_for_monster)
+  allow_monster_move5:arc (pMonster_move -> T6_to_T7_move_for_monster)
+  allow_hero_move1:arc (pHero_move -> D0_to_T5_move_for_hero)
+  toArcCollect:arc (D0_to_T3_move_for_hero_and_collect_key -> tile_hero_place_T3)
+  allow_hero_move16:arc (pHero_move -> T2_to_T1_move_for_hero)
+  arc_lives_check_T1_to_T2_move_for_monster:arc (pheroLives -> T1_to_T2_move_for_monster)
+  return_lives_T3_to_T2_move_for_hero:arc (T3_to_T2_move_for_hero -> pheroLives)
+  toArcCollect1:arc (T6_to_T7_move_for_hero_and_collect_key -> tile_hero_place_T7)
+  T5_to_D0_src_for_hero:arc (tile_hero_place_T5 -> T5_to_D0_move_for_hero)
+  keep_token_in_level19:arc (T5_to_T4_move_for_monster -> p_rep_L1)
+  keep_token_in_level15:arc (T3_to_T2_move_for_monster -> p_rep_L1)
+  allow_hero_move12:arc (pHero_move -> D1_to_T7_move_for_hero)
+  keep_token_in_level5:arc (T6_to_T7_move_for_monster -> p_rep_L2)
+  enable_monster_move12:arc (D1_to_T7_move_for_hero -> pMonster_move)
+  keep_token_in_level9:arc (T3_to_D0_move_for_monster -> p_rep_L1)
+  enable_monster_move14:arc (T8_to_D1_move_for_hero -> pMonster_move)
+  keep_token_in_level20:arc (T4_to_T5_move_for_monster -> p_rep_L1)
+  allow_monster_move4:arc (pMonster_move -> T5_to_D0_move_for_monster)
+  allow_hero_move:arc (pHero_move -> T3_to_D0_move_for_hero)
+  T3_to_T2_src_for_hero:arc (tile_hero_place_T3 -> T3_to_T2_move_for_hero)
+  T5_to_T4_src_for_monster:arc (tile_monster_place_T5 -> T5_to_T4_move_for_monster)
+  T4_to_T1_trg_for_hero:arc (T4_to_T1_move_for_hero -> tile_hero_place_T1)
+  T1_to_T4_trg_for_monster:arc (T1_to_T4_move_for_monster -> tile_monster_place_T4)
+  T5_to_D0_trg_for_hero:arc (T5_to_D0_move_for_hero -> tile_hero_place_D0)
+  fromArcCollect0:arc (tile_hero_place_T2 -> T2_to_T3_move_for_hero_and_collect_key)
+  arc_lives_check_T2_to_T5_move_for_monster:arc (pheroLives -> T2_to_T5_move_for_monster)
+  allow_hero_move2:arc (pHero_move -> T1_to_T4_move_for_hero)
+  arc_lives_check_T5_to_D0_move_for_hero:arc (pheroLives -> T5_to_D0_move_for_hero)
+  allow_monster_move0:arc (pMonster_move -> T3_to_D0_move_for_monster)
+  prodArc:arc (D0_to_T3_move_for_hero_and_collect_key -> collected_K0)
+  arc_lives_check_T3_to_D0_move_for_hero:arc (pheroLives -> T3_to_D0_move_for_hero)
+  enable_monster_move37:arc (T3_to_T2_move_for_monster -> pHero_move)
+  level_L2_to_T6_level_lock_for_monster0:arc (p_rep_L2 -> T7_to_T6_move_for_monster)
+  enable_monster_move23:arc (D0_to_T5_move_for_monster -> pHero_move)
+  level_L2_to_D1_level_lock_for_monster2:arc (p_rep_L2 -> D1_to_T7_move_for_monster)
+  arc_lives_check_T8_to_T6_move_for_monster:arc (pheroLives -> T8_to_T6_move_for_monster)
+  D1_to_T7_src_for_hero:arc (tile_hero_place_D1 -> D1_to_T7_move_for_hero)
+  keep_token_in_level11:arc (T2_to_T1_move_for_monster -> p_rep_L1)
+  D0_to_T5_trg_for_monster:arc (D0_to_T5_move_for_monster -> tile_monster_place_T5)
+  allow_hero_move7:arc (pHero_move -> T2_to_T3_move_for_hero)
+  arc_lives_check_T5_to_T4_move_for_hero:arc (pheroLives -> T5_to_T4_move_for_hero)
+  allow_monster_move3:arc (pMonster_move -> T1_to_T2_move_for_monster)
+  return_lives_T3_to_D0_move_for_hero:arc (T3_to_D0_move_for_hero -> pheroLives)
+  arc_lives_check_T3_to_D0_move_for_monster:arc (pheroLives -> T3_to_D0_move_for_monster)
+  keep_token_in_level18:arc (T1_to_T4_move_for_monster -> p_rep_L1)
+  arc_lives_check_T4_to_T1_move_for_monster:arc (pheroLives -> T4_to_T1_move_for_monster)
+  keep_token_in_level0:arc (D1_to_T8_move_for_monster -> p_rep_L2)
+  return_lives_T1_to_T4_move_for_monster:arc (T1_to_T4_move_for_monster -> pheroLives)
+  T3_to_T2_src_for_monster:arc (tile_monster_place_T3 -> T3_to_T2_move_for_monster)
+  keep_token_in_level:arc (T8_to_D1_move_for_monster -> p_rep_L2)
+  T2_to_T5_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T5_move_for_monster)
+  T7_to_D1_src_for_hero:arc (tile_hero_place_T7 -> T7_to_D1_move_for_hero)
+  enable_monster_move39:arc (T4_to_T1_move_for_monster -> pHero_move)
+  level_L1_to_T2_level_lock_for_monster1:arc (p_rep_L1 -> T2_to_T5_move_for_monster)
+  return_lives_T8_to_D1_move_for_monster:arc (T8_to_D1_move_for_monster -> pheroLives)
+  arc_lives_check_T3_to_T2_move_for_hero:arc (pheroLives -> T3_to_T2_move_for_hero)
+  T6_to_T8_src_for_hero:arc (tile_hero_place_T6 -> T6_to_T8_move_for_hero)
+  D1_to_T7_src_for_monster:arc (tile_monster_place_D1 -> D1_to_T7_move_for_monster)
+  toArcCollect0:arc (T2_to_T3_move_for_hero_and_collect_key -> tile_hero_place_T3)
+  allow_hero_move13:arc (pHero_move -> T5_to_D0_move_for_hero)
+  return_lives_T5_to_D0_move_for_monster:arc (T5_to_D0_move_for_monster -> pheroLives)
+  T3_to_D0_trg_for_monster:arc (T3_to_D0_move_for_monster -> tile_monster_place_D0)
+  keep_token_in_level13:arc (T2_to_T5_move_for_monster -> p_rep_L1)
+  D1_to_T8_src_for_monster:arc (tile_monster_place_D1 -> D1_to_T8_move_for_monster)
+  enable_monster_move24:arc (D0_to_T3_move_for_monster -> pHero_move)
+  T6_to_T7_trg_for_hero:arc (T6_to_T7_move_for_hero -> tile_hero_place_T7)
+  T2_to_T3_trg_for_hero:arc (T2_to_T3_move_for_hero -> tile_hero_place_T3)
+  T1_to_T4_trg_for_hero:arc (T1_to_T4_move_for_hero -> tile_hero_place_T4)
+  enable_monster_move41:arc (T7_to_D1_move_for_monster -> pHero_move)
+  T2_to_T3_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T3_move_for_monster)
+  enable_monster_move20:arc (T8_to_T6_move_for_hero -> pMonster_move)
+  return_lives_T2_to_T3_move_for_monster:arc (T2_to_T3_move_for_monster -> pheroLives)
+  enable_monster_move40:arc (T2_to_T3_move_for_monster -> pHero_move)
+  prodArc0:arc (T2_to_T3_move_for_hero_and_collect_key -> collected_K0)
+  allow_hero_move11:arc (pHero_move -> T1_to_T2_move_for_hero)
+  enable_monster_move:arc (T3_to_D0_move_for_hero -> pMonster_move)
+  return_lives_D0_to_T5_move_for_hero:arc (D0_to_T5_move_for_hero -> pheroLives)
+  T3_to_T2_trg_for_monster:arc (T3_to_T2_move_for_monster -> tile_monster_place_T2)
+  arc_lives_check_T3_to_T2_move_for_monster:arc (pheroLives -> T3_to_T2_move_for_monster)
+  prodArc2:arc (D1_to_T7_move_for_hero_and_collect_key -> collected_K1)
+  return_lives_D1_to_T8_move_for_hero:arc (D1_to_T8_move_for_hero -> pheroLives)
+  enable_monster_move38:arc (D1_to_T8_move_for_monster -> pHero_move)
+  T2_to_T1_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T1_move_for_hero)
+  keep_token_in_level16:arc (T2_to_T3_move_for_monster -> p_rep_L1)
+  arc_lives_check_T7_to_T6_move_for_monster:arc (pheroLives -> T7_to_T6_move_for_monster)
+  keep_token_in_level2:arc (D1_to_T7_move_for_monster -> p_rep_L2)
+  enable_monster_move16:arc (T2_to_T1_move_for_hero -> pMonster_move)
+  keep_token_in_level17:arc (T4_to_T1_move_for_monster -> p_rep_L1)
+  enable_monster_move11:arc (T1_to_T2_move_for_hero -> pMonster_move)
+  arc_lives_check_T7_to_T6_move_for_hero:arc (pheroLives -> T7_to_T6_move_for_hero)
+  arc_lives_check_T8_to_T6_move_for_hero:arc (pheroLives -> T8_to_T6_move_for_hero)
+  enable_monster_move22:arc (T3_to_D0_move_for_monster -> pHero_move)
+  enable_monster_move35:arc (T8_to_T6_move_for_monster -> pHero_move)
+  return_lives_T5_to_T2_move_for_hero:arc (T5_to_T2_move_for_hero -> pheroLives)
+  T1_to_T2_trg_for_monster:arc (T1_to_T2_move_for_monster -> tile_monster_place_T2)
+  T4_to_T5_trg_for_monster:arc (T4_to_T5_move_for_monster -> tile_monster_place_T5)
+  T6_to_T7_trg_for_monster:arc (T6_to_T7_move_for_monster -> tile_monster_place_T7)
+  enable_monster_move17:arc (T5_to_T2_move_for_hero -> pMonster_move)
+  toArcCollect2:arc (D1_to_T7_move_for_hero_and_collect_key -> tile_hero_place_T7)
+  level_L1_to_T1_level_lock_for_monster:arc (p_rep_L1 -> T4_to_T1_move_for_monster)
+  arc_lives_check_D1_to_T8_move_for_hero:arc (pheroLives -> D1_to_T8_move_for_hero)
+  fromArcCollect1:arc (tile_hero_place_T6 -> T6_to_T7_move_for_hero_and_collect_key)
+  fromArcCollect:arc (tile_hero_place_D0 -> D0_to_T3_move_for_hero_and_collect_key)
+  return_lives_T6_to_T8_move_for_monster:arc (T6_to_T8_move_for_monster -> pheroLives)
+  T8_to_T6_trg_for_hero:arc (T8_to_T6_move_for_hero -> tile_hero_place_T6)
+  arc_lives_check_D0_to_T5_move_for_monster:arc (pheroLives -> D0_to_T5_move_for_monster)
+  keep_token_in_level14:arc (T5_to_T2_move_for_monster -> p_rep_L1)
+  allow_hero_move19:arc (pHero_move -> T7_to_T6_move_for_hero)
+  D1_to_T7_trg_for_monster:arc (D1_to_T7_move_for_monster -> tile_monster_place_T7)
+  T7_to_T6_trg_for_monster:arc (T7_to_T6_move_for_monster -> tile_monster_place_T6)
+  T7_to_T6_trg_for_hero:arc (T7_to_T6_move_for_hero -> tile_hero_place_T6)
+  return_lives_T5_to_T4_move_for_hero:arc (T5_to_T4_move_for_hero -> pheroLives)
+  allow_hero_move6:arc (pHero_move -> T4_to_T5_move_for_hero)
+  level_L1_to_D0_level_lock_for_monster:arc (p_rep_L1 -> D0_to_T5_move_for_monster)
+  enable_monster_move42:arc (T7_to_T6_move_for_monster -> pHero_move)
+  return_lives_T1_to_T4_move_for_hero:arc (T1_to_T4_move_for_hero -> pheroLives)
+  T2_to_T1_src_for_monster:arc (tile_monster_place_T2 -> T2_to_T1_move_for_monster)
+  enable_monster_move26:arc (T5_to_D0_move_for_monster -> pHero_move)
+  allow_monster_move15:arc (pMonster_move -> T3_to_T2_move_for_monster)
+  arc_lives_check_D0_to_T5_move_for_hero:arc (pheroLives -> D0_to_T5_move_for_hero)
+  keep_token_in_level8:arc (D0_to_T3_move_for_monster -> p_rep_L1)
+  return_lives_T5_to_T4_move_for_monster:arc (T5_to_T4_move_for_monster -> pheroLives)
+  enable_monster_move10:arc (T7_to_D1_move_for_hero -> pMonster_move)
+  keep_token_in_level10:arc (T5_to_D0_move_for_monster -> p_rep_L1)
+  enable_monster_move5:arc (D0_to_T3_move_for_hero -> pMonster_move)
+  level_L1_to_T2_level_lock_for_monster3:arc (p_rep_L1 -> T3_to_T2_move_for_monster)
+  enable_monster_move15:arc (T4_to_T1_move_for_hero -> pMonster_move)
+  D0_to_T5_src_for_monster:arc (tile_monster_place_D0 -> D0_to_T5_move_for_monster)
+  allow_monster_move18:arc (pMonster_move -> T2_to_T3_move_for_monster)
+  enable_monster_move13:arc (T5_to_D0_move_for_hero -> pMonster_move)
+  T8_to_D1_trg_for_monster:arc (T8_to_D1_move_for_monster -> tile_monster_place_D1)
+  arc_lives_check_T2_to_T1_move_for_monster:arc (pheroLives -> T2_to_T1_move_for_monster)
+  D0_to_T3_trg_for_hero:arc (D0_to_T3_move_for_hero -> tile_hero_place_T3)
+  enable_monster_move25:arc (T1_to_T2_move_for_monster -> pHero_move)
+  allow_monster_move6:arc (pMonster_move -> T4_to_T5_move_for_monster)
+  level_L2_to_T6_level_lock_for_monster1:arc (p_rep_L2 -> T6_to_T7_move_for_monster)
+  T5_to_T4_trg_for_monster:arc (T5_to_T4_move_for_monster -> tile_monster_place_T4)
+  T8_to_D1_trg_for_hero:arc (T8_to_D1_move_for_hero -> tile_hero_place_D1)
+  arc_lives_check_T1_to_T4_move_for_hero:arc (pheroLives -> T1_to_T4_move_for_hero)
+  arc_lives_check_T6_to_T8_move_for_monster:arc (pheroLives -> T6_to_T8_move_for_monster)
+  enable_monster_move21:arc (T5_to_T4_move_for_monster -> pHero_move)
+  return_lives_D1_to_T7_move_for_monster:arc (D1_to_T7_move_for_monster -> pheroLives)
+  allow_hero_move14:arc (pHero_move -> T8_to_D1_move_for_hero)
+  allow_hero_move20:arc (pHero_move -> T8_to_T6_move_for_hero)
+  level_L1_to_T2_level_lock_for_monster0:arc (p_rep_L1 -> T1_to_T2_move_for_monster)
+  T8_to_D1_src_for_monster:arc (tile_monster_place_T8 -> T8_to_D1_move_for_monster)
+  enable_monster_move36:arc (T8_to_D1_move_for_monster -> pHero_move)
+  return_lives_T1_to_T2_move_for_hero:arc (T1_to_T2_move_for_hero -> pheroLives)
+  T5_to_D0_trg_for_monster:arc (T5_to_D0_move_for_monster -> tile_monster_place_D0)
+  T6_to_T8_trg_for_hero:arc (T6_to_T8_move_for_hero -> tile_hero_place_T8)
+  allow_monster_move9:arc (pMonster_move -> D1_to_T7_move_for_monster)
+  T5_to_T2_src_for_hero:arc (tile_hero_place_T5 -> T5_to_T2_move_for_hero)
+  enable_monster_move1:arc (D0_to_T5_move_for_hero -> pMonster_move)
+  D1_to_T8_src_for_hero:arc (tile_hero_place_D1 -> D1_to_T8_move_for_hero)
+  level_L1_to_D0_level_lock_for_monster2:arc (p_rep_L1 -> T5_to_D0_move_for_monster)
+  arc_lives_check_T4_to_T1_move_for_hero:arc (pheroLives -> T4_to_T1_move_for_hero)
+  level_L1_to_T1_level_lock_for_monster0:arc (p_rep_L1 -> T1_to_T4_move_for_monster)
+  arc_lives_check_T4_to_T5_move_for_monster:arc (pheroLives -> T4_to_T5_move_for_monster)
+  arc_lives_check_T6_to_T8_move_for_hero:arc (pheroLives -> T6_to_T8_move_for_hero)
+  T5_to_T2_trg_for_monster:arc (T5_to_T2_move_for_monster -> tile_monster_place_T2)
+  enable_monster_move8:arc (T6_to_T7_move_for_hero -> pMonster_move)
+  enable_monster_move30:arc (T6_to_T8_move_for_monster -> pHero_move)
+  D0_to_T3_trg_for_monster:arc (D0_to_T3_move_for_monster -> tile_monster_place_T3)
+  T2_to_T5_trg_for_monster:arc (T2_to_T5_move_for_monster -> tile_monster_place_T5)
+  T6_to_T8_src_for_monster:arc (tile_monster_place_T6 -> T6_to_T8_move_for_monster)
+  return_lives_D0_to_T3_move_for_hero:arc (D0_to_T3_move_for_hero -> pheroLives)
+  return_lives_T8_to_T6_move_for_monster:arc (T8_to_T6_move_for_monster -> pheroLives)
+  return_lives_T5_to_T2_move_for_monster:arc (T5_to_T2_move_for_monster -> pheroLives)
+  return_lives_T4_to_T5_move_for_hero:arc (T4_to_T5_move_for_hero -> pheroLives)
+  T7_to_T6_src_for_monster:arc (tile_monster_place_T7 -> T7_to_T6_move_for_monster)
+  T6_to_T7_src_for_monster:arc (tile_monster_place_T6 -> T6_to_T7_move_for_monster)
+  allow_monster_move11:arc (pMonster_move -> T2_to_T1_move_for_monster)
+  arc_lives_check_T4_to_T5_move_for_hero:arc (pheroLives -> T4_to_T5_move_for_hero)
+  allow_monster_move20:arc (pMonster_move -> T7_to_T6_move_for_monster)
+  arc_lives_check_T5_to_T2_move_for_monster:arc (pheroLives -> T5_to_T2_move_for_monster)
+  return_lives_T3_to_T2_move_for_monster:arc (T3_to_T2_move_for_monster -> pheroLives)
+  arc_lives_check_D1_to_T7_move_for_monster:arc (pheroLives -> D1_to_T7_move_for_monster)
+  T4_to_T5_src_for_hero:arc (tile_hero_place_T4 -> T4_to_T5_move_for_hero)
+  level_L1_to_T2_level_lock_for_monster:arc (p_rep_L1 -> T2_to_T1_move_for_monster)
+  T3_to_D0_src_for_monster:arc (tile_monster_place_T3 -> T3_to_D0_move_for_monster)
+  D0_to_T5_trg_for_hero:arc (D0_to_T5_move_for_hero -> tile_hero_place_T5)
+  enable_monster_move34:arc (T1_to_T4_move_for_monster -> pHero_move)
+  T2_to_T5_trg_for_hero:arc (T2_to_T5_move_for_hero -> tile_hero_place_T5)
+  return_lives_T1_to_T2_move_for_monster:arc (T1_to_T2_move_for_monster -> pheroLives)
+  allow_hero_move0:arc (pHero_move -> D1_to_T8_move_for_hero)
+  T2_to_T3_src_for_hero:arc (tile_hero_place_T2 -> T2_to_T3_move_for_hero)
+  arc_lives_check_T2_to_T5_move_for_hero:arc (pheroLives -> T2_to_T5_move_for_hero)
+  return_lives_T6_to_T7_move_for_hero:arc (T6_to_T7_move_for_hero -> pheroLives)
+  allow_monster_move17:arc (pMonster_move -> T4_to_T1_move_for_monster)
+  consArc0:arc (K0_to_collect -> T2_to_T3_move_for_hero_and_collect_key)
+  T7_to_D1_trg_for_hero:arc (T7_to_D1_move_for_hero -> tile_hero_place_D1)
+  arc_lives_check_T5_to_D0_move_for_monster:arc (pheroLives -> T5_to_D0_move_for_monster)
+  enable_monster_move3:arc (T2_to_T5_move_for_hero -> pMonster_move)
+  T4_to_T5_src_for_monster:arc (tile_monster_place_T4 -> T4_to_T5_move_for_monster)
+  T1_to_T2_src_for_hero:arc (tile_hero_place_T1 -> T1_to_T2_move_for_hero)
+  enable_monster_move28:arc (T4_to_T5_move_for_monster -> pHero_move)
+  allow_hero_move10:arc (pHero_move -> T7_to_D1_move_for_hero)
+  D0_to_T5_src_for_hero:arc (tile_hero_place_D0 -> D0_to_T5_move_for_hero)
+  prodArc1:arc (T6_to_T7_move_for_hero_and_collect_key -> collected_K1)
+  level_L2_to_D1_level_lock_for_monster0:arc (p_rep_L2 -> D1_to_T8_move_for_monster)
+  level_L2_to_D1_level_lock_for_monster:arc (p_rep_L2 -> T8_to_D1_move_for_monster)
+  level_L1_to_D0_level_lock_for_monster1:arc (p_rep_L1 -> T3_to_D0_move_for_monster)
+  T7_to_D1_trg_for_monster:arc (T7_to_D1_move_for_monster -> tile_monster_place_D1)
+  allow_monster_move:arc (pMonster_move -> T5_to_T4_move_for_monster)
+  enable_monster_move33:arc (T2_to_T1_move_for_monster -> pHero_move)
+  level_L1_to_D0_level_lock_for_monster0:arc (p_rep_L1 -> D0_to_T3_move_for_monster)
+  T8_to_T6_src_for_monster:arc (tile_monster_place_T8 -> T8_to_T6_move_for_monster)
+  return_lives_D0_to_T5_move_for_monster:arc (D0_to_T5_move_for_monster -> pheroLives)
+  allow_monster_move14:arc (pMonster_move -> T8_to_D1_move_for_monster)
+  allow_hero_move8:arc (pHero_move -> T6_to_T7_move_for_hero)
+  D0_to_T3_src_for_monster:arc (tile_monster_place_D0 -> D0_to_T3_move_for_monster)
+  arc_lives_check_T6_to_T7_move_for_hero:arc (pheroLives -> T6_to_T7_move_for_hero)
+  T5_to_D0_src_for_monster:arc (tile_monster_place_T5 -> T5_to_D0_move_for_monster)
+  return_lives_T6_to_T8_move_for_hero:arc (T6_to_T8_move_for_hero -> pheroLives)
+  return_lives_T3_to_D0_move_for_monster:arc (T3_to_D0_move_for_monster -> pheroLives)
+  T5_to_T2_src_for_monster:arc (tile_monster_place_T5 -> T5_to_T2_move_for_monster)
+  enable_monster_move9:arc (T6_to_T8_move_for_hero -> pMonster_move)
+  D0_to_T3_src_for_hero:arc (tile_hero_place_D0 -> D0_to_T3_move_for_hero)
+  T8_to_D1_src_for_hero:arc (tile_hero_place_T8 -> T8_to_D1_move_for_hero)
+  keep_token_in_level7:arc (D0_to_T5_move_for_monster -> p_rep_L1)
+  T5_to_T2_trg_for_hero:arc (T5_to_T2_move_for_hero -> tile_hero_place_T2)
+  return_lives_T5_to_D0_move_for_hero:arc (T5_to_D0_move_for_hero -> pheroLives)
+  arc_lives_check_T1_to_T2_move_for_hero:arc (pheroLives -> T1_to_T2_move_for_hero)
+  return_lives_T7_to_D1_move_for_hero:arc (T7_to_D1_move_for_hero -> pheroLives)
+  arc_lives_check_T1_to_T4_move_for_monster:arc (pheroLives -> T1_to_T4_move_for_monster)
+  T2_to_T3_trg_for_monster:arc (T2_to_T3_move_for_monster -> tile_monster_place_T3)
+  arc_lives_check_T2_to_T3_move_for_monster:arc (pheroLives -> T2_to_T3_move_for_monster)
+  arc_lives_check_T7_to_D1_move_for_monster:arc (pheroLives -> T7_to_D1_move_for_monster)
+  return_lives_T7_to_T6_move_for_monster:arc (T7_to_T6_move_for_monster -> pheroLives)
+  return_lives_T2_to_T1_move_for_monster:arc (T2_to_T1_move_for_monster -> pheroLives)
+  arc_lives_check_D0_to_T3_move_for_hero:arc (pheroLives -> D0_to_T3_move_for_hero)
+  T3_to_D0_src_for_hero:arc (tile_hero_place_T3 -> T3_to_D0_move_for_hero)
+  consArc2:arc (K1_to_collect -> D1_to_T7_move_for_hero_and_collect_key)
+  T5_to_T4_src_for_hero:arc (tile_hero_place_T5 -> T5_to_T4_move_for_hero)
+  T4_to_T1_src_for_hero:arc (tile_hero_place_T4 -> T4_to_T1_move_for_hero)
+  D1_to_T7_trg_for_hero:arc (D1_to_T7_move_for_hero -> tile_hero_place_T7)
+  enable_monster_move32:arc (T2_to_T5_move_for_monster -> pHero_move)
+  keep_token_in_level4:arc (T7_to_T6_move_for_monster -> p_rep_L2)
+  level_L1_to_T2_level_lock_for_monster2:arc (p_rep_L1 -> T5_to_T2_move_for_monster)
+  T1_to_T4_src_for_monster:arc (tile_monster_place_T1 -> T1_to_T4_move_for_monster)
+  D1_to_T8_trg_for_hero:arc (D1_to_T8_move_for_hero -> tile_hero_place_T8)
+  keep_token_in_level1:arc (T7_to_D1_move_for_monster -> p_rep_L2)
+  arc_lives_check_T2_to_T1_move_for_hero:arc (pheroLives -> T2_to_T1_move_for_hero)
+  level_L1_to_T2_level_lock_for_monster4:arc (p_rep_L1 -> T2_to_T3_move_for_monster)
+  arc_lives_check_T2_to_T3_move_for_hero:arc (pheroLives -> T2_to_T3_move_for_hero)
+  allow_monster_move2:arc (pMonster_move -> D0_to_T3_move_for_monster)
+  T7_to_T6_src_for_hero:arc (tile_hero_place_T7 -> T7_to_T6_move_for_hero)
+  arc_lives_check_T7_to_D1_move_for_hero:arc (pheroLives -> T7_to_D1_move_for_hero)
+  return_lives_D1_to_T7_move_for_hero:arc (D1_to_T7_move_for_hero -> pheroLives)
+  T7_to_D1_src_for_monster:arc (tile_monster_place_T7 -> T7_to_D1_move_for_monster)
+  T8_to_T6_src_for_hero:arc (tile_hero_place_T8 -> T8_to_T6_move_for_hero)
+  consArc1:arc (K1_to_collect -> T6_to_T7_move_for_hero_and_collect_key)
+  allow_monster_move1:arc (pMonster_move -> D0_to_T5_move_for_monster)
+  T1_to_T4_src_for_hero:arc (tile_hero_place_T1 -> T1_to_T4_move_for_hero)
+  T6_to_T8_trg_for_monster:arc (T6_to_T8_move_for_monster -> tile_monster_place_T8)
+  arc_lives_check_T8_to_D1_move_for_hero:arc (pheroLives -> T8_to_D1_move_for_hero)
+  T4_to_T5_trg_for_hero:arc (T4_to_T5_move_for_hero -> tile_hero_place_T5)
+  allow_monster_move13:arc (pMonster_move -> T8_to_T6_move_for_monster)
+  allow_monster_move8:arc (pMonster_move -> T6_to_T8_move_for_monster)
+  enable_monster_move19:arc (T7_to_T6_move_for_hero -> pMonster_move)
+  fromArcCollect2:arc (tile_hero_place_D1 -> D1_to_T7_move_for_hero_and_collect_key)
+  keep_token_in_level12:arc (T1_to_T2_move_for_monster -> p_rep_L1)
+  return_lives_T6_to_T7_move_for_monster:arc (T6_to_T7_move_for_monster -> pheroLives)
+  arc_lives_check_D1_to_T7_move_for_hero:arc (pheroLives -> D1_to_T7_move_for_hero)
+  keep_token_in_level3:arc (T6_to_T8_move_for_monster -> p_rep_L2)
+  return_lives_T2_to_T5_move_for_monster:arc (T2_to_T5_move_for_monster -> pheroLives)
+  level_L2_to_D1_level_lock_for_monster1:arc (p_rep_L2 -> T7_to_D1_move_for_monster)
+  T6_to_T7_src_for_hero:arc (tile_hero_place_T6 -> T6_to_T7_move_for_hero)
+  return_lives_T4_to_T1_move_for_monster:arc (T4_to_T1_move_for_monster -> pheroLives)
+  T2_to_T1_trg_for_monster:arc (T2_to_T1_move_for_monster -> tile_monster_place_T1)
+  enable_monster_move2:arc (T1_to_T4_move_for_hero -> pMonster_move)
+  T4_to_T1_src_for_monster:arc (tile_monster_place_T4 -> T4_to_T1_move_for_monster)
+  level_L2_to_T6_level_lock_for_monster:arc (p_rep_L2 -> T6_to_T8_move_for_monster)
+  enable_monster_move7:arc (T2_to_T3_move_for_hero -> pMonster_move)
+  allow_monster_move7:arc (pMonster_move -> T5_to_T2_move_for_monster)
+  enable_monster_move6:arc (T4_to_T5_move_for_hero -> pMonster_move)
+  allow_hero_move17:arc (pHero_move -> T5_to_T2_move_for_hero)
+  return_lives_T4_to_T5_move_for_monster:arc (T4_to_T5_move_for_monster -> pheroLives)
+  enable_monster_move27:arc (T6_to_T7_move_for_monster -> pHero_move)
+  return_lives_T7_to_D1_move_for_monster:arc (T7_to_D1_move_for_monster -> pheroLives)
+  T3_to_D0_trg_for_hero:arc (T3_to_D0_move_for_hero -> tile_hero_place_D0)
+  arc_lives_check_T8_to_D1_move_for_monster:arc (pheroLives -> T8_to_D1_move_for_monster)
+  WS_W:WorldStateToWorld (WS -> W)
+  glTileToPlace_hero2:generic_link (T5 -> tile_hero_place_T5)
+  glitemToCollectToPlace0:generic_link (K0 -> K0_to_collect)
+  glTileToPlace_hero8:generic_link (T7 -> tile_hero_place_T7)
+  glTileToPlace_monster0:generic_link (D1 -> tile_monster_place_D1)
+  glTileToPlace_monster6:generic_link (T4 -> tile_monster_place_T4)
+  glTileToPlace_hero5:generic_link (D0 -> tile_hero_place_D0)
+  glTileToPlace_monster7:generic_link (T1 -> tile_monster_place_T1)
+  glTileToPlace_monster8:generic_link (T7 -> tile_monster_place_T7)
+  glLevelToPlace_hero0:generic_link (L2 -> p_rep_L2)
+  glTileToPlace_hero0:generic_link (D1 -> tile_hero_place_D1)
+  glTileToPlace_monster3:generic_link (T6 -> tile_monster_place_T6)
+  glTileToPlace_hero6:generic_link (T4 -> tile_hero_place_T4)
+  glWorld_To_move_order_monster:generic_link (W -> pMonster_move)
+  glTileToPlace_monster4:generic_link (T3 -> tile_monster_place_T3)
+  glLevelToPlace_hero:generic_link (L1 -> p_rep_L1)
+  glTileToPlace_monster1:generic_link (T8 -> tile_monster_place_T8)
+  glitemCollectedToPlace1:generic_link (O1 -> collected_O1)
+  glTileToPlace_hero7:generic_link (T1 -> tile_hero_place_T1)
+  glHeroToLives:generic_link (H -> pheroLives)
+  glTileToPlace_hero4:generic_link (T3 -> tile_hero_place_T3)
+  glitemCollectedToPlace0:generic_link (K0 -> collected_K0)
+  place_is_trap_tile:generic_link (T1 -> tile_hero_place_T1)
+  glTileToPlace_hero:generic_link (T2 -> tile_hero_place_T2)
+  glWorld_To_move_order_hero:generic_link (W -> pHero_move)
+  glTileToPlace_monster5:generic_link (D0 -> tile_monster_place_D0)
+  glitemToCollectToPlace:generic_link (K1 -> K1_to_collect)
+  place_is_trap_tile0:generic_link (T1 -> tile_hero_place_T1)
+  glitemCollectedToPlace:generic_link (K1 -> collected_K1)
+  glitemToCollectToPlace1:generic_link (O1 -> O1_to_collect)
+  glTileToPlace_monster2:generic_link (T5 -> tile_monster_place_T5)
+  glTileToPlace_hero3:generic_link (T6 -> tile_hero_place_T6)
+  glTileToPlace_hero1:generic_link (T8 -> tile_hero_place_T8)
+  glTileToPlace_monster:generic_link (T2 -> tile_monster_place_T2)
+  inhArc:inh_arc (K0_to_collect -> D0_to_T3_move_for_hero)
+  inhArc1:inh_arc (K1_to_collect -> T6_to_T7_move_for_hero)
+  inhArc0:inh_arc (K0_to_collect -> T2_to_T3_move_for_hero)
+  inhArc2:inh_arc (K1_to_collect -> D1_to_T7_move_for_hero)
+  D1_T7:TileToTile (D1 -> T7) {
+      direction = "up";
+  }
+  T5_D0:TileToTile (T5 -> D0) {
+      direction = "right";
+  }
+  T6_T8:TileToTile (T6 -> T8) {
+      direction = "down";
+  }
+  T4_T5:TileToTile (T4 -> T5) {
+      direction = "right";
+  }
+  T3_T2:TileToTile (T3 -> T2) {
+      direction = "left";
+  }
+  D1_T8:TileToTile (D1 -> T8) {
+      direction = "left";
+  }
+  T1_T4:TileToTile (T1 -> T4) {
+      direction = "down";
+  }
+  D0_T3:TileToTile (D0 -> T3) {
+      direction = "up";
+  }
+  T7_D1:TileToTile (T7 -> D1) {
+      direction = "down";
+  }
+  T2_T3:TileToTile (T2 -> T3) {
+      direction = "right";
+  }
+  T8_T6:TileToTile (T8 -> T6) {
+      direction = "up";
+  }
+  T1_T2:TileToTile (T1 -> T2) {
+      direction = "right";
+  }
+  T2_T5:TileToTile (T2 -> T5) {
+      direction = "down";
+  }
+  T4_T1:TileToTile (T4 -> T1) {
+      direction = "up";
+  }
+  T6_T7:TileToTile (T6 -> T7) {
+      direction = "right";
+  }
+  T2_T1:TileToTile (T2 -> T1) {
+      direction = "left";
+  }
+  T3_D0:TileToTile (T3 -> D0) {
+      direction = "down";
+  }
+  T7_T6:TileToTile (T7 -> T6) {
+      direction = "left";
+  }
+  T5_T2:TileToTile (T5 -> T2) {
+      direction = "up";
+  }
+  T5_T4:TileToTile (T5 -> T4) {
+      direction = "left";
+  }
+  D0_T5:TileToTile (D0 -> T5) {
+      direction = "left";
+  }
+  T8_D1:TileToTile (T8 -> D1) {
+      direction = "right";
+  }
+  D0_D1:DoorToDoor (D0 -> D1)
+  D0_D2:DoorToDoor (D1 -> D0)
+  M2_T0:CreaturesTile (M2 -> T6)
+  H_T0:CreaturesTile (H -> T2)
+  M_T0:CreaturesTile (M -> D0)
+--------------
+CONFORM
+
+  a. fire_transition
+      {'t': 'T3_to_T2_move_for_hero'}
+  b. fire_transition
+      {'t': 'T3_to_D0_move_for_hero'}
+Select action: 
