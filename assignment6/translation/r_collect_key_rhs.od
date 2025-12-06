@@ -14,6 +14,13 @@ move_transition:RAM_PNTransition
 arc_from:RAM_arc (hero_place_from -> move_transition)
 arc_to:RAM_arc (move_transition -> hero_place_to)
 
+pHero_move:RAM_PNPlace {
+    condition = `"pHero_move" in get_name(this)`;
+}
+pMonster_move:RAM_PNPlace {
+    condition = `"pMonster_move" in get_name(this)`;
+}
+
 key_to_collect:RAM_PNPlace{
     condition = `get_name(this).endswith("_to_collect")`;
 }
@@ -23,12 +30,12 @@ collected_key:RAM_PNPlace{
 glKeyToCollect:RAM_generic_link (key -> key_to_collect)
 glKeyCollected:RAM_generic_link (key -> collected_key)
 
-# new transition move+collect keys
-
+# new transition move+collect key
 transitionCollect:RAM_PNTransition{
     name = `get_name(matched("move_transition")) + "_and_collect_key"`;
 }
 
+# movement hero from-to same tiles
 fromArcCollect:RAM_arc (hero_place_from -> transitionCollect)
 toArcCollect:RAM_arc (transitionCollect -> hero_place_to)
 
@@ -39,3 +46,6 @@ prodArc:RAM_arc (transitionCollect -> collected_key)
 # inh if key not collected yet
 inhArc:RAM_inh_arc (key_to_collect -> move_transition)
 
+# hero -> move+collect -> monstruo
+phase_fromHero:RAM_arc (pHero_move -> transitionCollect)
+phase_toMonster:RAM_arc (transitionCollect -> pMonster_move)
