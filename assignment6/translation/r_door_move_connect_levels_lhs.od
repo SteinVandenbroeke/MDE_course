@@ -1,0 +1,18 @@
+fromDoor:RAM_Door
+toDoor:RAM_Door
+
+fromLevel:RAM_Level
+toLevel:RAM_Level
+
+fromLevelToDoor:RAM_LevelToTile (fromLevel -> fromDoor)
+toLevelToDoor:RAM_LevelToTile (toLevel -> toDoor)
+
+pFromLevel:RAM_PNPlace
+glLevelFromToPlace:RAM_generic_link (fromLevel -> pFromLevel)
+
+pToLevel:RAM_PNPlace
+glLevelToToPlace:RAM_generic_link (toLevel -> pToLevel)
+
+door_move:RAM_PNTransition {
+    condition = `get_name(this) == f"door_move_{get_name(matched('fromDoor'))}_to_{get_name(matched('toDoor'))}"`;
+}

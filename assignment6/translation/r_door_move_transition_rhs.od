@@ -1,0 +1,32 @@
+fromDoor:RAM_Door
+toDoor:RAM_Door
+key:RAM_Key
+
+doorToDoor:RAM_DoorToDoor (fromDoor -> toDoor)
+doorToKey:RAM_DoorToKey (fromDoor -> key)
+
+key_to_collect:RAM_PNPlace{
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_key:RAM_PNPlace{
+    condition = `get_name(this).startswith("collected_")`;
+}
+glKeyToCollect:RAM_generic_link (key -> key_to_collect)
+glKeyCollected:RAM_generic_link (key -> collected_key)
+
+pMonster_move:RAM_PNPlace {
+    condition = `get_name(this) == "pMonster_move"`;
+}
+pHero_move:RAM_PNPlace {
+    condition = `get_name(this) == "pHero_move"`;
+}
+
+door_move:RAM_PNTransition {
+    name = `f"door_move_{get_name(matched('fromDoor'))}_to_{get_name(matched('toDoor'))}"`;
+}
+
+hasKeyArc:RAM_arc (collected_key -> door_move)
+inhArc:RAM_inh_arc (key_to_collect -> door_move)
+
+phase_fromHero:RAM_arc (pHero_move -> door_move)
+enable_monster_move:RAM_arc (door_move -> pMonster_move)

@@ -38,7 +38,9 @@ rule_names = [
     "item_tile",
     "collect_key",
     "collect_objective",
-    "door_to_door",
+    "door_move_transition",
+    "door_move_connect_hero_places",
+    "door_move_connect_levels"
 ]
 
 print("Loading rules")

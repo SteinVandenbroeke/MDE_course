@@ -11,7 +11,9 @@ ptoDoor_hero:RAM_PNPlace {
 }
 glToDoorToPlace_hero:RAM_generic_link (toDoor -> ptoDoor_hero)
 
-# Already exists a transition that connects this two hero places
-existing:RAM_PNTransition
-fromDoorArc:RAM_arc (pfromDoor_hero -> existing)
-toDoorArc:RAM_arc (existing -> ptoDoor_hero)
+door_move:RAM_PNTransition {
+    condition = `get_name(this) == f"door_move_{get_name(matched('fromDoor'))}_to_{get_name(matched('toDoor'))}"`;
+}
+
+fromDoorArc:RAM_arc (pfromDoor_hero -> door_move)
+toDoorArc:RAM_arc (door_move -> ptoDoor_hero)

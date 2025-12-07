@@ -1,0 +1,6 @@
+fromDoor:RAM_Door
+toDoor:RAM_Door
+
+existing:RAM_PNTransition {
+    condition = `get_name(this) == f"door_move_{get_name(matched('fromDoor'))}_to_{get_name(matched('toDoor'))}"`;
+}

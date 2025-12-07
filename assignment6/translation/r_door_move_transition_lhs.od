@@ -1,0 +1,22 @@
+fromDoor:RAM_Door
+toDoor:RAM_Door
+key:RAM_Key
+
+doorToDoor:RAM_DoorToDoor (fromDoor -> toDoor)
+doorToKey:RAM_DoorToKey (fromDoor -> key)
+
+key_to_collect:RAM_PNPlace{
+    condition = `get_name(this).endswith("_to_collect")`;
+}
+collected_key:RAM_PNPlace{
+    condition = `get_name(this).startswith("collected_")`;
+}
+glKeyToCollect:RAM_generic_link (key -> key_to_collect)
+glKeyCollected:RAM_generic_link (key -> collected_key)
+
+pMonster_move:RAM_PNPlace {
+    condition = `get_name(this) == "pMonster_move"`;
+}
+pHero_move:RAM_PNPlace {
+    condition = `get_name(this) == "pHero_move"`;
+}
