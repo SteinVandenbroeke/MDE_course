@@ -1,0 +1,33 @@
+level:RAM_Level {
+    condition = ```
+    all_tiles_in_level = get_outgoing(this, "LevelToTile")
+    total_monster_tokens_level = 0
+    for level_tile_ass in all_tiles_in_level:
+        tile = get_target(level_tile_ass)
+        generic_links_from_tile = get_outgoing(tile, "generic_link")
+
+        #find tile place
+        for link in generic_links_from_tile:
+            if "glTileToPlace_monster" in get_name(link):
+                tile_place = get_target(link)
+                break
+
+        tile_place_state = get_source(get_incoming(tile_place, "pn_of")[0])
+        total_monster_tokens_level += get_slot_value(tile_place_state, "numTokens")
+    total_monster_tokens_level == 0
+    ```;
+}
+
+pLevel:RAM_PNPlace{
+    condition = `f"{get_name(matched('level'))}" in get_name(this)`;
+}
+
+glLevelToPlace_hero:RAM_generic_link (level -> pLevel)
+
+pMonster_move:RAM_PNPlace {
+    condition = `"pMonster_move" in get_name(this)`;
+}
+
+pHero_move:RAM_PNPlace {
+    condition = `"pHero_move" in get_name(this)`;
+}

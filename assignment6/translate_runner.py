@@ -40,7 +40,8 @@ rule_names = [
     "collect_objective",
     "door_move_transition",
     "door_move_connect_hero_places",
-    "door_move_connect_levels"
+    "door_move_connect_levels",
+    "level_without_monster"
 ]
 
 print("Loading rules")

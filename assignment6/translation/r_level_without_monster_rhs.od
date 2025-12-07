@@ -1,0 +1,24 @@
+level:RAM_Level
+
+pLevel:RAM_PNPlace{
+    condition = `f"{get_name(matched('level'))}" in get_name(this)`;
+}
+
+glLevelToPlace_hero:RAM_generic_link (level -> pLevel)
+
+pMonster_move:RAM_PNPlace {
+    condition = `"pMonster_move" in get_name(this)`;
+}
+
+pHero_move:RAM_PNPlace {
+    condition = `"pHero_move" in get_name(this)`;
+}
+
+skip_monster_move:RAM_PNTransition
+
+pMonster_moveToSkip_monster_move:RAM_arc (pMonster_move -> skip_monster_move)
+level_moveToSkip_monster_move:RAM_arc (pLevel -> skip_monster_move)
+skip_monster_moveTopHero_move:RAM_arc (skip_monster_move -> pHero_move)
+
+
+dontLoseLevelToken:RAM_arc (skip_monster_move -> pLevel)
